@@ -1,0 +1,11 @@
+# Site settings
+title: Learning JRubyArt
+email: mamba2928@yahoo.co.uk
+description: > # this means to ignore newlines until "baseurl:"
+  Here I will write about JRubyArt.
+baseurl: "" # the subpath of your site, e.g. /blog/
+twitter_username: monkstoneT
+github_username:  monkstone
+
+# Build settings
+markdown: kramdown
