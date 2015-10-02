@@ -1,6 +1,6 @@
 ---
 layout: page
-title:  "Bare Sketches"
+title:  "Bare Sketch"
 permalink: /sketches/bare/
 ---
 
