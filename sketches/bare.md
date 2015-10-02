@@ -25,5 +25,18 @@ end
 
 Example Usages: [JWishy][jwishy], [Drawolver][drawolver]
 
+To create a P2D sketch use:-
+
+{% highlight bash %}
+k9 create my_sketch 300 300 p2d
+{% endhighlight %}
+
+To run such a sketch use:-
+
+{% highlight bash %}
+k9 run my_sketch.rb # uses an installed jruby or
+k9 --nojruby run my_sketch.rb # to use jruby-complete
+{% endhighlight %}
+
 [jwishy]: https://github.com/ruby-processing/samples4ruby-processing3/blob/master/contributed/jwishy.rb
 [drawolver]: https://github.com/ruby-processing/samples4ruby-processing3/blob/master/contributed/drawolver.rb

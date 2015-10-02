@@ -30,4 +30,11 @@ To create such a sketch use:-
 k9 create my_sketch 300 300 --wrap
 {% endhighlight %}
 
+To run such sketch in live mode use:-
+
+{% highlight bash %}
+k9 live my_sketch.rb
+{% endhighlight %}
+
+
 [live]:https://github.com/ruby-processing/JRubyArt/wiki/Live-Coding
