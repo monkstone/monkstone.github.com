@@ -5,11 +5,11 @@ date:   2015-10-09 15:43:13
 categories: jruby_art update
 ---
 
-There is this excellent book on processingbook [Generative Gestaltung, ISBN: 978-3-87439-759-9][generative] and the authors have just released the [code updated to run with processing-3.0][code]. Here is one the sketches translated to JRubyArt. 
+There is this excellent book on processing [Generative Gestaltung, ISBN: 978-3-87439-759-9][generative], and the authors have just released the [code updated to run with processing-3.0][code]. Here is one the sketches translated to JRubyArt. 
 
 Here's a chance to show your ruby chops by translating some more....
 
-And send me a tweet [@monkstoneT][twitter]
+And send me a tweet @[monkstoneT][twitter]
 
 {% highlight ruby %}
 # p_1_0_01.rb
@@ -22,7 +22,7 @@ And send me a tweet [@monkstoneT][twitter]
 # http://www.generative-gestaltung.de
 #
 # Licensed under the Apache License, Version 2.0 (the "License")
-# you may not use this file e_xcept in compliance with the License.
+# you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0
 # Unless required by applicable law or agreed to in writing, software
 # distributed under the License is distributed on an "AS IS" BASIS,
