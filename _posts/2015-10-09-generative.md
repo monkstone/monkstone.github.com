@@ -7,7 +7,7 @@ categories: jruby_art update
 
 There is this excellent book on processing [Generative Gestaltung, ISBN: 978-3-87439-759-9][generative], and the authors have just released the [code updated to run with processing-3.0][code]. Here are a couple of the sketches translated to JRubyArt. Note the ability to use hi-dpi for retina etc in the second sketch.
 
-Here's a chance to show your ruby chops by translating some more....
+Here's a chance to show your ruby chops by translating some more....see already [translated sketches here][sketches]
 
 And send me a tweet @[monkstoneT][twitter]
 
@@ -144,3 +144,4 @@ end
 [generative]:http://www.generative-gestaltung.de
 [code]:http://www.generative-gestaltung.de/code
 [twitter]:https://twitter.com/monkstoneT
+[sketches]:https://github.com/ruby-processing/Generative-Design-Code-in-Ruby
