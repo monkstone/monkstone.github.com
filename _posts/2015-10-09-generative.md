@@ -115,8 +115,8 @@ YCOUNT = 4
 
 def settings
   size(400, 400, P3D)
+  # pixel_density(2) # here for folks with hi-dpi display eg retina
   smooth(8)
-  # pixel_density(2) # for folks with hi-dpi display eg retina
 end
 
 def setup
