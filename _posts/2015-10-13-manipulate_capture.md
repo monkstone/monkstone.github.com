@@ -5,7 +5,8 @@ date:   2015-10-13 14:48:00
 categories: jruby_art update
 ---
 
-Daniel Shiffman has recently published the second edition of his [Learning Processing][shiffman] book updated for processing-3.0. He has also published the [code here][code].  This a port of his Manipulate video image sketch, which makes use of JRubyArt control panel to manipulate the video image.
+Daniel Shiffman has recently published the second edition of his [Learning Processing][shiffman] book updated for processing-3.0. He has also published the [code here][code].  This a port of his Manipulate video image sketch, which makes use of JRubyArt control panel to manipulate the video image. Show your ruby chops by porting some more examples...
+
 
 And send me a tweet @[monkstoneT][twitter]
 
