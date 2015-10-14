@@ -60,6 +60,8 @@ def draw
   image(video, 0, 0, wide, high) # width and height from slider
 end
 
+# This is a 'java reflection' method in processing, so keep the camel-case
+# and load the :video_event library (rpextras.jar) in JRubyArt to use.
 def captureEvent(c)
   c.read
 end
@@ -75,4 +77,3 @@ I have also ported [The Nature of Code][nature] to JRubyArt.
 [shiffman]:http://learningprocessing.com/
 [code]:https://github.com/shiffman/LearningProcessing
 [twitter]:https://twitter.com/monkstoneT
-
