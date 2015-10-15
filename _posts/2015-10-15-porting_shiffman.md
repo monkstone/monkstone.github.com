@@ -9,7 +9,9 @@ Daniel Shiffman has recently published the second edition of his [Learning Proce
 
 You can send me a tweet @[monkstoneT][twitter]
 
-Here is my first pass of the polymorphism sketch code:-
+###Here is a first pass to port the polymorphism sketch
+
+It runs but there is room for improvement
 
 {% highlight ruby %}
 # Learning Processing
@@ -140,6 +142,113 @@ class Circle < Shape
   # The change_color function is unique to the Circle class.
   def change_color
     @c = color(rand(255))
+  end
+
+  def display
+    ellipse_mode(CENTER)
+    fill(c)
+    stroke(0)
+    ellipse(x, y, r, r)
+  end
+end
+{% endhighlight %}
+
+###Here is second go at porting the Dan Shiffman sketch
+
+It is definetly getting better.
+
+{% highlight ruby %}
+# Learning Processing
+# Daniel Shiffman
+# http://www.learningprocessing.com
+
+# Example 22-2: Polymorphism
+
+# One array of Shapes, in ruby we don't need polymorphism to achieve that,
+# this is a 'second draft' of a JRubyArt port. Introducing the hook method,
+# keyword args and the post_initialization hook for flexible inheritance.
+require_relative 'circle'
+require_relative 'square'
+
+attr_reader :shps
+
+def setup
+  sketch_title 'Polymorphism'
+  @shps = []
+  30.times do
+    if rand < 0.5
+      shps << Circle.new(x: 320, y: 180, r: 32, c: color(rand(255), 100))
+    else
+      shps << Square.new(x: 320, y: 180, r: 32)
+    end
+  end
+end
+
+def draw
+  background(255)
+  shps.each(&:jiggle)
+  shps.each { |shape| shape.change_color if shape.respond_to? :change_color }
+  shps.each(&:display)
+end
+
+def settings
+  size(480, 270)
+end
+{% endhighlight %}
+The improved Square class, note no call to super is required (wasn't previously either but might have been confusing if left out).
+{% highlight ruby %}
+# Learning Processing
+# Daniel Shiffman
+# http://www.learningprocessing.com
+
+# Example 22-2: Polymorphism
+require_relative 'shape'
+# Square class can inherit Processing::Proxy methods from Shape
+# Variables are inherited from the parent.
+# We could also add variables unique to the Square class if we so desire
+class Square < Shape
+  # Inherits constructor from parent
+  # Inherits jiggle from parent
+
+  # The square overrides its parent for display.
+  def display
+    rect_mode(CENTER)
+    fill(175)
+    stroke(0)
+    rect(x, y, r, r)
+  end
+end
+{% endhighlight %}
+The improved Circle class, now in color, to match improved ruby.
+{% highlight ruby %}
+# Learning Processing
+# Daniel Shiffman
+# http://www.learningprocessing.com
+
+# Example 22-2: Polymorphism
+require_relative 'shape'
+# Circle class inherits Processing:Proxy module methods from Shape
+# Inherits all instance variables from parent + adding one using the 
+# post_initialize hook method
+class Circle < Shape  
+  COLORS = %w{#ff0000 #ffff00 #3333ff #33cc33}
+  attr_reader :c, :x, :y, :r
+
+  def post_initialize(args)
+    @c = args[:c] # initialize color using post_initialize hook in Shape
+  end
+
+  # Call the parent jiggle, but do some more stuff too
+  def jiggle
+    super
+    # The Circle jiggles both size and location.
+    @r += rand(-1..1.0)
+    @r = constrain(r, 0, 100)
+  end
+
+  # The change_color function is unique to the Circle class.
+  def change_color
+    @c = color(COLORS.sample)
   end
 
   def display
