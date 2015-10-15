@@ -260,6 +260,154 @@ class Circle < Shape
 end
 {% endhighlight %}
 
+###Finally we have a suitably refactored port the Dan Shiffman sketch
+Here the inheriting classes use a common interface (thus reducing coupling)
+{% highlight ruby %}
+# Learning Processing
+# Daniel Shiffman
+# http://www.learningprocessing.com
+
+# Example 22-2: Polymorphism
+
+# One array of Shapes, in ruby we don't need polymorphism to achieve that,
+# this is a JRubyArt port. Introducing the hook method,
+# keyword args and the post_initialization hook for flexible inheritance.
+# Important change we only really need to know 'run' the method initialization 
+# of color is now really irrelevant. Retained to illustrate how to use a hook.
+require_relative 'circle'
+require_relative 'square'
+
+attr_reader :shps
+
+def setup
+  sketch_title 'Polymorphism'
+  @shps = []
+  30.times do
+    if rand < 0.5
+      shps << Circle.new(x: 320, y: 180, r: 32, c: color(rand(255), 100))
+    else
+      shps << Square.new(x: 320, y: 180, r: 32)
+    end
+  end
+end
+
+def draw
+  background(255)
+  shps.each(&:run)
+end
+
+def settings
+  size(480, 270)
+end
+{% endhighlight %}
+The abstract Shape class
+{% highlight ruby %}
+# Daniel Shiffman
+# http://www.learningprocessing.com
+
+# Example 22-2: Polymorphism
+# class Shape does not require Processing::Proxy but can pass it on to
+# the inheriting classes Square and Circle (NB: change to using run)
+class Shape
+  include Processing::Proxy
+  attr_reader :x, :y, :r
+
+  def initialize(x:, y:, r:, **opts)
+    @x = x
+    @y = y
+    @r = r
+    post_initialize(opts)
+  end
+
+  def jiggle
+    @x += rand(-1..1.0)
+    @y += rand(-1..1.0)
+  end
+
+  def post_initialize(_args)
+    'not implemented'
+  end
+
+  # A generic shape does not really know how to be displayed.
+  # This will be overridden in the child classes.
+  def display
+    'not implemented'
+  end
+  
+  def run
+    'not implemented'
+  end
+end
+{% endhighlight %}
+The Square class
+{% highlight ruby %}
+# Learning Processing
+# Daniel Shiffman
+# http://www.learningprocessing.com
+
+# Example 22-2: Polymorphism
+require_relative 'shape'
+# Square class can inherit Processing::Proxy methods from Shape
+# Variables are inherited from the parent.
+# We could also add variables unique to the Square class if we so desire
+# NB: run could be the only visible method
+class Square < Shape
+  # Inherits constructor from parent
+  # Inherits jiggle from parent
+
+  # The square overrides its parent for display.
+  def display
+    rect_mode(CENTER)
+    fill(175)
+    stroke(0)
+    rect(x, y, r, r)
+  end
+  
+  def run
+    jiggle
+    display
+  end
+end
+{% endhighlight %}
+The Circle class now has transaparent colors
+{% highlight ruby %}
+# post_initialize hook method. Use of change_color makes initilization of @c
+# irrelevant, but without example is spoiled.
+class Circle < Shape  
+  COLORS = %w{#ff0000 #ffff00 #3333ff #33cc33}
+  attr_reader :c, :x, :y, :r
+
+  def post_initialize(args)
+    @c = args[:c]          # Also deal with this new instance variable
+  end
+
+  # Call the parent jiggle, but do some more stuff too
+  def jiggle
+    super
+    # The Circle jiggles both size and location.
+    @r += rand(-1..1.0)
+    @r = constrain(r, 0, 100)
+  end
+
+  # The change_color function is unique to the Circle class.
+  def change_color
+    @c = color(COLORS.sample) - (100<<24)
+  end
+
+  def display
+    ellipse_mode(CENTER)
+    fill(c)
+    stroke(0)
+    ellipse(x, y, r, r)
+  end
+  
+  def run
+    jiggle
+    change_color
+    display
+  end
+end
+{% endhighlight %}
 I have also ported [The Nature of Code][nature] to JRubyArt.
 
 [nature]:https://github.com/ruby-processing/The-Nature-of-Code-for-JRubyArt
