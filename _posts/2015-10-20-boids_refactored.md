@@ -218,8 +218,7 @@ Here is the re-factored Flight Patterns Sketch:-
 # Reworked version for JRubyArt version 0.9+
 # Usage:
 # Drag mouse to steer 'invisible' flock attractor, use 'f' key to toggle flee
-# Mouse 'click' to toggle 'sphere' or 'circle' display
-load_library 'boids'
+require_relative 'boids'
 
 attr_reader :radius
 
