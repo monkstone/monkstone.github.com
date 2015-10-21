@@ -5,7 +5,9 @@ date:   2015-10-20 20:17:00
 categories: jruby_art update
 ---
 
-The [original boids library][original] was created by Jeremy Ashkenas to demonstrate a pure 'ruby' library for ruby processing, this updated version has the same goal. However it is updated to make use of [Vec3D][vec3d] and [Vec2D][vec2d] classes (JRubyArt features) and keyword arguments (ruby-2.1). It also use [forwardable][forwardable]. See the full code below:-
+The [original boids library][original] was created by Jeremy Ashkenas to demonstrate a pure 'ruby' library for ruby processing, this updated version has the same goal. However it is updated to make use of [Vec3D][vec3d] and [Vec2D][vec2d] classes (JRubyArt features) and keyword arguments (ruby-2.1). It also use [forwardable][forwardable]. To see usage of now correctly implemented `angle` (heading) see [simple example][example].
+
+See the full library code below:-
 
 {% highlight ruby %}
 # Boids -- after Tom de Smedt.
@@ -277,3 +279,4 @@ end
 [vec3d]:https://ruby-processing.github.io/classes/vec3d/
 [vec2d]:https://ruby-processing.github.io/classes/vec2d/
 [forwardable]:http://ruby-doc.org/stdlib-2.0.0/libdoc/forwardable/rdoc/Forwardable.html
+[example]:https://github.com/ruby-processing/samples4ruby-processing3/blob/master/processing_app/library/boids/boids_example.rb
