@@ -4,7 +4,7 @@ title:  "Class Sketch"
 permalink: /sketches/class/
 ---
 
-An explictly class wrapped sketch for the purists. By itself this is not that interesting, but such a sketch plays better in the [live mode][live].
+An explicitly class wrapped sketch for the purists. By itself this is not that interesting, but such a sketch plays better in the [live mode][live].
 Methods:-
 {% highlight ruby %}
 class MySketch < Processing::App
