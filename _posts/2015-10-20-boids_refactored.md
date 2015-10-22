@@ -13,7 +13,7 @@ See the full library code below:-
 # Boids -- after Tom de Smedt.
 # See his Python version: http://nodebox.net/code/index.php/Boids
 # This is an example of how a pure-Ruby library can work. Original for
-# ruby-processing Jeremy Ashkenas. Reworked, re-factored for JRubyArt 0.9+
+# ruby-processing Jeremy Ashkenas. Reworked, re-factored for JRubyArt 1.0+
 # by Martin Prout, features forwardable, keyword args, Vec3D and Vec2D.
 class Boid
   attr_accessor :boids, :pos, :vel, :is_perching, :perch_time
@@ -217,7 +217,7 @@ Here is the re-factored Flight Patterns Sketch:-
 {% highlight ruby %}
 # Description:
 # Flight Patterns is that ol' Euruko 2008 demo. 
-# Reworked version for JRubyArt version 0.9+
+# Reworked version for JRubyArt version 1.0+
 # Usage:
 # Drag mouse to steer 'invisible' flock attractor, use 'f' key to toggle flee
 require_relative 'boids'
