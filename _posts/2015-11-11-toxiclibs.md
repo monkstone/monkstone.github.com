@@ -6,7 +6,7 @@ categories: jruby_art update
 permalink:   _posts/toxiclibs
 ---
 
-The recently released [toxicilibs-0.5.0.gem][gem] is an exemplar for how to create and use custom library gems in JRubyArt. The [toxiclibs gem][gem] provides a ruby wrapper for the [toxiclibs libraries][libraries], that make it easy to use toxicilbs libraries in JRubyArt. The gem build now uses maven to download and install jbox2d. It features such usage refinements as stepping through the the physics (in a hidden pre() loop) so you don't have to. See simple liquidy sketch example below (more examples are included in the [gem][gem]):-
+The recently released [toxicilibs-0.5.0.gem][gem] is an exemplar for how to create and use custom library gems in JRubyArt. The [toxiclibs gem][gem] provides a ruby wrapper for the [toxiclibs libraries][libraries], that make it easy to use toxicilbs libraries in JRubyArt. The gem build now uses maven to build an updated toxiclibs. Now using jdk8 lambdas.:-
 
 {% highlight ruby %}
 require 'toxiclibs'
