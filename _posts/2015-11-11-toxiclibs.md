@@ -163,6 +163,8 @@ end
 
 {% endhighlight %}
 
+Here is the sketch after a couple of Laplacian, smooths.
+
 <img src="/assets/implicit.png" />
 
 [gem]:https://github.com/ruby-processing/toxicgem
