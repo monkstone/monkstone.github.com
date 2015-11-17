@@ -150,13 +150,12 @@ class EvaluatingVolume < Volume::VolumetricSpace
     out = ->(val, res) { val <= 0 || val >= res }
     return 0 if out.call(x, resX1) || out.call(y, resY1) || out.call(z, resZ1)
     value = ->(val, res) { val * 1.0 / res - 0.5 }
-    function = lambda do |x, y, z, c|
-      cos(x * c) * sin(y * c) + cos(y * c) * sin(z * c) + cos(z * c) * sin(x * c)
-      # sin(x * c) + cos(y * c) + sin(z * c) # toxis original function
+    function = lambda do |a, b, c, k|
+      cos(a * k) * sin(b * k) + cos(b * k) * sin(c * k) + cos(c * k) * sin(a * k)
+      # sin(a * k) + cos(b * k) + sin(c * k) # toxis original function
     end
-    val = function.call(value.call(x, resX),value.call(y, resY), value.call(z, resZ), FREQ)
-    return 0 if val > upper_bound
-    val
+    val = function.call(value.call(x, resX), value.call(y, resY), value.call(z, resZ), FREQ)
+    (val > upper_bound) ? 0 : val
   end
 end
 {% endhighlight %}
