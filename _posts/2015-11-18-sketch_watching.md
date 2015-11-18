@@ -3,6 +3,7 @@ layout: post
 title:  "Sketch Watching"
 date:   2015-11-18 06:45:00
 categories: jruby_art update
+permalink:   _posts/watch
 ---
 
 ### Automatically Reload your Sketch with `k9 watch`
