@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Using ruby Matrix in JRubyArt"
-date: 2015-12-07 06:21:00
+date: 2015-12-09 20:49:00
 categories: jruby_art update
 keywords: Matrix, Vec3D, frame of reference, JRubyArt
 permalink: _posts/matrix
@@ -280,5 +280,5 @@ end
 
 [arcball]:http://ruby-processing.github.io/classes/arcball/
 [vec3d]:http://ruby-processing.github.io/classes/vec3d/
-[render]:https://github.com/ruby-processing/JRubyArt/wiki/Vec2D,-Vec3D,-ArcBall-and-Deglut-classes
+[render]:http://ruby-processing.github.io/app_render/
 [tips]:https://github.com/irajgreenberg/ProcessingTips
