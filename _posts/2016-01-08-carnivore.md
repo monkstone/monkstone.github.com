@@ -7,7 +7,7 @@ keywords: carnivore, sniffer, reflection, interface, JRubyArt
 permalink: _posts/carnivore
 ---
 
-It is an unfortunate truth that `java reflection methods` are popular with both processing developers and the developers of supporting libraries. It is unfortunate because we have to through hoops to use these methods in JRubyArt (and ruby-processing). The `captureEvent` and `videoEvent` are examples of reflection methods from the processing video developers. But we have made these readily available to JRubyArt users as a simple library load `load_library :video_event`. This what you would do (if we had not created the `video_event` library):-
+It is an unfortunate truth that `java reflection methods` are popular with both processing developers and the developers of supporting libraries. It is unfortunate because we have to go through hoops to use these methods in JRubyArt (and ruby-processing). The `captureEvent` and `videoEvent` are examples of reflection methods from the processing video developers. But we have made these readily available to JRubyArt users as a simple library load `load_library :video_event`. This what you would do (if we had not created the `video_event` library):-
 
 - create a java class `VideoInterface`
 - compile the java class (including classpath)
