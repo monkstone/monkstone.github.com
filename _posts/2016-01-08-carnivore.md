@@ -7,7 +7,7 @@ keywords: carnivore, sniffer, reflection, interface, JRubyArt
 permalink: _posts/carnivore
 ---
 
-It is an unfortunate truth that `java reflection methods` are popular with both processing developers and the developers of supporting libraries. It is unfortunate because we have to go through hoops to use these methods in JRubyArt (and ruby-processing). The `captureEvent` and `videoEvent` are examples of reflection methods from the processing video developers. But we have made these readily available to JRubyArt users as a simple library load `load_library :video_event`. This what you would do (if we had not created the `video_event` library):-
+It is an unfortunate truth that `java reflection methods` are popular with both processing developers and the developers of supporting libraries. It is unfortunate because we have to go through hoops to use these methods in JRubyArt (and ruby-processing). The `captureEvent` and `videoEvent` are examples of reflection methods from the processing video developers. But we have made these readily available to JRubyArt users as a [simple library][library] load `load_library :video_event`. This is what you would do (if we had not created the `video_event` library):-
 
 - create a java class `VideoInterface`
 - compile the java class (including classpath)
@@ -48,6 +48,8 @@ javac -cp video.jar:core.jar monkstone/videoevent/VideoInterface.java
 
 jar -cvf video_event.jar monkstone
 {% endhighlight %}
+
+See below a sketch which using this VideoEvent interface, see the version using the JRubyArt provided `:video_event` library [here][bw]
 
 ###black_white_capture.rb
 {% highlight ruby %}
@@ -159,3 +161,9 @@ def packetEvent(p)
   # puts("---------------------------\n")
 end
 {% endhighlight %}
+
+Read more about calling java from ruby including [reflection here][reflection].
+
+[library]:https://github.com/ruby-processing/JRubyArt/blob/master/library/video_event/video_event.rb
+[reflection]:https://github.com/jruby/jruby/wiki/CallingJavaFromJRuby
+[bw]:https://github.com/ruby-processing/samples4ruby-processing3/blob/master/processing_app/library/video/capture/black_white_capture.rb
