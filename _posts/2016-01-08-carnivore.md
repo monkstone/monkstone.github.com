@@ -15,6 +15,7 @@ It is an unfortunate truth that `java reflection methods` are popular with both 
 - modify the sketch to both `require` the `jar` and to `include` the interface. 
 
 ###VideoInterface.java
+See [javadoc here][video]
 {% highlight java %}
 package monkstone.videoevent;
 import processing.video.Movie;
@@ -164,6 +165,7 @@ end
 
 Read more about calling java from ruby including [reflection here][reflection].
 
+[video]:http://ruby-processing.github.io/JRubyArt/monkstone/videoevent/VideoInterface.html
 [library]:https://github.com/ruby-processing/JRubyArt/blob/master/library/video_event/video_event.rb
 [reflection]:https://github.com/jruby/jruby/wiki/CallingJavaFromJRuby
 [bw]:https://github.com/ruby-processing/samples4ruby-processing3/blob/master/processing_app/library/video/capture/black_white_capture.rb
