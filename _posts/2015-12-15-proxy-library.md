@@ -6,7 +6,7 @@ categories: jruby_art update
 keywords: abstract, reflection, library, JRubyArt
 ---
 
-In vanilla processing [library developers][vanilla] are encouraged to use java reflection to access the sketch `pre`, `post`, and `draw` loops. The do this by `registering` the processing methods (some java reflection magic) with the PApplet. Until recently we needed jruby `ext` and `become_java!` to access those methods in JRuby. However now all you need to do is `load` the `library_proxy` and make your `Library` class subclass `LibraryProxy`. This is still at the development stage so the interface may not be stable. The `LibraryProxy` class is an abstract java class and you should implement `pre`, `post` and `draw` methods (empty methods are fine). Also available are
+In vanilla processing [library developers][vanilla] are encouraged to use java reflection to access the sketch `pre`, `post`, and `draw` loops. They do this by `registering` the processing methods (some java reflection magic) with the PApplet. Until recently we needed jruby `ext` and `become_java!` to access those methods in JRuby. However now all you need to do is `load` the `library_proxy` and make your `Library` class subclass `LibraryProxy`. This is still at the development stage so the interface may not be stable. The `LibraryProxy` class is an abstract java class and you should implement `pre`, `post` and `draw` methods (empty methods are fine). Also available are
 `app` to access the underlying PApplet, `background`, `fill` and `stroke`, access the rest via app see proxy_library where `app.ellipse` is used.
 
 ### The Sketch
