@@ -9,6 +9,7 @@ keywords: runnable, euler, Processing::Proxy, JRubyArt
 Here is a little ruby-processing sketch by Ira Greenberg, that has been refactored and updated for [JRubyArt][jruby_art]. Also demonstrated is how to create and use modules in JRubyArt. We use the runner module to simplify the EulerBall interface, the `Processing::Proxy` module is used to access `PApplet` methods similar to vanilla processings `inner` classes. We create an convenience class to handle boundary collisions in an object orientated way.  Note we can selectively include `Processing::MathTool` to use the `constrain` method (note `map1d` etc are also included in the `MathTool`).
 
 ###euler_ball.rb
+
 {% highlight ruby %}
 # encoding: UTF-8
 
@@ -73,6 +74,7 @@ end
 Here is the much simplified `euler_integration` sketch, note the use of the more literate keyword arguments (since ruby 2.0).
 
 ###euler_integration.rb
+
 {% highlight ruby %}
 #
 # Euler Integration (v01)
