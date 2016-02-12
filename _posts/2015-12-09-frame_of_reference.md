@@ -9,7 +9,7 @@ permalink: _posts/matrix
 
 Here is vanilla [processing sketch][tips] by Ira Greenberg translated for JRubyArt. This sketch features the use of ruby Matrix to do 3D transforms it is quite complicated, but is a bit easier on the eye in ruby cf vanilla processing. Also featured are [Vec3D][vec3d] (replaces PVector), [ArcBall][arcball] (for intuitive manipulation) and [AppRender][render] for efficient [Vec3D][vec3d] to vertex translation.
 
-###frame_of_reference.rb
+### frame_of_reference.rb ###
 
 {% highlight ruby %}
 ###############
@@ -96,7 +96,7 @@ def setup
     # When you multiply matrices the inner numbers MUST match, so:
     # [4 x 4] [4 x 1] is OK, but [4 x 4] [1 x 4] is NOT COOL.
     # see mat4.rb where we use ruby Matrix to handle the multiplication for us
-        
+
     nn = p[i].n
     tt = Vec3D.new(
       p[i].vecs[1].x - p[i].vecs[0].x,
@@ -119,13 +119,13 @@ def draw
   background(0)
   lights
   FACE_COUNT.times do |i|
-    p[i].display(renderer) 
+    p[i].display(renderer)
     c[i].display(renderer)
   end
 end
 {% endhighlight %}
 
-### cylinder.rb
+### cylinder.rb ###
 
 {% highlight ruby %}
 class Cylinder
@@ -174,7 +174,7 @@ class Cylinder
 end
 {% endhighlight %}
 
-### plane.rb
+### plane.rb ###
 
 {% highlight ruby %}
 NORM_LEN = 225.0
@@ -236,7 +236,7 @@ class Plane
 end
 {% endhighlight %}
 
-### mat4.rb
+### mat4.rb ###
 
 {% highlight ruby %}
 # uber simple Homogeneous 4 x 4 matrix
@@ -274,7 +274,7 @@ end
 {% endhighlight %}
 
 
-### snapshot of the running sketch
+### snapshot of the running sketch ###
 
 <img src="/assets/frame_of_reference.png" />
 

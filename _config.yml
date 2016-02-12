@@ -10,7 +10,7 @@ syntax-highlighting:
     enabled: true
 # Build settings
 kramdown:
-  syntax_highlighter: rouge
+  highlighter: rouge
   input: GFM
 gems: 
   - jekyll-sitemap
