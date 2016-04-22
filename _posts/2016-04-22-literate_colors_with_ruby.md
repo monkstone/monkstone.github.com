@@ -9,13 +9,13 @@ keywords: literate, color, coluer, JRubyArt
 In a previous post I suggested we could use a hash to use web colors in a more literate way, here is a version for a Francophone in [JRubyArt][jruby_art]. Note that we need to convert webstrings to an int within the setup color is a
 [JRubyArt][jruby_art] method.
 
-### coulers.rb ###
+### couluers.rb ###
 
 {% highlight ruby %}
 # encoding: utf-8
 # frozen_string_literal: true
-COULER = %i(jaune rose rouge bleu vert gris noir violet blanc).freeze
-WEB_COULER = %w(
+COULEURS = %i(jaune rose rouge bleu vert gris noir violet blanc).freeze
+WEB_COULEURS = %w(
   #FFFF00
   #FF007F
   #FF0000
@@ -31,8 +31,8 @@ attr_reader :web
 
 def setup
   sketch_title 'Literate Web Colors'
-  cols_int = WEB_COULER.map { |col| color(col) }
-  @web = COULER.zip(cols_int).to_h
+  cols_int = WEB_COULEURS.map { |col| color(col) }
+  @web = COULEURS.zip(cols_int).to_h
   no_loop
 end
 
@@ -63,7 +63,7 @@ end
 
 {% endhighlight %}
 
-<img src="/assets/coulers.png" />
+<img src="/assets/couleurs.png" />
 
 [jruby_art]:https://ruby-processing.github.io/index.html
 
