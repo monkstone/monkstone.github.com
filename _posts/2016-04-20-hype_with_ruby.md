@@ -38,9 +38,7 @@ def setup
   H.init(self)
   H.background(color('#242424'))
   colors = Hype::HColorPool.new
-  WEB_COLORS.each do |col|
-    colors.add(color(col))
-  end
+  WEB_COLORS.each { |col| colors.add(color(col)) }
   pool = HDrawablePool.new(15_876)
   pool.auto_add_to_stage
       .add(HRect.new(5))
