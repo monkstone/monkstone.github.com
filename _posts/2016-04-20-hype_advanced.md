@@ -17,7 +17,7 @@ public interface HCallback {
 
 {% endhighlight %}
 
-Which in vanilla processing Joshua Davis implements this way:-
+Which in vanilla processing Joshua Davis implements using an anonymous class:-
 
 {% highlight java %}
 
@@ -33,7 +33,7 @@ Which in vanilla processing Joshua Davis implements this way:-
   
 {% endhighlight %}
 
-But since java 8 he could have used the java lambda form
+But since java 8 he could have used the java lambda form:-
 
 {% highlight java %}
 
