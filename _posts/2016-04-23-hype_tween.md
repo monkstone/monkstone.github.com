@@ -14,7 +14,7 @@ Unzip the library in the processing libraries folder, rename the folder `hype`, 
 
 In this case we use ruby syntax in the creation of web colors (as color int).  See how we can easily deal with nested callbacks in JRubyArt, much simpler than creating all those instances of `HCallback` (that could probably be replaced by java8 lambda anyway).
 
-### h_canvas.rb ###
+### tween_example.rb ###
 
 {% highlight ruby %}
 # encoding: utf-8
