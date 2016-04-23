@@ -6,7 +6,55 @@ categories: jruby_art update
 keywords: library, hype, JRubyArt
 ---
 
-Here is another example sketch by Joshua Davis, that has been refactored for [JRubyArt][jruby_art]. Download the [hype][hype_library] library from [github][hype_library]. Unzip the library in the processing libraries folder, rename the folder `hype`, rename `distribution` folder to `library`, rename the `HYPE.jar` to `hype.jar`. Check that you can see the library from the processing-3.0.2 ide. Note that we can use snake case in place of camel case, for constants use `::` and not `.` to call. The important thing to learn from this sketch is how to implement the HCallback interface. This can be implemented as a closure (block), note we do not/should not try and use the vanilla processing method. But we do need to cast the object to a `HDrawable` type we do this using `to_java(Java::Hype::HDrawable)` function.
+Here is another example sketch by Joshua Davis, that has been refactored for [JRubyArt][jruby_art]. Download the [hype][hype_library] library from [github][hype_library]. Unzip the library in the processing libraries folder, rename the folder `hype`, rename `distribution` folder to `library`, rename the `HYPE.jar` to `hype.jar`. Check that you can see the library from the processing-3.0.2 ide. Note that we can use snake case in place of camel case, for constants use `::` and not `.` to call. The important thing to learn from this sketch is how to implement the HCallback interface. 
+
+{% highlight java %}
+package hype;
+
+public interface HCallback {
+    public void run(Object obj);
+}
+
+{% endhighlight %}
+
+Which in vanilla processing Joshua Davis implements this way:-
+
+{% highlight java %}
+
+.onCreate(
+    new HCallback() {
+    public void run(Object obj) {
+      HDrawable d = (HDrawable) obj;
+      d.noStroke().noFill().loc( (int)random(width), (int)random(height) ).visibility(false);
+      swarm.addTarget(d);
+    }
+  }
+  )
+  
+{% endhighlight %}
+
+But since java 8 he could have used the java lambda form
+
+{% highlight java %}
+
+.onCreate((Object obj) -> {
+                    HDrawable d = (HDrawable) obj;
+                    d.noStroke().noFill().loc((int) random(width), (int) random(height)).visibility(false);
+                    swarm.addTarget(d);
+                })
+                
+{% endhighlight %}
+
+In JRubyArt it is implemented as a closure (block), note we do not/should not try to use the vanilla processing method. But we do need to cast the object to a `HDrawable` type we do this using `to_java(Java::Hype::HDrawable)` function.
+
+{% highlight ruby %}
+
+.on_create do |obj|
+  d = obj.to_java(Java::Hype::HDrawable)
+  d.no_stroke.no_fill.loc(rand(0..width), rand(0..width)).visibility(false)
+  swarm.add_target(d)
+  
+{% endhighlight %}  
 
 Another important thing to note is this sketch requires the `--nojruby` flag to run;
 
