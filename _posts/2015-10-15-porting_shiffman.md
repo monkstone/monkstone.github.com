@@ -9,7 +9,7 @@ Daniel Shiffman has recently published the second edition of his [Learning Proce
 
 You can send me a tweet @[monkstoneT][twitter]
 
-###Here is a first pass to port the polymorphism sketch
+### Here is a first pass to port the polymorphism sketch ###
 
 It runs but there is room for improvement
 
@@ -153,7 +153,7 @@ class Circle < Shape
 end
 {% endhighlight %}
 
-###Here is second go at porting the Dan Shiffman sketch
+### Here is second go at porting the Dan Shiffman sketch ###
 
 It is definetly getting better.
 
@@ -260,7 +260,7 @@ class Circle < Shape
 end
 {% endhighlight %}
 
-###Finally we have a suitably refactored port the Dan Shiffman sketch
+### Finally we have a suitably refactored port the Dan Shiffman sketch ###
 Here the inheriting classes use a common interface (thus reducing coupling)
 {% highlight ruby %}
 # Learning Processing
