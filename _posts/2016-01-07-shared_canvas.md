@@ -9,7 +9,7 @@ permalink: _posts/net
 
 Here is a vanilla processing sketch (translated to JRubyArt) that uses the processing net library.
 
-###shared_canvas_server.rb
+### shared_canvas_server.rb
 
 {% highlight ruby %}
 # Shared Drawing Canvas (Server)
@@ -59,7 +59,7 @@ def draw
 end
 {% endhighlight %}
 
-###shared_canvas_client.rb
+### shared_canvas_client.rb
 
 {% highlight ruby %}
 # Shared Drawing Canvas (Client)
