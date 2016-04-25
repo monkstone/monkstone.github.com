@@ -8,7 +8,7 @@ regenerate: true
 urls:
   bugs: http://github.com/ruby-processing/jruby_art/issues
   wiki: https://github.com/ruby-processing/JRubyArt/wiki
-  github: https://github.com/monkstone
+  github: https://github.com/monkstone.io
 twitter_username: monkstoneT
 github_username:  monkstone
 syntax-highlighting:
