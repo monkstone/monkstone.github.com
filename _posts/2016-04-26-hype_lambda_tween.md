@@ -7,7 +7,7 @@ keywords: library, hype, JRubyArt, lambda. callbacks
 ---
 
 Here we explore using ruby lambda syntax to implement callbacks with the hype library by Joshua Davis.  See how we can easily deal with nested callbacks in JRubyArt, much simpler than creating all those instances of `HCallback` however we do not really need these lambdas, see [previous post][], and it is probably inefficient to have them. This is just an exercise to show how we can do it we wanted to, if for examples we were prototyping a java version?
-It is not quite as straight-forward as it might seem, note the inclusion of the unused obj parameter for the short form lambda, and its omission from the long form (we do this to satisfy jruby is it a bug, or just something in the design of the hype library?).
+However it is not quite as straight-forward as it might seem, note the inclusion of the required but unused obj parameter for the stabby lambda, and its omission from the long form (so the timer callback expects a lambda of with an arity of zero, whereas the HTween callback expects an arity of one, _go figure_).
 
 ### tween_lambda_example.rb ###
 
