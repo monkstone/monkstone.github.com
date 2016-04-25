@@ -1,21 +1,15 @@
 ---
 layout: post
-title: "Using nested callbacks hype Library"
-date: 2016-04-23 11:40:00
+title: "Using lambda for callbacks hype Library"
+date: 2016-04-25 05:50:00
 categories: jruby_art update
-keywords: library, hype, JRubyArt
-permalink: nested_callbacks
+keywords: library, hype, JRubyArt, lambda. callbacks
 ---
 
-Here is an example sketch by Joshua Davis, from the [hype framework][hype_framework] that has been changed to make use of ruby syntax.
-The declared aim of the [hype][hype_library] library is to provide:-
-__A collection of classes that performs the heavy lifting so that you can create sketches with the minimum amount of code__. When using the [hype][hype_library] library to create [JRubyArt][jruby_art] sketches it is suggested that you not simply ape the [hype framework][hype_framework] examples, but tailor your sketches to take advantage of the ruby language to create even more elegant code (Code as Art), not that it is relevant here. 
+Here we explore using ruby lambda syntax to implement callbacks with the hype library by Joshua Davis.  See how we can easily deal with nested callbacks in JRubyArt, much simpler than creating all those instances of `HCallback` however we do not really need these lambdas, see [previous post][], and it is probably inefficient to have them. This is just an exercise to show how we can do it we wanted to, if for examples we were prototyping a java version?
+It is not quite as straight-forward as it might seem, note the inclusion of the unused obj parameter for the short form lambda, and its omission from the long form (we do this to satisfy jruby is it a bug, or just something in the design of the hype library?).
 
-Unzip the library in the processing libraries folder, rename the folder `hype`, rename `distribution` folder to `library`, rename the `HYPE.jar` to `hype.jar`. Check that you can see the library from the processing-3.0.2 ide. Note that we can use snake case in place of camel case, for constants use `::` and not `.` to call. The important thing to learn from this sketch is how to implement the HCallback interface. This can be implemented as a closure (block), note we do not/should not try and use the vanilla processing method. But when we need to cast the object to a `HDrawable` type, we do this using `to_java(Java::Hype::HDrawable)` function.
-
-In this case we use ruby syntax in the creation of web colors (as color int).  See how we can easily deal with nested callbacks in JRubyArt, much simpler than creating all those instances of `HCallback` (that could probably be replaced by java8 lambda anyway).
-
-### tween_example.rb ###
+### tween_lambda_example.rb ###
 
 {% highlight ruby %}
 # encoding: utf-8
@@ -63,13 +57,16 @@ def setup
                          .start(0).end(255).ease(0.1).spring(0.95)
     r.scale(0).rotation(-90).alpha(0)
     timer = Hype::HTimer.new.interval(250).unregister
-    tween3.callback { timer.register }
-    timer.callback do
+    on_appear = -> obj { timer.register }
+    on_disappear = -> obj { canvas.remove(r) }
+    on_pause = lambda do
+      tween3.callback &on_appear
       timer.unregister
       tween1.start(1).end(2).ease(0.01).spring(0.99).register
       tween2.start(90).end(-90).ease(0.01).spring(0.7).register
-      tween3.start(255).end(0).ease(0.01).spring(0.95).register.callback { canvas.remove(r) }
+      tween3.start(255).end(0).ease(0.01).spring(0.95).register.callback &on_disappear
     end
+    timer.callback &on_pause
   end
 end
 
@@ -82,6 +79,7 @@ end
 
 <img src="/assets/hype_tween.png" />
 
+[previous post]: {{ site.url }}/nested_callbacks/
 [jruby_art]:https://ruby-processing.github.io/index.html
 [hype_library]:https://github.com/hype/HYPE_Processing
 [hype_framework]:http://www.hypeframework.org/
