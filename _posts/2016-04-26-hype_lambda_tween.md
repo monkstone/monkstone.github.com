@@ -29,6 +29,7 @@ COLOR_POOL = %w(#FFFFFF #F7F7F7 #ECECEC #333333 #0095a8 #00616f #FF3300 #FF6600)
 
 def settings
   size(640, 640)
+  # pixel_density 2 # uncomment this if you've got a retina (hi-dpi) display
 end
 
 def setup
