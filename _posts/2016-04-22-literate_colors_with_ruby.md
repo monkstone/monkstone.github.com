@@ -6,7 +6,7 @@ categories: jruby_art update
 keywords: literate, color, coluer, JRubyArt
 ---
 
-In a previous post I suggested we could use a hash to use web colors in a more literate way, here is a version for a Francophone in [JRubyArt][jruby_art]. Note that we need to convert webstrings to an int within the setup color is a
+In a previous post I suggested we could use a hash to use web colors in a more literate way, here is a version for a Francophone in [JRubyArt][jruby_art]. Note that we need to convert webstrings to an int within `setup` since `color` is a
 [JRubyArt][jruby_art] method.
 
 ### couluers.rb ###
