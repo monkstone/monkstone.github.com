@@ -45,7 +45,7 @@ Tigers
 
 ## JRubyArt PBox2D example ##
 
-Alternative [JRubyArt][jruby_art] (anonymous class) Contact Listener implementation see [standalone class][] version.
+A [JRubyArt][jruby_art] implementation of an Contact Listener as an anonymous class in a Box2D listener. See also an alternative Contact Listener implementation as a [standalone class][].
 
 ### contact_listener_implementation.rb ###
 
