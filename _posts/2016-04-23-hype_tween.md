@@ -3,7 +3,7 @@ layout: post
 title: "Using nested callbacks hype Library"
 date: 2016-04-23 11:40:00
 categories: jruby_art update
-keywords: library, hype, JRubyArt
+keywords: library, hype, JRubyArt, java8, lambda
 permalink: nested_callbacks
 ---
 
@@ -11,9 +11,9 @@ Here is an example sketch by Joshua Davis, from the [hype framework][hype_framew
 The declared aim of the [hype][hype_library] library is to provide:-
 __A collection of classes that performs the heavy lifting so that you can create sketches with the minimum amount of code__. When using the [hype][hype_library] library to create [JRubyArt][jruby_art] sketches it is suggested that you not simply ape the [hype framework][hype_framework] examples, but tailor your sketches to take advantage of the ruby language to create even more elegant code (Code as Art), not that it is relevant here. 
 
-Unzip the library in the processing libraries folder, rename the folder `hype`, rename `distribution` folder to `library`, rename the `HYPE.jar` to `hype.jar`. Check that you can see the library from the processing-3.0.2 ide. Note that we can use snake case in place of camel case, for constants use `::` and not `.` to call. The important thing to learn from this sketch is how to implement the HCallback interface. This can be implemented as a closure (block), note we do not/should not try and use the vanilla processing method. But when we need to cast the object to a `HDrawable` type, we do this using `to_java(Java::Hype::HDrawable)` function.
+Unzip the library in the processing libraries folder, rename the folder `hype`, rename `distribution` folder to `library`, rename the `HYPE.jar` to `hype.jar`. Check that you can see the library from the processing-3.0.2 ide. Note that we can use snake case in place of camel case, for constants use `::` and not `.` to call. The important thing to learn from this sketch is how to implement the `HCallback` interface. This can be implemented as a closure (block), note we do not/should not try and use the vanilla processing method. 
 
-In this case we use ruby syntax in the creation of web colors (as color int).  See how we can easily deal with nested callbacks in JRubyArt, much simpler than creating all those instances of `HCallback` (that could probably be replaced by java8 lambda anyway).
+In this case we use ruby syntax in the creation of web color palette (as an array of color int) that we splat into the `HColorPool` constructor.  See how we can easily deal with nested callbacks in JRubyArt, much simpler than creating all those instances of `HCallback` (that could probably all be replaced by java8 lambdas anyway).
 
 ### tween_example.rb ###
 
@@ -31,19 +31,18 @@ module Hype
 end
 
 attr_reader :colors, :canvas
-COLOR_POOL = %w(#FFFFFF #F7F7F7 #ECECEC #333333 #0095a8 #00616f #FF3300 #FF6600).freeze
+PALETTE = %w(#FFFFFF #F7F7F7 #ECECEC #333333 #0095a8 #00616f #FF3300 #FF6600).freeze
 
 def settings
   size(640, 640)
-  # pixel_density 2 # uncomment if you've got retina or other hi-dpi display
 end
 
 def setup
   sketch_title('Tween Example')
   H.init(self)
   H.background(color('#000000'))
-  color_int = COLOR_POOL.map { |col| color(col) }
-  @colors = Hype::HColorPool.new(*color_int)
+  palette = PALETTE.map { |col| color(col) }
+  @colors = Hype::HColorPool.new(*palette)
   H.add(@canvas = HCanvas.new).autoClear(false).fade(1)
   tween_trigger = Hype::HRandomTrigger.new(1.0 / 6)
   tween_trigger.callback do

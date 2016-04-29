@@ -45,14 +45,13 @@ But since java 8 he could have used the java lambda form:-
                 
 {% endhighlight %}
 
-In JRubyArt it is implemented as a closure (block), note we do not/should not try to use the vanilla processing method. But we do need to cast the object to a `HDrawable` type we do this using `to_java(Java::Hype::HDrawable)` function.
+In JRubyArt it is implemented as a closure (block), note we do not/should not try to use the vanilla processing method.
 
 {% highlight ruby %}
 
 .on_create do |obj|
-  d = obj.to_java(Java::Hype::HDrawable)
-  d.no_stroke.no_fill.loc(rand(0..width), rand(0..width)).visibility(false)
-  swarm.add_target(d)
+  obj.no_stroke.no_fill.loc(rand(0..width), rand(0..width)).visibility(false)
+  swarm.add_target(obj)
   
 {% endhighlight %}  
 
@@ -69,7 +68,7 @@ k9 --nojruby run magnetic_field.rb
 # frozen_string_literal: true
 load_library :hype
 include_package 'hype'
-
+# Use Hype namespace
 module Hype
   java_import 'hype.extended.layout.HGridLayout'
   java_import 'hype.extended.behavior.HMagneticField'
@@ -90,9 +89,11 @@ def setup
   @field = Hype::HMagneticField.new
   NUM_MAGNETS.times do
     if rand > 0.5
-      field.add_pole(rand(0..width), rand(0..height), 3) # x, y, north polarity / strength =  3 / repel
+      # x, y, north polarity / strength =  3 / repel
+      field.add_pole(rand(0..width), rand(0..height), 3)
     else
-      field.add_pole(rand(0..width), rand(0..height), -3) # x, y, south polarity / strength = -3 / attract
+      # x, y, south polarity / strength = -3 / attract
+      field.add_pole(rand(0..width), rand(0..height), -3)
     end
   end
 
@@ -101,9 +102,8 @@ def setup
       .add(HShape.new('arrow.svg').enable_style(false).anchor_at(H::CENTER))
       .layout(Hype::HGridLayout.new.start_x(-60).start_y(-60).spacing(16, 16).cols(50))
       .on_create do |obj|
-        d = obj.to_java(Java::Hype::HDrawable)
-        d.no_stroke.anchor(-20, -20)
-        field.add_target(d)
+        obj.no_stroke.anchor(-20, -20)
+        field.add_target(obj)
       end
       .requestAll
 
@@ -112,9 +112,8 @@ def setup
   pool_swarm.auto_add_to_stage
             .add(HRect.new(5))
             .on_create do |obj|
-              d = obj.to_java(Java::Hype::HDrawable)
-              d.no_stroke.no_fill.loc(rand(0..width), rand(0..width)).visibility(false)
-              swarm.add_target(d)
+              obj.no_stroke.no_fill.loc(rand(0..width), rand(0..width)).visibility(false)
+              swarm.add_target(obj)
             end
             .requestAll
 end

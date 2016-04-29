@@ -10,7 +10,7 @@ Here is an example sketch by Joshua Davis, from the [hype framework][hype_framew
 The declared aim of the [hype][hype_library] library is to provide:-
 __A collection of classes that performs the heavy lifting so that you can create sketches with the minimum amount of code__. When using the [hype][hype_library] library to create [JRubyArt][jruby_art] sketches it is suggested that you not simply ape the [hype framework][hype_framework] examples, but tailor your sketches to take advantage of the ruby language to create even more elegant code (Code as Art), not that it is relevant here. 
 
-Unzip the library in the processing libraries folder, rename the folder `hype`, rename `distribution` folder to `library`, rename the `HYPE.jar` to `hype.jar`. Check that you can see the library from the processing-3.0.2 ide. Note that we can use snake case in place of camel case, for constants use `::` and not `.` to call. The important thing to learn from this sketch is how to implement the HCallback interface. This can be implemented as a closure (block), note we do not/should not try and use the vanilla processing method. But when we need to cast the object to a `HDrawable` type, we do this using `to_java(Java::Hype::HDrawable)` function.
+Unzip the library in the processing libraries folder, rename the folder `hype`, rename `distribution` folder to `library`, rename the `HYPE.jar` to `hype.jar`. Check that you can see the library from the processing-3.0.2 ide. Note that we can use snake case in place of camel case, for constants use `::` and not `.` to call. The important thing to learn from this sketch is how to implement the HCallback interface. This can be implemented as a closure (block), note we do not/should not try and use the vanilla processing method. 
 
 In this case we use ruby syntax in the creation of web colors (as color int).  As with other shader sketches the `scanlines.glsl` lives in the data folder, also sketch needs to be run with the `--nojruby` flag.
 
@@ -48,12 +48,12 @@ def setup
   sketch_title 'Scanlines GLSL sketch'
   H.init(self)
   H.background(color('#000000'))
-  cols = COLS.map { |col| color(col) }
+  palette = COLS.map { |col| color(col) }
   @my_shader = load_shader('scanlines.glsl')
   my_shader.set('resolution', 1.0, 1.0)
   my_shader.set('screenres', width.to_f, height.to_f)
   my_shader.set('time', millis / 1000.0)
-  colors = Hype::HColorPool.new(*cols)
+  colors = Hype::HColorPool.new(*palette)
   canvas_shader = H.add(HCanvas.new(P3D)
                    .auto_clear(true)
                    .shader(my_shader))
@@ -63,25 +63,23 @@ def setup
   pool1.auto_add_to_stage
        .add(HRect.new.rounding(4))
        .on_create do |obj|
-    d = obj.to_java(Java::Hype::HDrawable)
-    d.size(rand(50..100))
+    obj.size(rand(50..100))
      .fill(colors.get_color)
      .no_stroke
      .loc(width / 2, height / 2)
      .anchor_at(H::CENTER)
-    swarm.add_target(d)
+    swarm.add_target(obj)
   end
   pool2 = HDrawablePool.new(20)
   pool2.auto_parent(canvas_shader)
        .add(HRect.new.rounding(4))
        .on_create do |obj|
-    d = obj.to_java(Java::Hype::HDrawable)
-    d.size(rand(50..100))
-     .fill(colors.get_color)
-     .no_stroke
-     .loc(width / 2, height / 2)
-     .anchor_at(H::CENTER)
-    swarm.add_target(d)
+    obj.size(rand(50..100))
+       .fill(colors.get_color)
+       .no_stroke
+       .loc(width / 2, height / 2)
+       .anchor_at(H::CENTER)
+    swarm.add_target(obj)
   end
   @timer = Hype::HTimer.new
                        .num_cycles(pool1.num_active)

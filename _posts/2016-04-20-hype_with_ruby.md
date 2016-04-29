@@ -10,9 +10,11 @@ Here is an example sketch by Joshua Davis, from the [hype framework][hype_framew
 The declared aim of the [hype][hype_library] library is to provide:-
 __A collection of classes that performs the heavy lifting so that you can create sketches with the minimum amount of code__. When using the [hype][hype_library] library to create [JRubyArt][jruby_art] sketches it is suggested that you not simply ape the [hype framework][hype_framework] examples, but tailor your sketches to take advantage of the ruby language to create even more elegant code (Code as Art). 
 
-Unzip the library in the processing libraries folder, rename the folder `hype`, rename `distribution` folder to `library`, rename the `HYPE.jar` to `hype.jar`. Check that you can see the library from the processing-3.0.2 ide. Note that we can use snake case in place of camel case, for constants use `::` and not `.` to call. The important thing to learn from this sketch is how to implement the HCallback interface. This can be implemented as a closure (block), note we do not/should not try and use the vanilla processing method. But we do need to cast the object to a `HDrawable` type we do this using `to_java(Java::Hype::HDrawable)` function.
+Unzip the library in the processing libraries folder, rename the folder `hype`, rename `distribution` folder to `library`, rename the `HYPE.jar` to `hype.jar`. Check that you can see the library from the processing-3.0.2 ide. Note that we can use snake case in place of camel case, for constants use `::` and not `.` to call. The important thing to learn from this sketch is how to implement the `HCallback` interface. This can be implemented as a closure (block), note we do not/should not try and use the vanilla processing method. 
 
-In this case we use ruby syntax to `dry out` the creation of web colors. We could make the code more literate by creating a hash of web colors (and call the colors by human readable names, although for web artists that might not be necessary?
+In this case we use ruby syntax to `dry out` the creation of web colors. We first create an array of web color strings `PALETTE`. We then `map` those strings to color int values, creating the array palette.  We then use the `splat` operator in the creation of a new instance of`HColorPool`. We could make the code more literate by creating a hash of web colors (and call the colors by human readable names, although for web artists that might not be necessary)? 
+
+From the above you should realise that it is very easy to experiment with different palettes using the JRubyArt watch mode (best to load up a few at the outset, but they could also be individually edited, because ruby constants are only constant by convention, but you will get `warned`).
 
 ### color_pool.rb ###
 
@@ -27,7 +29,7 @@ module Hype
   java_import 'hype.extended.layout.HGridLayout'
 end
 
-WEB_COLORS = %w(#FFFFFF #F7F7F7 #ECECEC #0095A8 #00616F #333333 #FF3300 #FF6600).freeze
+PALETTE = %w(#FFFFFF #F7F7F7 #ECECEC #0095A8 #00616F #333333 #FF3300 #FF6600).freeze
 
 def settings
   size(600, 600)
@@ -37,16 +39,15 @@ def setup
   sketch_title 'Color Pool'
   H.init(self)
   H.background(color('#242424'))
-  colors = Hype::HColorPool.new
-  WEB_COLORS.each { |col| colors.add(color(col)) }
+  palette = PALETTE.map { |col| color(col) }
+  colors = Hype::HColorPool.new(*palette)  
   pool = HDrawablePool.new(15_876)
   pool.auto_add_to_stage
       .add(HRect.new(5))
       .layout(Hype::HGridLayout.new.start_x(5).start_y(5).spacing(5, 5).cols(126))
       .on_create do |obj|
         i = pool.current_index
-        d = obj.to_java(Java::Hype::HDrawable)
-        d.no_stroke.fill(colors.get_color(i))
+        obj.no_stroke.fill(colors.get_color(i))
       end
       .request_all
   H.draw_stage

@@ -24,20 +24,19 @@ module Hype
   java_import 'hype.extended.colorist.HColorPool'
 end
 
-attr_reader :colors, :canvas
-COLOR_POOL = %w(#FFFFFF #F7F7F7 #ECECEC #333333 #0095a8 #00616f #FF3300 #FF6600).freeze
+attr_reader :canvas
+PALETTE = %w(#FFFFFF #F7F7F7 #ECECEC #333333 #0095a8 #00616f #FF3300 #FF6600).freeze
 
 def settings
   size(640, 640)
-  # pixel_density 2 # uncomment this if you've got a retina (hi-dpi) display
 end
 
 def setup
   sketch_title('Tween Example')
   H.init(self)
   H.background(color('#000000'))
-  color_int = COLOR_POOL.map { |col| color(col) }
-  @colors = Hype::HColorPool.new(*color_int)
+  palette = PALETTE.map { |col| color(col) }
+  colors = Hype::HColorPool.new(*palette)
   H.add(@canvas = HCanvas.new).autoClear(false).fade(1)
   tween_trigger = Hype::HRandomTrigger.new(1.0 / 6)
   tween_trigger.callback do
@@ -58,16 +57,16 @@ def setup
                          .start(0).end(255).ease(0.1).spring(0.95)
     r.scale(0).rotation(-90).alpha(0)
     timer = Hype::HTimer.new.interval(250).unregister
-    on_appear = -> obj { timer.register }
-    on_disappear = -> obj { canvas.remove(r) }
+    on_appear = -> (_obj) { timer.register }
+    on_disappear = -> (_obj) { canvas.remove(r) }
     on_pause = lambda do
-      tween3.callback &on_appear
+      tween3.callback(&on_appear)
       timer.unregister
       tween1.start(1).end(2).ease(0.01).spring(0.99).register
       tween2.start(90).end(-90).ease(0.01).spring(0.7).register
-      tween3.start(255).end(0).ease(0.01).spring(0.95).register.callback &on_disappear
+      tween3.start(255).end(0).ease(0.01).spring(0.95).register.callback(&on_disappear)
     end
-    timer.callback &on_pause
+    timer.callback(&on_pause)
   end
 end
 
