@@ -18,7 +18,6 @@ In this case we use ruby syntax in the creation of web colors (as color int).  A
 
 {% highlight ruby %}
 # encoding: utf-8
-# frozen_string_literal: true
 # Using a simplified scanline shader, this example demonstrates how to apply
 # a PShader to an HCanvas object.
 #
@@ -37,8 +36,7 @@ module Hype
 end
 
 attr_reader :my_shader, :swarm, :timer
-
-COLS = %w(#FFFFFF #F7F7F7 #ECECEC #333333 #0095a8 #00616f #FF3300 #FF6600).freeze
+PALETTE = %w(#FFFFFF #F7F7F7 #ECECEC #333333 #0095a8 #00616f #FF3300 #FF6600).freeze
 
 def settings
   size(640, 640, P3D)
@@ -48,12 +46,11 @@ def setup
   sketch_title 'Scanlines GLSL sketch'
   H.init(self)
   H.background(color('#000000'))
-  palette = COLS.map { |col| color(col) }
   @my_shader = load_shader('scanlines.glsl')
   my_shader.set('resolution', 1.0, 1.0)
   my_shader.set('screenres', width.to_f, height.to_f)
   my_shader.set('time', millis / 1000.0)
-  colors = Hype::HColorPool.new(*palette)
+  colors = Hype::HColorPool.new(web_to_color_array(PALETTE))
   canvas_shader = H.add(HCanvas.new(P3D)
                    .auto_clear(true)
                    .shader(my_shader))

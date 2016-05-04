@@ -65,7 +65,6 @@ k9 --nojruby run magnetic_field.rb
 
 {% highlight ruby %}
 # encoding: utf-8
-# frozen_string_literal: true
 load_library :hype
 include_package 'hype'
 # Use Hype namespace

@@ -13,13 +13,12 @@ __A collection of classes that performs the heavy lifting so that you can create
 
 Unzip the library in the processing libraries folder, rename the folder `hype`, rename `distribution` folder to `library`, rename the `HYPE.jar` to `hype.jar`. Check that you can see the library from the processing-3.0.2 ide. Note that we can use snake case in place of camel case, for constants use `::` and not `.` to call. The important thing to learn from this sketch is how to implement the `HCallback` interface. This can be implemented as a closure (block), note we do not/should not try and use the vanilla processing method. 
 
-In this case we use ruby syntax in the creation of web color palette (as an array of color int) that we splat into the `HColorPool` constructor.  See how we can easily deal with nested callbacks in JRubyArt, much simpler than creating all those instances of `HCallback` (that could probably all be replaced by java8 lambdas anyway).
+In this case we use the `web_to_color_array` convenience method (since JRubyArt-1.0.7) to convert the web string array to color int in the `HColorPool` constructor.  See how we can easily deal with nested callbacks in JRubyArt, much simpler than creating all those instances of `HCallback` (that could probably all be replaced by java8 lambdas anyway).
 
 ### tween_example.rb ###
 
 {% highlight ruby %}
 # encoding: utf-8
-# frozen_string_literal: true
 load_library :hype
 include_package 'hype'
 # namespace for imported classes
@@ -30,7 +29,6 @@ module Hype
   java_import 'hype.extended.colorist.HColorPool'
 end
 
-attr_reader :colors, :canvas
 PALETTE = %w(#FFFFFF #F7F7F7 #ECECEC #333333 #0095a8 #00616f #FF3300 #FF6600).freeze
 
 def settings
@@ -41,9 +39,9 @@ def setup
   sketch_title('Tween Example')
   H.init(self)
   H.background(color('#000000'))
-  palette = PALETTE.map { |col| color(col) }
-  @colors = Hype::HColorPool.new(*palette)
-  H.add(@canvas = HCanvas.new).autoClear(false).fade(1)
+  colors = Hype::HColorPool.new(web_to_color_array(PALETTE))
+  canvas = HCanvas.new
+  H.add(canvas).autoClear(false).fade(1)
   tween_trigger = Hype::HRandomTrigger.new(1.0 / 6)
   tween_trigger.callback do
     r = canvas.add(HRect.new(25 + (rand(0..5) * 25)).rounding(10))

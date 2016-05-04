@@ -12,9 +12,9 @@ __A collection of classes that performs the heavy lifting so that you can create
 
 Unzip the library in the processing libraries folder, rename the folder `hype`, rename `distribution` folder to `library`, rename the `HYPE.jar` to `hype.jar`. Check that you can see the library from the processing-3.0.2 ide. Note that we can use snake case in place of camel case, for constants use `::` and not `.` to call. The important thing to learn from this sketch is how to implement the `HCallback` interface. This can be implemented as a closure (block), note we do not/should not try and use the vanilla processing method. 
 
-In this case we use ruby syntax to `dry out` the creation of web colors. We first create an array of web color strings `PALETTE`. We then `map` those strings to color int values, creating the array palette.  We then use the `splat` operator in the creation of a new instance of`HColorPool`. We could make the code more literate by creating a hash of web colors (and call the colors by human readable names, although for web artists that might not be necessary)? 
+In this case we use ruby syntax to `dry out` the creation of web colors. We first create an array of web color strings `PALETTE`. We then `map` those strings to color int values, creating the array palette.  We then use the palette in the creation of a new instance of`HColorPool`. We could make the code more literate by creating a hash of web colors (and call the colors by human readable names, although for web artists that might not be necessary)? 
 
-From the above you should realise that it is very easy to experiment with different palettes using the JRubyArt watch mode (best to load up a few at the outset, but they could also be individually edited, because ruby constants are only constant by convention, but you will get `warned`).
+From the above you should realise that it is very easy to experiment with different palettes using the JRubyArt watch mode (best to load up a few at the outset, but they could also be individually edited, because ruby constants are only constant by convention, but you will get `warned`).  Since JRubyArt-1.0.7 we can make an even more efficient conversion from an array of web string to an array of java color int using the `web_to_color_array` method, see the [nested callbacks][nested] post.
 
 ### color_pool.rb ###
 
@@ -40,7 +40,7 @@ def setup
   H.init(self)
   H.background(color('#242424'))
   palette = PALETTE.map { |col| color(col) }
-  colors = Hype::HColorPool.new(*palette)  
+  colors = Hype::HColorPool.new(palette)  
   pool = HDrawablePool.new(15_876)
   pool.auto_add_to_stage
       .add(HRect.new(5))
@@ -57,6 +57,7 @@ end
 
 <img src="/assets/color_pool.png" />
 
+[nested]: {{ site.url }}/nested_callbacks
 [jruby_art]:https://ruby-processing.github.io/index.html
 [hype_library]:https://github.com/hype/HYPE_Processing
 [hype_framework]:http://www.hypeframework.org/
