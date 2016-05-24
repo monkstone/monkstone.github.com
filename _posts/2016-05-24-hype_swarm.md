@@ -3,7 +3,7 @@ layout: post
 title: "Using HLocatable and HSwarm from the hype Library"
 date: 2016-05-24 11:40:00
 categories: jruby_art update
-keywords: library, hype, JRubyArt, java8, lambda
+keywords: library, hype, JRubyArt, java8, proc
 
 ---
 
@@ -15,7 +15,7 @@ Unzip the library in the processing libraries folder, rename the folder `hype`, 
 
 In this case we use the `web_to_color_array` convenience method (since JRubyArt-1.0.7) to convert the web string array to color int in the `HColorPool` constructor.  Note that we create the `on_anim` callback as a proc (if we had used lambda we would need a dummy `_obj` argument to implement the callback interface, because we are using `obj` from the original callback). I'm not entirely sure we are getting same behaviour with the targets as the original (need investigation).
 
-### tween_example.rb ###
+### hype_swarm.rb ###
 
 {% highlight ruby %}
 # encoding: utf-8
