@@ -279,4 +279,4 @@ end
 [vec3d]:https://ruby-processing.github.io/classes/vec3d/
 [vec2d]:https://ruby-processing.github.io/classes/vec2d/
 [forwardable]:http://ruby-doc.org/stdlib-2.0.0/libdoc/forwardable/rdoc/Forwardable.html
-[example]:https://github.com/ruby-processing/samples4ruby-processing3/blob/master/processing_app/library/boids/boids_example.rb
+[example]:https://github.com/ruby-processing/JRubyArt-examples/blob/master/processing_app/library/boids/boids_example.rb

@@ -38,5 +38,5 @@ k9 run my_sketch.rb # uses an installed jruby or
 k9 --nojruby run my_sketch.rb # to use jruby-complete
 {% endhighlight %}
 
-[jwishy]: https://github.com/ruby-processing/samples4ruby-processing3/blob/master/contributed/jwishy.rb
-[drawolver]: https://github.com/ruby-processing/samples4ruby-processing3/blob/master/contributed/drawolver.rb
+[jwishy]: https://github.com/ruby-processing/JRubyArt-examples/blob/master/contributed/jwishy.rb
+[drawolver]: https://github.com/ruby-processing/JRubyArt-examples/blob/master/contributed/drawolver.rb
