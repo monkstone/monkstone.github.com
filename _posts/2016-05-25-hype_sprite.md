@@ -13,7 +13,7 @@ __A collection of classes that performs the heavy lifting so that you can create
 
 Unzip the library in the processing libraries folder, rename the folder `hype`, rename `distribution` folder to `library`, rename the `HYPE.jar` to `hype.jar`. Check that you can see the library from the processing-3.0.2 ide. Note that we can use snake case in place of camel case, for constants use `::` and not `.` to call. The important thing to learn from this sketch is how to implement the `HCallback` interface. This can be implemented as a closure (block), note we do not/should not try and use the vanilla processing method. 
 
-In this case we use the `web_to_color_array` convenience method (since JRubyArt-1.0.7) to convert the web string array to color int in the `HColorPool` constructor.  Note that we create the `on_anim` callback as a proc (if we had used lambda we would need a dummy `_obj` argument to implement the callback interface, because we are using `obj` from the original callback). I'm not entirely sure we are getting same behaviour with the targets as the original (need investigation).
+In this case we use the `web_to_color_array` convenience method (since JRubyArt-1.0.7) to convert the web string array to color int in the `HColorPool` constructor.  Note that we do not create a copy of the `obj` from the callback, as this appears to be an uneccesary step.
 
 ### hype_sprite.rb ###
 
