@@ -13,7 +13,7 @@ __A collection of classes that performs the heavy lifting so that you can create
 
 Unzip the library in the processing libraries folder, rename the folder `hype`, rename `distribution` folder to `library`, rename the `HYPE.jar` to `hype.jar`. Check that you can see the library from the processing-3.0.2 ide. Note that we can use snake case in place of camel case, for constants use `::` and not `.` to call. The important thing to learn from this sketch is how to implement the `HCallback` interface. This can be implemented as a closure (block), note we do not/should not try and use the vanilla processing method. 
 
-In this case we use the `web_to_color_array` convenience method (since JRubyArt-1.0.7) to create a hash of color int with symbol keys.  
+In this case we use the `web_to_color_array` convenience method (since JRubyArt-1.0.7) to create a hash of color int with symbol keys. Note that hype constants require the `H::` prefix, whereas processing constants do not (because we already include the PConstants interface). 
 
 ### hype_proximity.rb ###
 
