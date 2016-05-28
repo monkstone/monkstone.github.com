@@ -1,3 +1,4 @@
+
 ---
 layout: post
 title: "Video Capture Filter JRubyArt"
@@ -16,7 +17,7 @@ attr_reader :cam, :my_shader
 
 def setup
   sketch_title 'Black White Capture'
-  @my_shader = load_shader('bwfrag.glsl')
+  @my_shader = load_shader(data_path('bwfrag.glsl'))
   start_capture(width, height)
 end
 
