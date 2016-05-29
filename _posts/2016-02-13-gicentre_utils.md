@@ -6,7 +6,7 @@ categories: jruby_art update
 keywords: library, gicentre, chart, JRubyArt
 ---
 
-Here is an example sketch by Jo Wood, that has been refactored for [JRubyArt][jruby_art]. Install the [gicentreUtils][gicentre] library from the processing-3.0.2 ide. Demonstrated in this sketch, is how to specify utf-8 encoding and frozen string pragma, getting ready for JRuby-9.1.0.0. Also note that instead of using the egregious java get/set pragma eg `setBarGap` etc in ruby we can use the much nicer `bar_gap =` to set values, _and use snake case_ see setup.
+Here is an example sketch by Jo Wood, that has been refactored for [JRubyArt][jruby_art]. Install the [gicentreUtils][gicentre] library from the processing-3.1.1 ide. Demonstrated in this sketch, is how to specify utf-8 encoding and frozen string pragma, getting ready for JRuby-9.1.0.0. Also note that instead of using the egregious java get/set pragma eg `setBarGap` etc in ruby we can use the much nicer `bar_gap =` to set values, _and use snake case_ see setup.
 
 ### bar_chart.rb ###
 
