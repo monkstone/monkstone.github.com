@@ -18,8 +18,9 @@ def draw
 end
 
 def settings
-  size 300, 300 #, {optional mode}
-  # full_screen, smooth etc go here
+  size 300, 300 # or full_screen
+  # pixel_density(density) # density = 2 for hi dpi display (eg retina)
+  # smooth # goes here
 end
 {% endhighlight %}
 

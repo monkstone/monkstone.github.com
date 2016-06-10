@@ -23,8 +23,9 @@ class MySketch < Processing::App
   end
 
   def settings
-    size 300, 300
-    # smooth # here
+    size 300, 300 # or full_screen
+    # pixel_density(density) # density = 2 for hi dpi display (eg retina)
+    # smooth # goes here
   end
 end
 
