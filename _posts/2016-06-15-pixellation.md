@@ -121,6 +121,26 @@ My friend Phil Sutton RA painting after pixellation (size of dots is governed by
 
 <img src="/assets/after.png" />
 
+Using the following cfdg file:-
+
+```cfdg
+CF::Background = [b -1]
+
+startshape haddock
+
+shape dot
+  rule 100{dot[r 7]}
+  rule 10{dot[s 1.09 1 a -.1]}
+  rule 10{dot[s 1.09 1 a -.1]}
+  rule {TRIANGLE[]}
+  rule {CIRCLE[]}
+  rule {SQUARE[]}
+
+import data.cfdg
+```
+
+<img src="/assets/variation.png" />
+
 [context]:http://www.contextfreeart.org
 [jruby_art]:https://ruby-processing.github.io/index.html
 [file_chooser]:http://ruby-processing.github.io/classes/chooser
