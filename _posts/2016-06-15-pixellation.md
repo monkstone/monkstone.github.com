@@ -13,7 +13,13 @@ This sketch features the new JRubyArt [chooser][file_chooser] library. But to ma
 
 {% highlight ruby %}
 load_library :chooser
-attr_reader :img, :data, :skip
+attr_reader :img, :data, :skip, :poster
+
+###########
+# Sophisticated example of file chooser.
+###########
+
+KEYS = %w(0 4 5 6 7 8 9)
 
 def settings
   size 500, 500
@@ -25,12 +31,14 @@ def setup
   resizable
   fill 0, 0, 200
   text('Click Window to Load Image', 10, 100)
-  @skip = 5 # controls apparent resolution
+  @skip = 10 # controls apparent resolution
   @data = []
+  @poster = 0
 end
 
 def draw
   image(img, 0, 0) unless img.nil?
+  filter(POSTERIZE, poster) unless poster == 0
 end
 
 def write_data(name, data)
@@ -79,6 +87,8 @@ def key_pressed
     puts 'done'
   when 's', 'S'
     save_frame(data_path('original.png'))
+  when *KEYS
+    @poster = key.to_i
   else
     puts format('key %s was pressed', key)
   end
@@ -100,7 +110,6 @@ def pixellate
   end
   write_start 'haddock', data
 end
-
 
 {% endhighlight %}
 
