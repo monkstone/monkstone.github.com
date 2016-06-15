@@ -104,7 +104,7 @@ end
 
 {% endhighlight %}
 
-My friend Phil Sutton RA painting (before)
+My friend Phil Sutton RA painting (before). Phil was a contemporary of the late Harold Cohen, and told me that Harold used to paint with dots back in the day. Both artists are featured in [Six young Painters][six] The Arts Council (1956).
 
 <img src="/assets/before.png" />
 
@@ -115,3 +115,4 @@ My friend Phil Sutton RA painting after pixellation (size of dots is governed by
 [context]:http://www.contextfreeart.org
 [jruby_art]:https://ruby-processing.github.io/index.html
 [file_chooser]:http://ruby-processing.github.io/classes/chooser
+[six]:https://www.amazon.co.uk/Six-Young-Painters-Michael-Andrews/dp/B00NRMKB6G
