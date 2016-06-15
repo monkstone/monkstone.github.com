@@ -7,7 +7,7 @@ keywords: contextfreeart, pixellation, JRubyArt, file_chooser
 
 ---
 
-This sketch features the new JRubyArt [chooser][file_chooser] library. But to make any sense requires that you have the [context free art][context] program installed. What this sketch does is analyse a images pixels and translates the information to a context free art sketch (consisting of haddock.cfdg and data.cfdg). You next use the context free art program to generate and image (movie) using haddock.cfdg (which loads data.cfdg). There are many opportunities to refine the cfdg sketch (you could replace circles with random shapes, but much more than that), or change the way the data.cfdg is produced, the possibilities are endless. One tip start with a smaller image than you want to create.
+This sketch features the new JRubyArt [chooser][file_chooser] library. But to make any sense requires that you have the [context free art][context] program installed. What this sketch does is analyse a images pixels and translates the information to a context free art sketch (consisting of haddock.cfdg and data.cfdg). You next use the context free art program to generate a image (movie) using haddock.cfdg (which loads data.cfdg). There are many opportunities to refine the cfdg sketch (you could replace circles with random shapes, but much more than that), or change the way the data.cfdg is produced, the possibilities are endless. One tip start with a smaller image than you want to create.
 
 ### pixellator.rb ###
 
@@ -104,7 +104,7 @@ end
 
 {% endhighlight %}
 
-My friend Phil Sutton RA painting (before). Phil was a contemporary of the late Harold Cohen, and told me that Harold used to paint with dots back in the day. Both artists are featured in [Six young Painters][six] The Arts Council (1956).
+My friend Phil Sutton RA painting (before). Phil was a contemporary of the late Harold Cohen, and told me that Harold used to paint with dots back in the day. Both artists are featured in [Six young Painters][six] The Arts Council (1956). Phil has remained resolutely a fauvist see some of his [work here][work] and some of his publicly owned work including some of his [Shakespeare paintings][shake].
 
 <img src="/assets/before.png" />
 
@@ -116,3 +116,5 @@ My friend Phil Sutton RA painting after pixellation (size of dots is governed by
 [jruby_art]:https://ruby-processing.github.io/index.html
 [file_chooser]:http://ruby-processing.github.io/classes/chooser
 [six]:https://www.amazon.co.uk/Six-Young-Painters-Michael-Andrews/dp/B00NRMKB6G
+[work]:http://www.philipsuttonra.com/
+[shake]:http://artuk.org/discover/artworks/search/actor:sutton-philip-b-1928
