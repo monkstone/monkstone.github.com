@@ -14,7 +14,8 @@ It is an unfortunate truth that `java reflection methods` are popular with both 
 - create a jar (and place it in the same folder as your sketch)
 - modify the sketch to both `require` the `jar` and to `include` the interface. 
 
-###VideoInterface.java
+### VideoInterface.java ###
+
 See [javadoc here][video]
 {% highlight java %}
 package monkstone.videoevent;
@@ -52,7 +53,8 @@ jar -cvf video_event.jar monkstone
 
 See below a sketch which using this VideoEvent interface, see the version using the JRubyArt provided `:video_event` library [here][bw]
 
-###black_white_capture.rb
+### black_white_capture.rb ###
+
 {% highlight ruby %}
 require_relative 'video_event'
 load_libraries :video
@@ -91,7 +93,8 @@ end
 
 Now where this knowledge becomes really useful, is when you want to use another library, say the vanilla processing carnivore library whose `packetEvent` method also depends on java relection. Here is a suitable CarnivoreListener class.
 
-###CarnivoreListener.java
+### CarnivoreListener.java ###
+
 {% highlight java %}
 
 package monkstone;
@@ -118,7 +121,7 @@ jar -cvf carnivore_listener.jar monkstone
 
 Here is an example sketch:-
 
-###carnivore1.rb
+### carnivore1.rb ###
 
 {% highlight ruby %}
 # A Simple Carnivore Client -- print packets in Processing console
