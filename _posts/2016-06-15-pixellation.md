@@ -141,9 +141,49 @@ import data.cfdg
 
 <img src="/assets/variation.png" />
 
+Or for something mindblowing (best with [B+W image variant][gray]) checkout kiplings [cheche.cfdg][cheche]
+
+```c++
+/*
+    cheche
+ 
+    By AK, July 2012
+ 
+    messing around with Monkstone's "Che"
+    (contextfree.org/gallery/view.php?id=2941)
+ 
+    Render: 3200*3200 with threshold=0.1
+ 
+    Variations: n/a
+*/
+ 
+CF::Background = [sat 1 b -.3]
+ 
+startshape che
+ 
+che_ht=284
+che_wd=232
+pix_scale=.006
+shape dot
+ rule 3{dot[z 1]}
+ rule {
+    SQUARE[a -.4 s (che_wd*pix_scale) (che_ht*pix_scale)]
+    reche[[s pix_scale z .1 b -1]]
+    }
+ 
+shape reche {
+    SQUARE[a -.3 sat 1 b .5 s che_wd che_ht]
+    che[[x (-che_wd/2) y (che_ht/2) z .1]]
+    }
+ 
+import data.cfdg
+```
+
 [context]:http://www.contextfreeart.org
+[cheche]:http://www.contextfreeart.org/gallery/view.php?id=2945
 [jruby_art]:https://ruby-processing.github.io/index.html
 [file_chooser]:http://ruby-processing.github.io/classes/chooser
 [six]:https://www.amazon.co.uk/Six-Young-Painters-Michael-Andrews/dp/B00NRMKB6G
 [work]:http://www.philipsuttonra.com/
 [shake]:http://artuk.org/discover/artworks/search/actor:sutton-philip-b-1928
+[gray]:https://github.com/ruby-processing/JRubyArt-examples/blob/master/processing_app/library/file_chooser/gray.rb
