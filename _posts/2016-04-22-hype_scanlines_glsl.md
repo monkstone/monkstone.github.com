@@ -12,7 +12,7 @@ __A collection of classes that performs the heavy lifting so that you can create
 
 Unzip the library in the processing libraries folder, rename the folder `hype`, rename `distribution` folder to `library`, rename the `HYPE.jar` to `hype.jar`. Check that you can see the library from the processing-3.1.1 ide. Note that we can use snake case in place of camel case, for constants use `::` and not `.` to call. The important thing to learn from this sketch is how to implement the HCallback interface. This can be implemented as a closure (block), note we do not/should not try and use the vanilla processing method. 
 
-In this case we use ruby syntax in the creation of web colors (as color int).  As with other shader sketches the `scanlines.glsl` lives in the data folder, also sketch needs to be run with the `--nojruby` flag.
+In this case we use ruby syntax in the creation of web colors (as color int).  As with other shader sketches the `scanlines.glsl` lives in the data folder.
 
 ### h_canvas.rb ###
 

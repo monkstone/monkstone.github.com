@@ -28,13 +28,13 @@ end
 To create such a sketch use:-
 
 {% highlight bash %}
-k9 create my_sketch 300 300 --wrap
+k9 --create my_sketch 300 300 # with `template: class` in config.yml
 {% endhighlight %}
 
 To run such sketch in live mode use:-
 
 {% highlight bash %}
-k9 live my_sketch.rb
+k9 --live my_sketch.rb
 {% endhighlight %}
 
 

@@ -53,12 +53,11 @@ In JRubyArt it is implemented as a closure (block), note we do not/should not tr
   obj.no_stroke.no_fill.loc(rand(0..width), rand(0..width)).visibility(false)
   swarm.add_target(obj)
   
-{% endhighlight %}  
+{% endhighlight %} 
 
-Another important thing to note is this sketch requires the `--nojruby` flag to run;
 
 {% highlight bash %}
-k9 --nojruby run magnetic_field.rb
+k9 --run magnetic_field.rb
 {% endhighlight %}
 
 ### magnetic_field.rb ###
@@ -98,7 +97,7 @@ def setup
 
   @pool = HDrawablePool.new(2_500)
   pool.auto_add_to_stage
-      .add(HShape.new('arrow.svg').enable_style(false).anchor_at(H::CENTER))
+      .add(HShape.new(data_path('arrow.svg')).enable_style(false).anchor_at(H::CENTER))
       .layout(Hype::HGridLayout.new.start_x(-60).start_y(-60).spacing(16, 16).cols(50))
       .on_create do |obj|
         obj.no_stroke.anchor(-20, -20)

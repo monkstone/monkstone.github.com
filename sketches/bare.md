@@ -29,14 +29,14 @@ Example Usages: [JWishy][jwishy], [Drawolver][drawolver]
 To create a P2D sketch use:-
 
 {% highlight bash %}
-k9 create my_sketch 300 300 p2d
+k9 --create my_sketch 300 300 p2d # default is to use `bare` template
 {% endhighlight %}
 
 To run such a sketch use:-
 
 {% highlight bash %}
-k9 run my_sketch.rb # uses an installed jruby or
-k9 --nojruby run my_sketch.rb # to use jruby-complete
+# default is to use an installed jruby 
+k9 --run my_sketch.rb # to use jruby-complete set `JRUBY: false` in `config.yml`
 {% endhighlight %}
 
 [jwishy]: https://github.com/ruby-processing/JRubyArt-examples/blob/master/contributed/jwishy.rb
