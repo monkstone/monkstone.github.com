@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Setting up Atom for JRubyArt"
-date: 2016-07-28 13:00:00
+date: 2016-07-29 16:00:00
 categories: jruby_art update
 keywords: atom, processing, jruby_art 
 permalink: _posts/atom-jruby_art
@@ -35,5 +35,5 @@ Emacs wrapped sketch files will run directly with the `script` package but futur
 
 [atom]:https://atom.io/
 [releases]:https://github.com/atom/atom/releases/tag/v1.8.0
-[jedit]:https://ruby-processing.github.io/editors/
-[vim]:https://ruby-processing.github.io/editors/
+[jedit]:http://ruby-processing.github.io/JRubyArt/editors
+[vim]:http://ruby-processing.github.io/JRubyArt/editors
