@@ -37,3 +37,16 @@ What`s it look like?:-
 ### For the adventurous ###
 
 You could write your own package to `k9 --run` JRubyArt sketches, `emacs` wrapped sketches can run as ruby scripts, so only need the `script` package to run them.
+
+PS: there is probably bit of performance hit cf running from jEdit or the processing ide (but the look and feel is much better). With JRubyArt you could create an outline sketch from a regular console ideally in empty folder:-
+
+```bash
+k9 --create fred 200 200
+```
+
+Set it running in watch mode
+
+```
+k9 --watch fred.rb
+```
+Then edit the sketch from atom, to see the effect of your changes you only need to save the sketch (best of all worlds, a clean modern editor that should not compromise performance). 
