@@ -95,7 +95,7 @@ end
 # Hartmut Bohnacker, Benedikt Gross, Julia Laub, Claudius Lazzeroni
 # Copyright 2009 Hartmut Bohnacker, Benedikt Gross, Julia Laub, Claudius Lazzeroni
 #
-# https://www.generative-gestaltung.de
+# http://www.generative-gestaltung.de
 #
 # Licensed under the Apache License, Version 2.0 (the "License")
 # you may not use this file except in compliance with the License.
@@ -142,7 +142,7 @@ def draw
 end
 {% endhighlight %}
 
-[generative]:https://www.generative-gestaltung.de
-[code]:https://www.generative-gestaltung.de/code
+[generative]:http://www.generative-gestaltung.de
+[code]:http://www.generative-gestaltung.de/code
 [twitter]:https://twitter.com/monkstoneT
 [sketches]:https://github.com/ruby-processing/Generative-Design-Code-in-Ruby
