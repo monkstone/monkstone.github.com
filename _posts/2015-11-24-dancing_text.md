@@ -58,4 +58,4 @@ end
 
 {% endhighlight %}
 
-[gem]:http://ruby-processing.github.io/geomerativegem/
+[gem]:https://ruby-processing.github.io/geomerativegem/

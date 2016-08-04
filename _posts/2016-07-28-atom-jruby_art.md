@@ -35,5 +35,5 @@ Emacs wrapped sketch files will run directly with the `script` package but futur
 
 [atom]:https://atom.io/
 [releases]:https://github.com/atom/atom/releases/tag/v1.8.0
-[jedit]:http://ruby-processing.github.io/JRubyArt/editors
-[vim]:http://ruby-processing.github.io/JRubyArt/editors
+[jedit]:https://ruby-processing.github.io/JRubyArt/editors
+[vim]:https://ruby-processing.github.io/JRubyArt/editors

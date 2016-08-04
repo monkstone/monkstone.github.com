@@ -1,8 +1,7 @@
-
 ---
 layout: post
 title: "Video Capture Filter JRubyArt"
-date: 2015-12-03 00:00:00
+date: 2015-12-03 10:00:00
 categories: jruby_art update
 keywords: library, filter, capture, glsl, JRubyArt
 permalink: _posts/video_filter

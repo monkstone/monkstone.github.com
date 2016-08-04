@@ -278,7 +278,7 @@ end
 
 <img src="/assets/frame_of_reference.png" />
 
-[arcball]:http://ruby-processing.github.io/classes/arcball/
-[vec3d]:http://ruby-processing.github.io/classes/vec3d/
-[render]:http://ruby-processing.github.io/app_render/
+[arcball]:https://ruby-processing.github.io/classes/arcball/
+[vec3d]:https://ruby-processing.github.io/classes/vec3d/
+[render]:https://ruby-processing.github.io/app_render/
 [tips]:https://github.com/irajgreenberg/ProcessingTips

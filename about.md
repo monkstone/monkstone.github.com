@@ -12,4 +12,4 @@ NB: this blog has been updated for JRubyArt-1.2.0+
 [processing]:https://processing.org
 [gem]:{{ site.url }}/_posts/pbox2d/
 [libraries]:https://processing.org/reference/libraries/
-[jruby_art]:http://ruby-processing.github.io/JRubyArt/
+[jruby_art]:https://ruby-processing.github.io/JRubyArt/

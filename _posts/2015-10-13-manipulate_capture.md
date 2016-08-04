@@ -15,7 +15,7 @@ Here is the sketch code:-
 {% highlight ruby %}
 # Learning Processing
 # Daniel Shiffman
-# http://www.learningprocessing.com
+# https://www.learningprocessing.com
 
 # Example 16-2: Manipulate video image
 
@@ -75,6 +75,6 @@ end
 I have also ported [The Nature of Code][nature] to JRubyArt.
 
 [nature]:https://github.com/ruby-processing/The-Nature-of-Code-for-JRubyArt
-[shiffman]:http://learningprocessing.com/
+[shiffman]:https://learningprocessing.com/
 [code]:https://github.com/shiffman/LearningProcessing
 [twitter]:https://twitter.com/monkstoneT

@@ -16,7 +16,7 @@ It runs but there is room for improvement
 {% highlight ruby %}
 # Learning Processing
 # Daniel Shiffman
-# http://www.learningprocessing.com
+# https://www.learningprocessing.com
 
 # Example 22-2: Polymorphism
 
@@ -56,7 +56,7 @@ Here is the parent Shape class
 {% highlight ruby %}
 # Learning Processing
 # Daniel Shiffman
-# http://www.learningprocessing.com
+# https://www.learningprocessing.com
 
 # Example 22-2: Polymorphism
 # class Shape does not require Processing::Proxy but can pass it on to
@@ -87,7 +87,7 @@ Here is the Square class
 {% highlight ruby %}
 # Learning Processing
 # Daniel Shiffman
-# http://www.learningprocessing.com
+# https://www.learningprocessing.com
 
 # Example 22-2: Polymorphism
 require_relative 'shape'
@@ -115,7 +115,7 @@ Here is the Circle class
 {% highlight ruby %}
 # Learning Processing
 # Daniel Shiffman
-# http://www.learningprocessing.com
+# https://www.learningprocessing.com
 
 # Example 22-2: Polymorphism
 require_relative 'shape'
@@ -160,7 +160,7 @@ It is definetly getting better.
 {% highlight ruby %}
 # Learning Processing
 # Daniel Shiffman
-# http://www.learningprocessing.com
+# https://www.learningprocessing.com
 
 # Example 22-2: Polymorphism
 
@@ -199,7 +199,7 @@ The improved Square class, note no call to super is required (wasn't previously 
 {% highlight ruby %}
 # Learning Processing
 # Daniel Shiffman
-# http://www.learningprocessing.com
+# https://www.learningprocessing.com
 
 # Example 22-2: Polymorphism
 require_relative 'shape'
@@ -223,7 +223,7 @@ The improved Circle class, now in color, to match improved ruby.
 {% highlight ruby %}
 # Learning Processing
 # Daniel Shiffman
-# http://www.learningprocessing.com
+# https://www.learningprocessing.com
 
 # Example 22-2: Polymorphism
 require_relative 'shape'
@@ -265,7 +265,7 @@ Here the inheriting classes use a common interface (thus reducing coupling)
 {% highlight ruby %}
 # Learning Processing
 # Daniel Shiffman
-# http://www.learningprocessing.com
+# https://www.learningprocessing.com
 
 # Example 22-2: Polymorphism
 
@@ -303,7 +303,7 @@ end
 The abstract Shape class
 {% highlight ruby %}
 # Daniel Shiffman
-# http://www.learningprocessing.com
+# https://www.learningprocessing.com
 
 # Example 22-2: Polymorphism
 # class Shape does not require Processing::Proxy but can pass it on to
@@ -343,7 +343,7 @@ The Square class
 {% highlight ruby %}
 # Learning Processing
 # Daniel Shiffman
-# http://www.learningprocessing.com
+# https://www.learningprocessing.com
 
 # Example 22-2: Polymorphism
 require_relative 'shape'
@@ -411,6 +411,6 @@ end
 I have also ported [The Nature of Code][nature] to JRubyArt.
 
 [nature]:https://github.com/ruby-processing/The-Nature-of-Code-for-JRubyArt
-[shiffman]:http://learningprocessing.com/
+[shiffman]:https://learningprocessing.com/
 [code]:https://github.com/shiffman/LearningProcessing
 [twitter]:https://twitter.com/monkstoneT

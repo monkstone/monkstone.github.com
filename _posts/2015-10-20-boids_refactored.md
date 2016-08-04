@@ -11,7 +11,7 @@ See the full library code below:-
 
 {% highlight ruby %}
 # Boids -- after Tom de Smedt.
-# See his Python version: http://nodebox.net/code/index.php/Boids
+# See his Python version: https://nodebox.net/code/index.php/Boids
 # This is an example of how a pure-Ruby library can work. Original for
 # ruby-processing Jeremy Ashkenas. Reworked, re-factored for JRubyArt 1.0+
 # by Martin Prout, features forwardable, keyword args, Vec3D and Vec2D.
@@ -278,5 +278,5 @@ end
 [original]:https://github.com/jashkenas/ruby-processing/blob/8865c934318e05e62cbfa2603e661275b1cffd31/library/boids/boids.rb
 [vec3d]:https://ruby-processing.github.io/classes/vec3d/
 [vec2d]:https://ruby-processing.github.io/classes/vec2d/
-[forwardable]:http://ruby-doc.org/stdlib-2.0.0/libdoc/forwardable/rdoc/Forwardable.html
+[forwardable]:https://ruby-doc.org/stdlib-2.0.0/libdoc/forwardable/rdoc/Forwardable.html
 [example]:https://github.com/ruby-processing/JRubyArt-examples/blob/master/processing_app/library/boids/boids_example.rb

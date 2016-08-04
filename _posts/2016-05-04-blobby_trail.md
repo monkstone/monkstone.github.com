@@ -53,4 +53,4 @@ end
 <img src="/assets/blobby_trail.png" />
 
 [jruby_art]:https://ruby-processing.github.io/index.html
-[gem]:http://ruby-processing.github.io/geomerativegem/
+[gem]:https://ruby-processing.github.io/geomerativegem/
