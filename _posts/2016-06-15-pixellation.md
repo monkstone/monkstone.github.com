@@ -179,11 +179,11 @@ shape reche {
 import data.cfdg
 ```
 
-[context]:https://www.contextfreeart.org
-[cheche]:https://www.contextfreeart.org/gallery/view.php?id=2945
+[context]:http://www.contextfreeart.org
+[cheche]:http://www.contextfreeart.org/gallery/view.php?id=2945
 [jruby_art]:https://ruby-processing.github.io/index.html
 [file_chooser]:https://ruby-processing.github.io/classes/chooser
 [six]:https://www.amazon.co.uk/Six-Young-Painters-Michael-Andrews/dp/B00NRMKB6G
-[work]:https://www.philipsuttonra.com/
+[work]:http://www.philipsuttonra.com/
 [shake]:https://artuk.org/discover/artworks/search/actor:sutton-philip-b-1928
 [gray]:https://github.com/ruby-processing/JRubyArt-examples/blob/master/processing_app/library/file_chooser/gray.rb
