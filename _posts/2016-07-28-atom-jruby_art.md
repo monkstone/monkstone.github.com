@@ -23,9 +23,9 @@ Tough luck if you want the 32 bit version on linux
 
 ### Install Packages ###
 
-From the atom editor install the `build`, `rake-build` and `script` packages.
+From the atom editor install the `project-runner` and `script` packages.
 
-To explore JRubyArt examples open `k9_samples` folder as a project, select `build` from the menu, then choose the rake tasks from the sub-menu, launches sketches in a random order per folder.
+To explore JRubyArt examples open `k9_samples` folder, select `project-runner` from the menu, then choose the run from the sub-menu, launches sketches in a random order per folder.
 
 ### What's it look like ###
 
@@ -34,6 +34,6 @@ To explore JRubyArt examples open `k9_samples` folder as a project, select `buil
 Emacs wrapped sketch files will run directly with the `script` package but future work (you could do this) may enable `k9 --run sketch` from the editor _cf_ [jEdit][jedit] and [vim][vim].
 
 [atom]:https://atom.io/
-[releases]:https://github.com/atom/atom/releases/tag/v1.8.0
+[releases]:https://github.com/atom/atom/releases/tag/v1.9.0
 [jedit]:https://ruby-processing.github.io/JRubyArt/editors
 [vim]:https://ruby-processing.github.io/JRubyArt/editors
