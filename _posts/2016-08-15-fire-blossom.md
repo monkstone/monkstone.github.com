@@ -69,7 +69,9 @@ end
 
 FireBlossom.new
 ```
+
 ### What's it look like ###
+
 
 ![fire-blossom.png]({{ github.site.url }}/assets/fire-blossom.png)
 
