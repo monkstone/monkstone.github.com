@@ -4,7 +4,7 @@ title: "An old ruby-processing sketch in propane"
 date: 2016-08-15 10:00:00
 categories: jruby_art update
 keywords: ruby-processing, propane
-permalink: _posts/atom-propane
+
 ---
 Here is an example of a static sketch in propane (there is no need for a draw loop)
 
