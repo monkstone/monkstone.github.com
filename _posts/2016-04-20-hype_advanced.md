@@ -6,7 +6,7 @@ categories: jruby_art update
 keywords: library, hype, JRubyArt
 ---
 
-Here is another example sketch by Joshua Davis, that has been refactored for [JRubyArt][jruby_art]. Download the [hype][hype_library] library from [github][hype_library]. Unzip the library in the processing libraries folder, rename the folder `hype`, rename `distribution` folder to `library`, rename the `HYPE.jar` to `hype.jar`. Check that you can see the library from the processing-3.1.1 ide. Note that we can use snake case in place of camel case, for constants use `::` and not `.` to call. The important thing to learn from this sketch is how to implement the HCallback interface. 
+Here is another example sketch by Joshua Davis, that has been refactored for [JRubyArt][jruby_art]. Download the [hype][hype_library] library from [github][hype_library]. Unzip the library in the processing libraries folder, rename the folder `hype`, rename `distribution` folder to `library`, rename the `HYPE.jar` to `hype.jar`. Check that you can see the library from the processing-3.2.1 ide. Note that we can use snake case in place of camel case, for constants use `::` and not `.` to call. The important thing to learn from this sketch is how to implement the HCallback interface. 
 
 {% highlight java %}
 package hype;

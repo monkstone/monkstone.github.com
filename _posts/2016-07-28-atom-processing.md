@@ -20,7 +20,7 @@ Tough luck if you want the 32 bit version
 You must provide a link to the `processing-java` script, I would use:-
 
 ```
-sudo update-alternatives --install /usr/local/bin/processing-java processing-java /home/tux/processing-3.1.1/processing-java 50
+sudo update-alternatives --install /usr/local/bin/processing-java processing-java /home/tux/processing-3.2.1/processing-java 50
 ```
 
 
