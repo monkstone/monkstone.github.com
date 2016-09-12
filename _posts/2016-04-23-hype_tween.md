@@ -4,7 +4,7 @@ title: "Using nested callbacks hype Library"
 date: 2016-04-23 11:40:00
 categories: jruby_art update
 keywords: library, hype, JRubyArt, java8, lambda
-permalink: nested_callbacks
+permalink: /nested_callbacks/
 ---
 
 Here is an example sketch by Joshua Davis, from the [hype framework][hype_framework] that has been changed to make use of ruby syntax.

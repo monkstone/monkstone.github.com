@@ -4,7 +4,7 @@ title: "Using ruby Matrix in JRubyArt"
 date: 2015-12-09 20:49:00
 categories: jruby_art update
 keywords: Matrix, Vec3D, frame of reference, JRubyArt
-permalink: _posts/matrix
+permalink: /matrix/
 ---
 
 Here is vanilla [processing sketch][tips] by Ira Greenberg translated for JRubyArt. This sketch features the use of ruby Matrix to do 3D transforms it is quite complicated, but is a bit easier on the eye in ruby cf vanilla processing. Also featured are [Vec3D][vec3d] (replaces PVector), [ArcBall][arcball] (for intuitive manipulation) and [AppRender][render] for efficient [Vec3D][vec3d] to vertex translation.

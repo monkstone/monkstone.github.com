@@ -3,7 +3,7 @@ layout: post
 title:  "Literate Camera for JRubyArt"
 date:   2015-11-20 10:55:00
 categories: jruby_art update
-permalink:   _posts/kamera
+permalink:   /kamera/
 ---
 
 ### Using kamera to provide a literate camera in JRubyArt

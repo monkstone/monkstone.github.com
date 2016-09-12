@@ -4,7 +4,7 @@ title: "Setting up Atom for Processing on Linux"
 date: 2016-07-28 13:00:00
 categories: jruby_art update
 keywords: atom, processing, linux, debian 
-permalink: _posts/atom-debian
+permalink: /atom-debian/
 ---
 
 ### Install Atom (debian/mint/ubuntu)###

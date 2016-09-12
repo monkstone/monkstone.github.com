@@ -4,7 +4,7 @@ title: "The LibraryLoader Module in JRubyArt"
 date: 2015-12-02 00:00:00
 categories: jruby_art update
 keywords: library, library loader, libraries, JRubyArt
-permalink: _posts/library_loader
+permalink: /library_loader/
 ---
 
 The JRubyArt [LibraryLoader module][library_loader] is essentially the same as that developed for ruby-processing. But since processing-3.0 there is the distinct possibility that you will need to specify the vanilla processing sketchbook folder (in `.jruby_art/config.yml`), for it to work properly. As a convenience you can call the module using either `load_library` or `load_libraries` from your sketch. The preferred way call the library / libraries is as a symbol, comma separated list of symbols _but Strings also work see below for core java libraries_:-

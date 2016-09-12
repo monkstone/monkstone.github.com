@@ -4,7 +4,7 @@ title: "Setting up Atom for propane"
 date: 2016-08-11 10:00:00
 categories: jruby_art update
 keywords: atom, processing, propane
-permalink: _posts/atom-propane
+permalink: /atom-propane/
 ---
 
 ### Install Atom ###

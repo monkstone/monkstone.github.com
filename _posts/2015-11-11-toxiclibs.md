@@ -3,7 +3,7 @@ layout: post
 title:  "Toxiclibs libraries for JRubyArt"
 date:   2015-11-11 00:00:00
 categories: jruby_art update
-permalink:   _posts/toxiclibs
+permalink:   /toxiclibs/
 ---
 
 The recently released [toxiclibs-0.5.1.gem][gem] is an exemplar for how to create and use custom library gems in JRubyArt. The [toxiclibs gem][gem] provides a ruby wrapper for the [toxiclibs libraries][libraries], that make it easy to use toxiclibs libraries in JRubyArt. The gem build now uses maven to build an updated toxiclibs. Now using jdk8 lambdas with Collections.  Here is simulation sketch:-

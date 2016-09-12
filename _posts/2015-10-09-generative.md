@@ -3,7 +3,7 @@ layout: post
 title:  "Generative Gestaltung sketches in JRubyArt"
 date:   2015-10-09 15:43:13
 categories: jruby_art update
-permalink:   _posts/timestamp
+permalink:   /timestamp/
 ---
 
 There is this excellent book on processing [Generative Gestaltung, ISBN: 978-3-87439-759-9][generative], and the authors have released the [code updated to run with processing-3.0+][code]. Here are a couple of the sketches translated to JRubyArt. Note the ability to use hi-dpi for retina etc in the second sketch.

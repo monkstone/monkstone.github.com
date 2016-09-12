@@ -4,7 +4,7 @@ title: "Video Capture Filter JRubyArt"
 date: 2015-12-03 10:00:00
 categories: jruby_art update
 keywords: library, filter, capture, glsl, JRubyArt
-permalink: _posts/video_filter
+permalink: /video_filter/
 ---
 
 Here we need load two libraries the processing `video` library, and the JRubyArt art `video_event` library. The `video_event` library sole purpose is to allow you to use the java reflection method `captureEvent` those processing boys are over keen on reflection to my liking. The preferred way call the libraries is as a comma separated list of symbols _but Strings also work_.  Note that we also need to `include_package 'processing.video'` or use the fully qualified name for Capture:-

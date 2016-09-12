@@ -4,7 +4,7 @@ title: "Subtractive Roman Numerals"
 date: 2016-06-04 06:58:00
 categories: jruby_art update
 keywords: sandi metz, 99, JRubyArt, roman numerals
-permalink: sandi
+permalink: /sandi/
 ---
 
 The latest Sandi Metz book (99 Bottles) is due soon why not join the [mailing list][list]. In her recent post, Sandi succesfully tackles the [Roman Numeral Kata][kata] using refinements to modify String and Fixnum classes. This was only possible because there are actually strict rules governing the legal subtractive form of roman numerals (back in the day they probably stuck to the additive forms anyway, _kept the stone masons busy_). Ninety-nine as in example below is a case in point where `IC` for example is illegal (preceding character letters cannot be less than ten times the value of the character they precede). See gist for [roman_numerals.rb][roman] or sign up to [Sandi's mailing list][list] for the original. I have a feeling that this is the first instance of `using` refinements in a JRubyArt sketch.

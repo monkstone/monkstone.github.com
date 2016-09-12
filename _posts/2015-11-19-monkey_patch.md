@@ -3,7 +3,7 @@ layout: post
 title:  "Monkey Patching Vec3D"
 date:   2015-11-19 10:10:00
 categories: jruby_art update
-permalink:   _posts/monkey-patch
+permalink:   /monkey-patch/
 ---
 
 ### Re-Opening Vec3D to add rotation funtionality

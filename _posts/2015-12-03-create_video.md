@@ -4,7 +4,7 @@ title: "Create a Video from a Sketch JRubyArt"
 date: 2015-12-03 00:10:00
 categories: jruby_art update
 keywords: video, sketch, JRubyArt
-permalink: _posts/create_video
+permalink: /create_video/
 ---
 
 This example demonstrates how to use `save_frame` to render out an image sequence that you can assemble into a movie using the processing MovieMaker tool.  Although linux users may prefer to use `ffmpeg` from the command line.

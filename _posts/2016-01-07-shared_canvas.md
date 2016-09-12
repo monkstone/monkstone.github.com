@@ -4,7 +4,7 @@ title: "Shared canvas net"
 date: 2016-01-07 21:50:00
 categories: jruby_art update
 keywords: client, server, net, JRubyArt
-permalink: _posts/net
+permalink: /net/
 ---
 
 Here is a vanilla processing sketch (translated to JRubyArt) that uses the processing net library.
