@@ -18,7 +18,7 @@ Use the `script` package to run propane sketches from the atom editor.
 
 You can add documentation for propane using the atom editor as follows
 
-```markdown
+```md
 
 ### Simplex Noise ###
 
@@ -27,6 +27,7 @@ Mainly inspired by Karsten Schmidt and Stefan Gustavson I created a `simplex_noi
 [simplex]:http://webstaff.itn.liu.se/~stegu/simplexnoise/simplexnoise.pdf
 
 ```
+
 ### Preview mardown documents ###
 
 Use the build in markdown preview capabilities (_of atom_) to preview your documentation see below.
