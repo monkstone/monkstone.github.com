@@ -17,7 +17,9 @@ Use the `script` package to run propane sketches from the atom editor.
 ### Add Extra Documentation for Sketches in Markdown ###
 
 You can add documentation for propane using the atom editor as follows
+
 ```markdown
+
 ### Simplex Noise ###
 
 Mainly inspired by Karsten Schmidt and Stefan Gustavson I created a `simplex_noise` library for propane (mainly in java) but I tweeked the example to work in ruby. Read more from [Stefan Gustavson][simplex] who created the java code. Kudos to Karsten Schmidt for the test code (vanilla processing not ruby version)
@@ -33,4 +35,5 @@ Use the build in markdown preview capabilities (_of atom_) to preview your docum
 __Bringing it all together:-__
 
 See `SimplexNoise.md` preview in right panel (with running sketch on top) and the sketch code in the left hand panel.
+
 ![atom.png]({{ github.site.url }}/assets/atom.png)
