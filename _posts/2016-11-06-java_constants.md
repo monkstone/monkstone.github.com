@@ -57,4 +57,4 @@ end
 {% endhighlight %}
 
 
-![atom.png]({{ github.site.url }}/assets/color_presets.png)
+![color_presets.png]({{ github.site.url }}/assets/color_presets.png)
