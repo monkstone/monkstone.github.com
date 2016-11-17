@@ -70,7 +70,7 @@ Simple.new
 [Marcel Bellidin]:https://github.com/marcel12bell/simple-live-coding/
 [khan academy]:http://www.khanacademy.org/cs/
 [John Resig]:http://ejohn.org/blog/introducing-khan-cs/
-[Bret Victor]:http://worrydream.com/#!/LearnableProgramming/
+[Bret Victor]:http://worrydream.com/#!/LearnableProgramming
 [SonicPi]:http://sonic-pi.net/
 [mindstorms]:https://books.google.co.uk/books?id=HhIEAgUfGHwC&printsec=frontcover&redir_esc=y&hl=en#v=onepage&q&f=false
 [OU]:http://www.tutorials4u.com/smalltalk/smalltalk-tutorial-01.htm
