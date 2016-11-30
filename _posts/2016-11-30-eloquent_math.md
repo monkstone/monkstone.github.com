@@ -5,11 +5,9 @@ date: 2016-11-30 04:00:00
 categories: jruby_art update
 keywords: Vec2D, ruby, JRubyArt
 ---
-You can (and should) write eloquent code in `JRubyArt` (cf vanilla `processing` and `p5*js`). Say for example you want a test to determine whether three points are collinear, you would probably look up [collinear at wolfram math world](http://mathworld.wolfram.com/Collinear.html). And you would see that in two dimensions given three points P1, P2 and P3 they would be collinear if their vectors x1, x2 and x3 satisfied the following equation, where x denotes the cross product.
+You can (and should) write eloquent code in `JRubyArt` (cf vanilla `processing` and `p5*js`). Say for example you want a test to determine whether three points are collinear, you would probably look up [collinear at wolfram math world](http://mathworld.wolfram.com/Collinear.html). And you would see that in two dimensions given three points P1, P2 and P3 they would be collinear if their vectors x<sub>1</sub>, x<sub>2</sub> and x<sub>3</sub> satisfied the following equation, where x denotes the cross product.
 
-`
-|(x2 - x1)x(x1 - x3)| = 0
-`
+|(x<sub>2</sub> - x<sub>1</sub>)x(x<sub>1</sub> - x<sub>3</sub>)| = 0
 
 We can readily translate that test into ruby (JRubyArt/propane) using `Vec2D` as our vector class (cf processing and `PVector` class), thanks to the separation of 2D and 3D functionality, and that we can simple subtract one `Vec2D` instance from another.
 {% highlight ruby %}
