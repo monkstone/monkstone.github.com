@@ -24,7 +24,7 @@ Vect = Struct.new(:x, :y, :z) # for calculation of center
 
 class Circles < Propane::App
   def settings
-    size(800, 600, P2D)
+    size(800, 400, P2D)
   end
 
   def setup
@@ -33,7 +33,6 @@ class Circles < Propane::App
     @c = rand(360)
     @points = (0..2).map { Point.new(rand(width), rand(height)) }
     background 0
-    @setup_done = true
   end
 
   def draw
@@ -62,7 +61,7 @@ class Circles < Propane::App
     mp[1] = bisector(pts[1].pos, pts[2].pos)
     center_point = center(mp) # find the center of the circle
     # calculate the radius
-    radius = dist(center_point.x, center_point.y, pts[2].pos.x, pts[2].pos.y)
+    radius = center_point.dist(pts[2].pos)
     # if not collinear display circle
     ellipse(center_point.x, center_point.y, 2 * radius, 2 * radius)
   end
@@ -78,14 +77,12 @@ class Circles < Propane::App
   end
 
   def center(bisector)
-    eq = []
     # equation of the first bisector (ax - y =  -b)
-    bisector.each do |mp|
+    eq = bisector.map do |mp|
       a = tan mp.angle
       v = mp.vector
-      eq << Vect.new(a, -1, -1 * (v.y - v.x * a))
+      Vect.new(a, -1, -1 * (v.y - v.x * a))
     end
-
     # calculate x and y coordinates of the circumcenter
     ox = (eq[1].y * eq[0].z - eq[0].y * eq[1].z) /
          (eq[0].x * eq[1].y - eq[1].x * eq[0].y)
