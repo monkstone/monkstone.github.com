@@ -67,3 +67,13 @@ end
 {% endhighlight %}
 
 <img src="/assets/collinear.png" />
+
+Caculating the midpoint between two vectors
+
+{% highlight ruby %}
+
+def midpoint(a, b)
+  (a + b) / 2.0
+end
+
+{% endhighlight %}
