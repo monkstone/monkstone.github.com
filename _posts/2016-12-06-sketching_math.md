@@ -5,7 +5,7 @@ date: 2016-12-06 09:00:00
 categories: jruby_art update
 keywords: Vec2D, ruby, propane, circumcircle
 ---
-For JRubyArt and propane you need to have a pretty good reason not use Vec2D and Vec3D as replacements for PVector as my recent experiments with creating a circumcircle for 3 points. Where we can use a Vec2D cross product in a collinearity test. Further to determine the midpoint of two vectors is as simple as `(a + b) / 2`, you could this with PVector but its just ugly, and furthermore you are needlessly carrying a third dimension. Here is my most recent sketch:-
+For JRubyArt and propane you need to have a pretty good reason not use Vec2D and Vec3D as replacements for PVector as my recent experiments with creating a circumcircle for 3 points have confirmed. We can use a Vec2D cross product in a collinearity test (impossible with PVector). Further to determine the midpoint of two vectors is as simple as `(a + b) / 2`, you could this with PVector but it is just ugly, and furthermore you are needlessly carrying a third dimension. Here is my most recent sketch:-
 
 ### circumcircle_sketch.rb ###
 
