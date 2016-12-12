@@ -124,7 +124,7 @@ class MathPoint
 
   def from_sketch(x, y)
     @from_mouse = true
-    @pos = Vec2D.new(x - OR, map1d(y, height - OR..-OR, 0..height))
+    @pos = Vec2D.new(x, y))
     self
   end
 
@@ -137,11 +137,11 @@ class MathPoint
   end
 
   def screen_x
-    pos.x + OR
+    pos.x
   end
 
   def screen_y
-    map1d(pos.y, 0..height, height - OR..-OR)
+    pos.y
   end
 
   def display
