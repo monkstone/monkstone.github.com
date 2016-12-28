@@ -7,6 +7,7 @@ permalink: /sketches/bare/
 A bare sketch is similar to a sketch you would create in the processing ide, ie it does not seem to be class wrapped.  However that gets done for you at run-time, the difference from the processing sketch is that the JRubyArt sketch requires you to use the settings method (this is hidden for vanilla processing sketches run from the ide but required for eclipse / netbeans users).
 
 Methods:-
+
 ```ruby
 def setup
   sketch_title 'My Sketch'
