@@ -10,7 +10,7 @@ In a previous post I suggested we could use a hash to use web colors in a more l
 
 ### couluers.rb ###
 
-{% highlight ruby %}
+```ruby
 # encoding: utf-8
 COULEURS = %i(jaune rose rouge bleu vert gris noir violet blanc).freeze
 PALETTE = %w(
@@ -58,7 +58,7 @@ def settings
   smooth 4
 end
 
-{% endhighlight %}
+```
 
 <img src="/assets/couleurs.png" />
 

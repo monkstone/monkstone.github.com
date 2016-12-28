@@ -16,7 +16,7 @@ In this case we use ruby syntax in the creation of web colors (as color int).  A
 
 ### h_canvas.rb ###
 
-{% highlight ruby %}
+```ruby
 # encoding: utf-8
 # Using a simplified scanline shader, this example demonstrates how to apply
 # a PShader to an HCanvas object.
@@ -92,11 +92,11 @@ def draw
   my_shader.set('time', millis / 1000.0)
 end
 
-{% endhighlight %}
+```
 
 ### scanlines.glsl ###
 
-{% highlight glsl %}
+```glsl
 /*
 	A basic scanline shader for Processing, based on MattiasCRT: https://www.shadertoy.com/view/Ms23DR
 */
@@ -130,7 +130,7 @@ void main(void) {
 
 	gl_FragColor = col;
 }
-{% endhighlight %}
+```
 
 <img src="/assets/scanlines.png" />
 

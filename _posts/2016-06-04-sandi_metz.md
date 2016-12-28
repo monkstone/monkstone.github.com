@@ -11,7 +11,7 @@ The latest Sandi Metz book (99 Bottles) is due soon why not join the [mailing li
 
 ### blackboard.rb ###
 
-{% highlight ruby %}
+```ruby
 
 # blackboard.rb inspired by madam Sandi
 require_relative 'roman_numerals'
@@ -53,7 +53,7 @@ def settings
   size 690, 240
 end
 
-{% endhighlight %}
+```
 
 <img src="/assets/roman.png" />
 

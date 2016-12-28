@@ -12,7 +12,7 @@ Here's a chance to show your ruby chops by translating some more....see already 
 
 And send me a tweet [@monkstoneT][twitter]
 
-{% highlight ruby %}
+```ruby
 # p_1_0_01.rb
 #
 # Generative Gestaltung, ISBN: 978-3-87439-759-9
@@ -85,9 +85,9 @@ end
 def timestamp
   Time.now.strftime("%Y%d%m_%H%M%S")
 end
-{% endhighlight %}
+```
 
-{% highlight ruby %}
+```ruby
 # m_3_1_01.rb
 #
 # Generative Gestaltung, ISBN: 978-3-87439-759-9
@@ -140,7 +140,7 @@ def draw
     end_shape
   end
 end
-{% endhighlight %}
+```
 
 [generative]:http://www.generative-gestaltung.de
 [code]:http://www.generative-gestaltung.de/code

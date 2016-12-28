@@ -7,7 +7,7 @@ keywords: java, color theory, toxiclibs, theme
 ---
 Toxiclibs color theme sketch in JRubyArt
 
-{% highlight ruby %}
+```ruby
 
 # ColorTheme demo showing the following:
 # - construction of TColor themes via textual descriptions of shades and Colors
@@ -129,7 +129,7 @@ def discs(list)
 end
 
 
-{% endhighlight %}
+```
 
 
 ![color_theme.png]({{ github.site.url }}/assets/color_theme.png)

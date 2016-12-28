@@ -10,7 +10,7 @@ permalink:   /kamera/
 
 Here is another `toxiclibs` example sketch, which features a dynamic camera. The center tracks the car in this sketch (`mesh.centroid` as a `TVec3D`).  Here we make use use JRubyArt `kamera` method, which provides a more literate version of processings camera. Because `kamera` is a ruby method TVec3D and the custom Vect below are both acceptable values (owing to ruby duck-typing). Further the argument order is not important, even though we maintain the original processing order here:-
 
-{% highlight ruby %}
+```ruby
 
 require 'toxiclibs'
 
@@ -103,6 +103,6 @@ def key_pressed
   init_physics
 end
 
-{% endhighlight %}
+```
 
 <img src="/assets/crash.png" />

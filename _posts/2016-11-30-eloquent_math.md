@@ -10,17 +10,17 @@ You can (and should) write eloquent code in `JRubyArt` (cf vanilla `processing` 
 |(x<sub>2</sub> - x<sub>1</sub>)x(x<sub>1</sub> - x<sub>3</sub>)| = 0
 
 We can readily translate that test into ruby (JRubyArt/propane) using `Vec2D` as our vector class (cf processing and `PVector` class), thanks to the separation of 2D and 3D functionality, and that we can simple subtract one `Vec2D` instance from another.
-{% highlight ruby %}
+```ruby
 # where a, b and c are the Vec2D instances of our points
 def collinear(a, b, c)
   (a - b).cross(b - c).zero?
 end
 
-{% endhighlight %}
+```
 
 Using the collinear test in a simple sketch
 
-{% highlight ruby %}
+```ruby
 
 attr_reader :font
 
@@ -64,16 +64,16 @@ def draw_text(a, b, c)
   text("#{collinear(a, b, c)}", c.x, c.y)
 end
 
-{% endhighlight %}
+```
 
 <img src="/assets/collinear.png" />
 
 Caculating the midpoint between two vectors
 
-{% highlight ruby %}
+```ruby
 
 def midpoint(a, b)
   (a + b) / 2.0
 end
 
-{% endhighlight %}
+```

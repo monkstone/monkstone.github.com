@@ -10,7 +10,7 @@ Here is a little processing sketch by Ira Greenberg, that has been refactored an
 
 ### euler_ball.rb ###
 
-{% highlight ruby %}
+```ruby
 # encoding: UTF-8
 
 # module encapsulating run
@@ -67,13 +67,13 @@ class Bounds
     constrain(val, low, high)
   end
 end
-{% endhighlight %}
+```
 
 Here is the much simplified `euler_integration` sketch, note the use of the more literate keyword arguments (since ruby 2.0).
 
 ### euler_integration.rb ###
 
-{% highlight ruby %}
+```ruby
 #
 # Euler Integration (v01)
 # pos  +=  spd
@@ -106,6 +106,6 @@ def settings
   size(400, 400)
   smooth 4
 end
-{% endhighlight %}
+```
 
 [jruby_art]:https://ruby-processing.github.io/index.html

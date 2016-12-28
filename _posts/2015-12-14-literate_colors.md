@@ -7,12 +7,12 @@ categories: jruby_art update
 
 If you are coming to JRubyArt from vanilla processing, you may not be aware of quite how elegant ruby can be:-
 
-{% highlight ruby %}
+```ruby
 web = %w(#841B2D #c0c0c0 #ffd700)
 names = %i(RUBY SILVER GOLD)
 colours = names.zip(web).to_h
 background color(colours[:RUBY])
-{% endhighlight %}
+```
 
 In the first three lines we have created a (hash) dictionary of "web colors" that we can use in our sketch. You can look up web colors for yourself to create your own color palette.
 

@@ -11,7 +11,7 @@ In vanilla processing [library developers][vanilla] are encouraged to use java r
 
 ### The Sketch
 
-{% highlight ruby %}
+```ruby
 # test_proxy.rb by Martin Prout
 load_library :library_proxy
 require_relative 'proxy_library'
@@ -30,11 +30,11 @@ def draw
   fill 200, 0, 0
   ellipse 150, 150, 200, 100
 end
-{% endhighlight %}
+```
 
 ### The Library
 
-{% highlight ruby %}
+```ruby
 # proxy_library.rb
 # LibraryProxy is an abstract java class to give us access to the java
 # reflection methods 'pre', 'post' and 'draw' (which we should implement).
@@ -50,7 +50,7 @@ class TestProxy < LibraryProxy # subclass LibraryProxy
   
   def post; end # empty method is OK   
 end
-{% endhighlight %}
+```
 
 ### Snapshot of the running sketch
 

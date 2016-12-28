@@ -9,7 +9,7 @@ For JRubyArt and propane you need to have a pretty good reason not use Vec2D and
 
 ### circumcircle_sketch.rb ###
 
-{% highlight ruby %}
+```ruby
 
 # Loosely based on a sketch by Bárbara Almeida
 # https://www.openprocessing.org/sketch/179567
@@ -103,11 +103,11 @@ def graph_paper
   end
 end
 
-{% endhighlight %}
+```
 
 ### math_point.rb ###
 
-{% highlight ruby %}
+```ruby
 
 # frozen_string_literal: true
 # In processing the Y-axis is inverted, plus we have a fake origin for display
@@ -164,13 +164,13 @@ class MathPoint
   end
 end
 
-{% endhighlight %}
+```
 
 ### points.rb ###
 
 Here we create a custom enumerable class, that incorporates our collinear test, try this in java!!!
 
-{% highlight ruby %}
+```ruby
 
 # frozen_string_literal: true
 require 'forwardable'
@@ -207,13 +207,13 @@ class TPoints
   end
 end
 
-{% endhighlight %}
+```
 
 ### circumcircle.rb ###
 
 Here we isolate the Collinear functionality in a class that has no `processing` / `java` dependencies.
 
-{% highlight ruby %}
+```ruby
 
 # frozen_string_literal: true
 require 'matrix'
@@ -251,7 +251,7 @@ class Circumcircle
   end
 end
 
-{% endhighlight %}
+```
 
 <img src='/assets/circumcircle.png' />
 

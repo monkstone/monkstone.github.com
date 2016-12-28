@@ -11,7 +11,7 @@ This sketch features the new JRubyArt [chooser][file_chooser] library. But to ma
 
 ### pixellator.rb ###
 
-{% highlight ruby %}
+```ruby
 load_library :chooser
 attr_reader :img, :data, :skip, :poster
 
@@ -111,7 +111,7 @@ def pixellate
   write_start 'haddock', data
 end
 
-{% endhighlight %}
+```
 
 My friend Phil Sutton RA painting (before). Phil was a contemporary of the late Harold Cohen, and told me that Harold used to paint with dots back in the day. Both artists are featured in [Six young Painters][six] The Arts Council (1956). Phil has remained resolutely a fauvist see some of his [work here][work] and some of his publicly owned work including some of his [Shakespeare paintings][shake].
 

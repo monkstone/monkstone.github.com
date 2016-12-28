@@ -10,7 +10,7 @@ permalink:   /monkey-patch/
 
 Whilst translating `toxiclibs` example for JRubyArt I came across this mesh doodle sketch, that I realised I could make work just using my Vec2D and Vec3D classes (and avoid using the `toxicilibs` library). I just needed to add some rotation functionality to my Vec3D class as follows (and to use a struct for Face):-
 
-{% highlight ruby %}
+```ruby
 # After a toxiclibs "MeshDoodle" sketch by Karsten Schmidt
 # Adapted to use JRubyArt Vec2D and Vec3D classes by Martin Prout
 # Note: The extension Vec3D class to support rotations and use of a Struct
@@ -94,4 +94,4 @@ def mouse_moved
   @q = b
 end
 
-{% endhighlight %}
+```

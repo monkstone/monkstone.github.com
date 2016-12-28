@@ -17,7 +17,7 @@ Note that hype constants require the `H::` prefix.
 
 ### hype_polar_layout.rb ###
 
-{% highlight ruby %}
+```ruby
 
 # encoding: utf-8
 load_library :hype
@@ -68,7 +68,7 @@ def draw
   @ranSeedNum = 1 if @ranSeedNum > 300
   H.draw_stage
 end
-{% endhighlight %}
+```
 
 <img src="/assets/polar_layout.png" />
 

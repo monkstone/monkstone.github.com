@@ -17,7 +17,7 @@ In this case we use the `web_to_color_array` convenience method (since JRubyArt-
 
 ### hype_swarm.rb ###
 
-{% highlight ruby %}
+```ruby
 # encoding: utf-8
 load_library :hype
 include_package 'hype'
@@ -107,7 +107,7 @@ def draw
 end
 
 
-{% endhighlight %}
+```
 
 
 <img src="/assets/swarm.png" />

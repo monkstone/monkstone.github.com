@@ -8,7 +8,7 @@ keywords: java, contstants, instance_eval, jruby
 ---
 I think I have found an elegant way to create and iterate over a sequence of java constants (provided as an interface `hype.interfaces.HConstants`) where `class H implements HConstants`.  The constants in this case are hexadecimal numbers (eg `CLEAR` = `0x00FFFFFF`). It might be even more efficient to have `FSTRING` = `Java::HypeInterfaces::HConstants::%s`?  Seems to work well in JRubyArt, is there any reason I should not promote this method?
 
-{% highlight ruby %}
+```ruby
 
 load_library :hype
 include_package 'hype'
@@ -54,7 +54,7 @@ def draw
   no_loop
 end
 
-{% endhighlight %}
+```
 
 
 ![color_presets.png]({{ github.site.url }}/assets/color_presets.png)

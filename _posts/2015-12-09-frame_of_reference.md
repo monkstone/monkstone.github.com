@@ -11,7 +11,7 @@ Here is vanilla [processing sketch][tips] by Ira Greenberg translated for JRubyA
 
 ### frame_of_reference.rb ###
 
-{% highlight ruby %}
+```ruby
 ###############
 # Frame of Reference example by Ira Greenberg
 # https://github.com/irajgreenberg/ProcessingTips
@@ -123,11 +123,11 @@ def draw
     c[i].display(renderer)
   end
 end
-{% endhighlight %}
+```
 
 ### cylinder.rb ###
 
-{% highlight ruby %}
+```ruby
 class Cylinder
   include Processing::Proxy
   attr_accessor :vecs
@@ -172,11 +172,11 @@ class Cylinder
     end_shape
   end
 end
-{% endhighlight %}
+```
 
 ### plane.rb ###
 
-{% highlight ruby %}
+```ruby
 NORM_LEN = 225.0
 
 class Plane
@@ -234,11 +234,11 @@ class Plane
     stroke(0, 75)
   end
 end
-{% endhighlight %}
+```
 
 ### mat4.rb ###
 
-{% highlight ruby %}
+```ruby
 # uber simple Homogeneous 4 x 4 matrix
 require 'matrix'
 
@@ -271,7 +271,7 @@ class Mat4
     Vec3D.new(vec.column(0)[0], vec.column(0)[1], vec.column(0)[2])
   end
 end
-{% endhighlight %}
+```
 
 
 ### snapshot of the running sketch ###

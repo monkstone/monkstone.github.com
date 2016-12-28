@@ -10,7 +10,7 @@ Here is an example sketch by Jo Wood, that has been refactored for [JRubyArt][jr
 
 ### bar_chart.rb ###
 
-{% highlight ruby %}
+```ruby
 # encoding: utf-8
 # frozen_string_literal: true
 load_library :gicentreUtils
@@ -70,7 +70,7 @@ def draw
   text(LEGEND, 70, vertical_spacing)
 end
 
-{% endhighlight %}
+```
 
 <img src="/assets/chart.png" />
 
@@ -78,7 +78,7 @@ end
 
 Here is another interesting example sketch using the library
 
-{% highlight ruby %}
+```ruby
 load_library :gicentreUtils
 java_import 'org.gicentre.utils.move.Ease'
 
@@ -392,7 +392,7 @@ end
 
 private :draw_graph
 
-{% endhighlight %}
+```
 
 <img src="/assets/easing.png" />
 

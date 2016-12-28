@@ -17,7 +17,7 @@ In this case we use the `web_to_color_array` convenience method (since JRubyArt-
 
 ### hype_sprite.rb ###
 
-{% highlight ruby %}
+```ruby
 #encoding: utf-8
 load_library :hype
 include_package 'hype'
@@ -75,7 +75,7 @@ def draw
   H.draw_stage
   sketch_title(format('HSprite %d fps', frame_rate))
 end
-{% endhighlight %}
+```
 
 
 <img src="/assets/h_sprite.png" />

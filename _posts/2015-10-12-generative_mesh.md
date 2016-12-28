@@ -11,7 +11,7 @@ And send me a tweet @[monkstoneT][twitter]
 
 Here is the sketch code:-
 
-{% highlight ruby %}
+```ruby
 # m_3_3_03.rb
 #
 # Generative Gestaltung, ISBN: 978-3-87439-759-9
@@ -92,11 +92,11 @@ def generate_points(u_count, v_count)
   end
   points
 end                                                                                                                                                                                     
-{% endhighlight %}
+```
 
 Here is the mesh code:-
 
-{% highlight ruby %}
+```ruby
 # mesh.rb
 module GeometricForm
   include Math
@@ -283,7 +283,7 @@ module GeometricForm
     Vec3D.new(x, y, z) * scale + Vec3D.random * mesh_distortion
   end
 end
-{% endhighlight %}
+```
 
 [generative]:http://www.generative-gestalung.de
 [code]:http://www.generative-gestalung.de/code

@@ -17,7 +17,7 @@ In this case we use the `web_to_color_array` convenience method (since JRubyArt-
 
 ### hype_proximity.rb ###
 
-{% highlight ruby %}
+```ruby
 
 # encoding: utf-8
 load_library :hype
@@ -81,7 +81,7 @@ def draw
   no_fill
   ellipse(width / 2, height / 2, 500, 500)
 end
-{% endhighlight %}
+```
 
 <img src="/assets/proximity.png" />
 

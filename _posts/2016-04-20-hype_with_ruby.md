@@ -18,7 +18,7 @@ From the above you should realise that it is very easy to experiment with differ
 
 ### color_pool.rb ###
 
-{% highlight ruby %}
+```ruby
 # encoding: utf-8
 # frozen_string_literal: true
 load_library :hype
@@ -53,7 +53,7 @@ def setup
   H.draw_stage
 end
 
-{% endhighlight %}
+```
 
 <img src="/assets/color_pool.png" />
 

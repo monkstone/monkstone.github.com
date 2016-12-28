@@ -11,7 +11,7 @@ What drew me back to the [Marcel Bellidin][Marcel Bellidin] project was [SonicPi
 
 Now let me first say I've not read [mindstorms][mindstorms] which is recommended reading (by Bret Victor), nor do I have inclination or time, but ruby is surely a better starting point to teach kids than a clipped version of java.
 
-{% highlight ruby %}
+```ruby
 #!/usr/bin/env jruby
 require 'propane'
 
@@ -63,7 +63,7 @@ end
 
 Simple.new
 
-{% endhighlight %}
+```
 
 <img src="/assets/live.png" />
 

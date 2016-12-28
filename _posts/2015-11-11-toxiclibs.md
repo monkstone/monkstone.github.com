@@ -8,7 +8,7 @@ permalink:   /toxiclibs/
 
 The recently released [toxiclibs-0.5.1.gem][gem] is an exemplar for how to create and use custom library gems in JRubyArt. The [toxiclibs gem][gem] provides a ruby wrapper for the [toxiclibs libraries][libraries], that make it easy to use toxiclibs libraries in JRubyArt. The gem build now uses maven to build an updated toxiclibs. Now using jdk8 lambdas with Collections.  Here is simulation sketch:-
 
-{% highlight ruby %}
+```ruby
 require 'toxiclibs'
 
 NUM_ITERATIONS = 10
@@ -53,13 +53,13 @@ def key_pressed
   @gs.reset
 end
 
-{% endhighlight %}
+```
 
 <img src="/assets/tonemap.png" />
 
 Here is a Volume Utils sketch, featuring Mesh to PShape and povray export:-
 
-{% highlight ruby %}
+```ruby
 require 'toxiclibs'
 
 RES = 64
@@ -158,7 +158,7 @@ class EvaluatingVolume < Volume::VolumetricSpace
     (val > upper_bound) ? 0 : val
   end
 end
-{% endhighlight %}
+```
 
 Here is the sketch after a couple of Laplacian, smooths.
 
@@ -166,7 +166,7 @@ Here is the sketch after a couple of Laplacian, smooths.
 
 Here is another Volume Utils sketch:-
 
-{% highlight ruby %}
+```ruby
 require 'toxiclibs'
 
 RES = 64
@@ -247,7 +247,7 @@ def key_pressed
     init_mesh
   end
 end
-{% endhighlight %}
+```
 
 Here is the sketch after voxelize and a couple of Laplacian, smooths.
 

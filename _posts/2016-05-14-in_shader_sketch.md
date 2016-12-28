@@ -10,7 +10,7 @@ A rather simple shared in sketch example for [JRubyArt][jruby_art]
 
 ### in_shader_sketch.rb ###
 
-{% highlight ruby %}
+```ruby
 # encoding: utf-8
 # After an articles on processing forum by user Poersch
 # https://forum.processing.org/two/profile/7061/Poersch
@@ -67,7 +67,7 @@ def texture_rect
   end_shape
 end
 
-{% endhighlight %}
+```
 
 
 <img src="/assets/in_sketch_shader.png" />

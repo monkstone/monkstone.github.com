@@ -9,7 +9,7 @@ The [original boids library][original] was created by Jeremy Ashkenas to demonst
 
 See the full library code below:-
 
-{% highlight ruby %}
+```ruby
 # Boids -- after Tom de Smedt.
 # See his Python version: https://nodebox.net/code/index.php/Boids
 # This is an example of how a pure-Ruby library can work. Original for
@@ -211,10 +211,10 @@ class Boids
     constrain
   end
 end
-{% endhighlight %}
+```
 
 Here is the re-factored Flight Patterns Sketch:-
-{% highlight ruby %}
+```ruby
 # Description:
 # Flight Patterns is that ol' Euruko 2008 demo. 
 # Reworked version for JRubyArt version 1.0+
@@ -272,7 +272,7 @@ def draw
     end
   end
 end
-{% endhighlight %}
+```
 
 
 [original]:https://github.com/jashkenas/ruby-processing/blob/8865c934318e05e62cbfa2603e661275b1cffd31/library/boids/boids.rb

@@ -7,7 +7,7 @@ keywords: Vec2D, ruby, propane, circumcircle
 ---
 You can (_and should be able to_) write eloquent code in `propane` (or `JRubyArt` cf vanilla `processing` and `p5*js`). This includes use of Struct to create placeholders for data that should be grouped together as in PBisector below (rather than the misuse PVector as a data type), and Vect just used as a placeholder for a Vector datatype (in a Matrix like calculation).
 
-{% highlight ruby %}
+```ruby
 
 #!/usr/bin/env jruby
 # frozen_string_literal: true
@@ -126,6 +126,6 @@ end
 
 Circles.new
 
-{% endhighlight %}
+```
 
 <img src="/assets/circles.png" />

@@ -7,7 +7,7 @@ categories: jruby_art update
 
 Using the [geomerative gem][gem] in JRubyArt
 
-{% highlight ruby %}
+```ruby
 # after a sketch by Rune Skjoldborg Madsen aka runemadsen
 # see https://github.com/runemadsen
 require 'geomerative'
@@ -56,6 +56,6 @@ def draw
   end
 end
 
-{% endhighlight %}
+```
 
 [gem]:https://ruby-processing.github.io/geomerativegem/

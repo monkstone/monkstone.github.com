@@ -9,7 +9,7 @@ permalink: /video_filter/
 
 Here we need load two libraries the processing `video` library, and the JRubyArt art `video_event` library. The `video_event` library sole purpose is to allow you to use the java reflection method `captureEvent` those processing boys are over keen on reflection to my liking. The preferred way call the libraries is as a comma separated list of symbols _but Strings also work_.  Note that we also need to `include_package 'processing.video'` or use the fully qualified name for Capture:-
 
-{% highlight ruby %}
+```ruby
 load_library :video, :video_event
 include_package 'processing.video'
 attr_reader :cam, :my_shader
@@ -39,11 +39,11 @@ def settings
   size(640, 480, P2D)
 end
 
-{% endhighlight %}
+```
 
 Here is the shader filter `bwfrag.glsl` that lives in the sketch data folder
 
-{% highlight glsl %}
+```glsl
 
 #ifdef GL_ES
 precision mediump float;
@@ -69,6 +69,6 @@ void main() {
   }     
 }
 
-{% endhighlight %}
+```
 
 [library_loader]:https://github.com/ruby-processing/JRubyArt/blob/master/lib/jruby_art/library_loader.rb

@@ -12,16 +12,16 @@ Using Hype Random Trigger Callback in [JRubyArt][jruby_art]
 
 First create PALETTE an array of web color strings and an array of symbols to use as keys.
 
-{% highlight ruby %}
+```ruby
 PALETTE = %w(#242424 #999999 #202020).freeze
 KEY = %i(background stroke fill).freeze
-{% endhighlight %}
+```
 
 Next within setup (to use `web_to_color_array` method) create a hash (dictionary for pythonistas) of color ints.
 
-{% highlight ruby %}
+```ruby
 col = KEY.zip(web_to_color_array(PALETTE)).to_h
-{% endhighlight %}
+```
 
 Then use the colors in your sketch `col[:background]` a bit of an overkill in this sketch. You could use `color('#242424')` instead, note we must quote the web color string in ruby, and use the JRubyArt `color` method to return a color int. _Vanilla-processing does some pre-processing for you._
 
@@ -29,7 +29,7 @@ Then use the colors in your sketch `col[:background]` a bit of an overkill in th
 
 Much, simpler than in vanilla processing see [original][hype]. Here we replace the anonymous `new HCallback()` class instance with a ruby block.
 
-{% highlight ruby %}
+```ruby
 ran_trig.callback do
   d.loc(
     rand(50..width - 50),
@@ -38,13 +38,13 @@ ran_trig.callback do
                           .rotation_rad(rand(TWO_PI)
   )
 end
-{% endhighlight %}
+```
 
 Putting it all together, unfortunately output below just a snapshot here, the [original][hype] features a processing.js version:-
 
 ### random_trigger.rb ###
 
-{% highlight ruby %}
+```ruby
 # encoding: utf-8
 load_library :hype
 include_package 'hype'
@@ -94,7 +94,7 @@ end
 def draw
   H.draw_stage
 end
-{% endhighlight %}
+```
 
 
 <img src="/assets/random_trigger.png" />

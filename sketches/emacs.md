@@ -7,7 +7,7 @@ permalink: /sketches/emacs/
 An explicitly class wrapped sketch for use in [emacs][]/netbeans will run with `jruby` does not require `k9 --run`.
 
 Methods:-
-{% highlight ruby %}
+```ruby
 require 'jruby_art'
 require 'jruby_art/app'
 
@@ -30,12 +30,12 @@ class MySketch < Processing::App
 end
 
 MySketch.new unless defined? $app
-{% endhighlight %}
+```
 
 To create such a sketch use:-
 
-{% highlight bash %}
+```
 k9 --create my_sketch 300 300 # with `template: emacs` in `config.yml`
-{% endhighlight %}
+```
 
 [emacs]:https://github.com/ruby-processing/JRubyArt/wiki/Using-emacs-as-your-JRubyArt-Ide

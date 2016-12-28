@@ -11,7 +11,7 @@ However it is not quite as straight-forward as it might seem, note the inclusion
 
 ### tween_lambda_example.rb ###
 
-{% highlight ruby %}
+```ruby
 # encoding: utf-8
 load_library :hype
 include_package 'hype'
@@ -72,7 +72,7 @@ def draw
   H.draw_stage
 end
 
-{% endhighlight %}
+```
 
 
 <img src="/assets/hype_tween.png" />

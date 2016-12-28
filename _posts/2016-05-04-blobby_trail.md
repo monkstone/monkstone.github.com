@@ -10,7 +10,7 @@ A rather simple sketch using the [geomerative gem][gem] in [JRubyArt][jruby_art]
 
 ### blobby_trail.rb ###
 
-{% highlight ruby %}
+```ruby
 # encoding: utf-8
 require 'geomerative'
 # After an original sketch by fjenett
@@ -47,7 +47,7 @@ def move
   @y += yd
   @yd *= -1 unless (0..height).cover?(y)
 end
-{% endhighlight %}
+```
 
 
 <img src="/assets/blobby_trail.png" />

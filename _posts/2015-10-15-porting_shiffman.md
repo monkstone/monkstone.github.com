@@ -13,7 +13,7 @@ You can send me a tweet @[monkstoneT][twitter]
 
 It runs but there is room for improvement
 
-{% highlight ruby %}
+```ruby
 # Learning Processing
 # Daniel Shiffman
 # https://www.learningprocessing.com
@@ -51,9 +51,9 @@ def settings
   size(480, 270)
 end
 
-{% endhighlight %}
+```
 Here is the parent Shape class
-{% highlight ruby %}
+```ruby
 # Learning Processing
 # Daniel Shiffman
 # https://www.learningprocessing.com
@@ -82,9 +82,9 @@ class Shape
     'not implemented'
   end
 end
-{% endhighlight %}
+```
 Here is the Square class
-{% highlight ruby %}
+```ruby
 # Learning Processing
 # Daniel Shiffman
 # https://www.learningprocessing.com
@@ -110,9 +110,9 @@ class Square < Shape
     rect(x, y, r, r)
   end
 end
-{% endhighlight %}
+```
 Here is the Circle class
-{% highlight ruby %}
+```ruby
 # Learning Processing
 # Daniel Shiffman
 # https://www.learningprocessing.com
@@ -151,13 +151,13 @@ class Circle < Shape
     ellipse(x, y, r, r)
   end
 end
-{% endhighlight %}
+```
 
 ### Here is second go at porting the Dan Shiffman sketch ###
 
 It is definetly getting better.
 
-{% highlight ruby %}
+```ruby
 # Learning Processing
 # Daniel Shiffman
 # https://www.learningprocessing.com
@@ -194,9 +194,9 @@ end
 def settings
   size(480, 270)
 end
-{% endhighlight %}
+```
 The improved Square class, note no call to super is required (wasn't previously either but might have been confusing if left out).
-{% highlight ruby %}
+```ruby
 # Learning Processing
 # Daniel Shiffman
 # https://www.learningprocessing.com
@@ -218,9 +218,9 @@ class Square < Shape
     rect(x, y, r, r)
   end
 end
-{% endhighlight %}
+```
 The improved Circle class, now in color, to match improved ruby.
-{% highlight ruby %}
+```ruby
 # Learning Processing
 # Daniel Shiffman
 # https://www.learningprocessing.com
@@ -258,11 +258,11 @@ class Circle < Shape
     ellipse(x, y, r, r)
   end
 end
-{% endhighlight %}
+```
 
 ### Finally we have a suitably refactored port the Dan Shiffman sketch ###
 Here the inheriting classes use a common interface (thus reducing coupling)
-{% highlight ruby %}
+```ruby
 # Learning Processing
 # Daniel Shiffman
 # https://www.learningprocessing.com
@@ -299,9 +299,9 @@ end
 def settings
   size(480, 270)
 end
-{% endhighlight %}
+```
 The abstract Shape class
-{% highlight ruby %}
+```ruby
 # Daniel Shiffman
 # https://www.learningprocessing.com
 
@@ -338,9 +338,9 @@ class Shape
     'not implemented'
   end
 end
-{% endhighlight %}
+```
 The Square class
-{% highlight ruby %}
+```ruby
 # Learning Processing
 # Daniel Shiffman
 # https://www.learningprocessing.com
@@ -368,9 +368,9 @@ class Square < Shape
     display
   end
 end
-{% endhighlight %}
+```
 The Circle class now has transaparent colors
-{% highlight ruby %}
+```ruby
 # post_initialize hook method. Use of change_color makes initilization of @c
 # irrelevant, but without example is spoiled.
 class Circle < Shape  
@@ -407,7 +407,7 @@ class Circle < Shape
     display
   end
 end
-{% endhighlight %}
+```
 I have also ported [The Nature of Code][nature] to JRubyArt.
 
 [nature]:https://github.com/ruby-processing/The-Nature-of-Code-for-JRubyArt

@@ -11,7 +11,7 @@ And send me a tweet @[monkstoneT][twitter]
 
 Here is the sketch code:-
 
-{% highlight ruby %}
+```ruby
 # Learning Processing
 # Daniel Shiffman
 # https://www.learningprocessing.com
@@ -46,7 +46,7 @@ end
 def settings
   size 300, 300
 end
-{% endhighlight %}
+```
 
 I have also ported [The Nature of Code][nature] to JRubyArt.
 

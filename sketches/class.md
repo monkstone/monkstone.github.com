@@ -6,7 +6,7 @@ permalink: /sketches/class/
 
 An explicitly class wrapped sketch for the purists. By itself this is not that interesting, but such a sketch plays better in the [live mode][live].
 Methods:-
-{% highlight ruby %}
+```ruby
 class MySketch < Processing::App
   def setup
     sketch_title 'My Sketch'
@@ -23,19 +23,19 @@ class MySketch < Processing::App
     # smooth # goes here
   end
 end
-{% endhighlight %}
+```
 
 To create such a sketch use:-
 
-{% highlight bash %}
+```
 k9 --create my_sketch 300 300 # with `template: class` in config.yml
-{% endhighlight %}
+```
 
 To run such sketch in live mode use:-
 
-{% highlight bash %}
+```
 k9 --live my_sketch.rb
-{% endhighlight %}
+```
 
 
 [live]:https://github.com/ruby-processing/JRubyArt/wiki/Live-Coding

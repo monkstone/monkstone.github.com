@@ -9,7 +9,7 @@ permalink: /create_video/
 
 This example demonstrates how to use `save_frame` to render out an image sequence that you can assemble into a movie using the processing MovieMaker tool.  Although linux users may prefer to use `ffmpeg` from the command line.
 
-{% highlight ruby %}
+```ruby
 #
 # Save Frames
 # by Daniel Shiffman.
@@ -71,4 +71,4 @@ def settings
   smooth
 end
 
-{% endhighlight %}
+```

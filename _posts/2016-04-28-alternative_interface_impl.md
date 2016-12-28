@@ -10,7 +10,7 @@ As with perl (not python) there is usually more than on way to do it with jruby.
 
 ### comparator_implementation.rb ###
 
-{% highlight ruby %}
+```ruby
 # encoding: utf-8
 # frozen_string_literal: true
 # Update to version in JRuby Cookbook
@@ -34,14 +34,14 @@ java.util.Collections::sort(
 )
 
 v.each { |animal| puts animal }
-{% endhighlight %}
+```
 
 Output
-{% highlight bash %}
+```
 Bears
 Lions
 Tigers
-{% endhighlight %}
+```
 
 ## JRubyArt PBox2D example ##
 
@@ -49,7 +49,7 @@ A [JRubyArt][jruby_art] implementation of an Contact Listener as an anonymous cl
 
 ### contact_listener_implementation.rb ###
 
-{% highlight ruby %}
+```ruby
 # encoding: utf-8
 # frozen_string_literal: true
 require 'pbox2d'
@@ -101,7 +101,7 @@ def draw
   particles.reject!(&:done)
   wall.display
 end
-{% endhighlight %}
+```
 
 [standalone class]:https://github.com/ruby-processing/jbox2d/blob/master/examples/test_contact/lib/custom_listener.rb
 [jruby_art]:https://ruby-processing.github.io/index.html

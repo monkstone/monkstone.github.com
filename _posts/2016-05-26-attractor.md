@@ -16,7 +16,7 @@ Unzip the library in the processing libraries folder, rename the folder `hype`, 
 
 ### hype_attractor.rb ###
 
-{% highlight ruby %}
+```ruby
 
 # encoding: utf-8
 load_library :hype
@@ -72,7 +72,7 @@ def draw
   @r += 0.4
   H.draw_stage
 end
-{% endhighlight %}
+```
 
 <img src="/assets/h_attractor.png" />
 

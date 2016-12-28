@@ -15,7 +15,7 @@ Unzip the library in the processing libraries folder, rename the folder `hype`, 
 
 ### grid_layout.rb ###
 
-{% highlight ruby %}
+```ruby
 
 # encoding: utf-8
 load_library :hype
@@ -68,7 +68,7 @@ def draw
   H.draw_stage
 end
 
-{% endhighlight %}
+```
 
 <img src="/assets/grid_layout.png" />
 

@@ -11,7 +11,7 @@ Here is a vanilla processing sketch (translated to JRubyArt) that uses the proce
 
 ### shared_canvas_server.rb
 
-{% highlight ruby %}
+```ruby
 # Shared Drawing Canvas (Server)
 # by Alexander R. Galloway. Translated to JRubyArt by Martin Prout
 #
@@ -57,11 +57,11 @@ def draw
   # Draw line using received coords
   line(*data)
 end
-{% endhighlight %}
+```
 
 ### shared_canvas_client.rb
 
-{% highlight ruby %}
+```ruby
 # Shared Drawing Canvas (Client)
 # by Alexander R. Galloway. Translated to JRubyArt by Martin Prout
 #
@@ -105,5 +105,5 @@ def draw
   stroke(0)
   line(*data)
 end
-{% endhighlight %}
+```
 
