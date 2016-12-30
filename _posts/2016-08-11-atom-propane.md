@@ -23,37 +23,22 @@ Tough luck if you want the 32 bit version on linux
 
 ### Install Packages ###
 
-From the atom editor install the `atom-runner` package.
+From the atom editor install the `script` package.
 
-### Configure Atom-Runner ###
 
-For the atom menu select (**File -> config**) and edit `config.cson` to include the runner config beneath `"*":` as follows
-
-```cson
-"*":
-  ...
-  'runner':
-    'scopes':
-       'ruby': 'jruby'
-       ...
-    'extensions':
-       'spec.coffee': 'mocha'
-       'ps1': 'powershell –file'
-```
-
-See [Atom-Runner][runner] documentation (but note we replace jruby as the ruby executable)
+See [Atom-Script][script] (but note we replace jruby as the ruby executable, we can do this by including shebang argument at the beginning of sketch)
 
 ### Running Sketches ###
 
-To run sketches with a `data` folder you should initially open the immediate folder (when using Atom-Runner) eg:
+To run sketches with a `data` folder you should initially open the immediate folder:
 
-To explore propane samples open `~/propane_samples/regular` or `~/propane_samples/data_path` folder, select a file to view then `alt r` (windows/linux) or `ctrl r` mac to run the selected file.
+To explore propane samples open `~/propane_samples` folder and explore `processing_app`, select a file to view then `alt r` (windows/linux) or `ctrl r` mac to run the selected file.
 
 ### What's it look like ###
 
 <img src="/assets/atom-runner.png" />
 
-[runner]:https://github.com/lsegal/atom-runner
+[script]:https://atom.io/packages/script
 [atom]:https://atom.io/
 [releases]:https://github.com/atom/atom/releases/tag/v1.9.0
 [jedit]:https://ruby-processing.github.io/JRubyArt/editors
