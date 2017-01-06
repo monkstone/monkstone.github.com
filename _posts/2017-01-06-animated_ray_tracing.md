@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Ray Tracing for JRubyArt and Propane"
-date: 2017-01-05 06:00:00
+title: "Animated Ray Tracing for JRubyArt and Propane"
+date: 2017-01-06 06:00:00
 categories: jruby_art update
 keywords: jruby_art, propane, processing, sunflow, animation
 ---
