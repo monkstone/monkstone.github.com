@@ -56,8 +56,12 @@ end
 ```
 
 ### The Animated Ray Trace Sketch
+Now you hava a bunch of `*.png` images that you need to zip up to create a video
 
-
+```bash
+png2yuv -j Animation_%0.3d.png -f 25 -I p -b 1 > tmp.yuv # zip it all up
+ffmpeg2theora --optimize --videobitrate 16778 -o Animation.ogv tmp.yuv # convert
+```
 
 <video src="/assets/Animation.ogv" poster="/assets/Animation.png" width="800" height="600" controls preload></video>
 
