@@ -5,11 +5,11 @@ date: 2017-01-06 06:00:00
 categories: jruby_art update
 keywords: jruby_art, propane, processing, sunflow, animation
 ---
-Sunflow is an open source global illumination rendering system written in Java written by [Christopher Kulla][fpsunflower]. I have recently updated to [build with maven][maven] using jdk-8 and to use the latest [janino jars][janino]. The aim is to create a gem to make sunflow rendering easily available to JRubyArt and propane users using Joon Hylub Lees [joons-renderer][joons] as a starting point (this very much WIP see [github][github]), and is showing much promise:-
+Sunflow is an open source global illumination rendering system written in Java written by [Christopher Kulla][fpsunflower]. I have recently updated to [build with maven][maven] using jdk-8 and to use the latest [janino jars][janino]. I have created a gem to make sunflow rendering easily available to JRubyArt and propane users using Joon Hylub Lees [joons-renderer][joons]  see [github][github])
 
 ### test.rb (JRubyArt Sketch)
 ```ruby
-load_library :joonsrenderer
+require `joonsrenderer`
 include_package 'joons'
 
 attr_reader :jr, :eye, :center, :up, :count, :radius, :file_name
