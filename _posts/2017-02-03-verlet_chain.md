@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Sophisticated use Struct as a Boundary in JRubyArt"
+title: "Sophisticated use of a Struct as a Boundary in JRubyArt"
 date: 2017-02-02 13:00:00
 categories: jruby_art update
 keywords: jruby_art, verlet physics, local library, boundary
