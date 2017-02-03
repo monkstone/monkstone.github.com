@@ -5,7 +5,7 @@ date: 2017-02-02 13:00:00
 categories: jruby_art update
 keywords: jruby_art, verlet physics, local library, boundary
 ---
-[Ira Greenberg][greenberg] created this processing sketch, but it does not look very pretty in vanilla processing.  Here I have made use of ruby to create a more elegant sketch, that is somewhat more Object Orientated, without creating too many more objects. In particular I have created Boundary Struct that makes it much easier to test boundary conditions for the VerletBall. I have further simplified the interfaces of both VerletBall and VerletStick which result in a much simplified sketch. I have even include an extra link it the chain but prformance is fine.
+[Ira Greenberg][greenberg] created this processing sketch, but it does not look very pretty in vanilla processing.  Here I have used the ruby language to create a more elegant sketch, that is also somewhat more Object Orientated, without adding too many objects. In particular I have created Boundary Struct that makes it much easier to test boundary conditions for the VerletBall. I have further simplified the interfaces of both VerletBall and VerletStick which result in a much simplified sketch. I have even include an extra link it the chain but performance is fine.
 
 ### verlet_ball.rb (in local library)
 
@@ -150,5 +150,15 @@ def draw
   balls.each(&:run)
 end
 ```
+
+To creat the local library I created a verlet_chain folder (nested in a library folder) and I created simple `verlet_chain.rb` file that points to the classes.
+### verlet_chain.rb
+
+```ruby
+frozen_string_literal: true
+require_relative 'lib/verlet_ball'
+require_relative 'lib/verlet_stick'
+```
+
 
 [greenberg]:https://github.com/irajgreenberg/workshopExamples/tree/master/verlet_integration_01b_chain
