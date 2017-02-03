@@ -153,6 +153,7 @@ end
 
 To create the local library I created a verlet_chain folder (nested in a library folder) and I created simple `verlet_chain.rb` file that points to the classes.
 
+
 ### verlet_chain.rb
 
 ```ruby
