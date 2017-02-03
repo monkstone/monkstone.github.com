@@ -162,4 +162,6 @@ require_relative 'lib/verlet_ball'
 require_relative 'lib/verlet_stick'
 ```
 
+<video src="{{site.github.url}}/assets/verlet_chain.ogv" poster="{{site.github.url}}/assets/Averlet_chain..png" width="400" height="400" controls preload></video>
+
 [greenberg]:https://github.com/irajgreenberg/workshopExamples/tree/master/verlet_integration_01b_chain
