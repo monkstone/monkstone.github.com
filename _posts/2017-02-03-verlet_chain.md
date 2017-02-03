@@ -151,7 +151,8 @@ def draw
 end
 ```
 
-To creat the local library I created a verlet_chain folder (nested in a library folder) and I created simple `verlet_chain.rb` file that points to the classes.
+To create the local library I created a verlet_chain folder (nested in a library folder) and I created simple `verlet_chain.rb` file that points to the classes.
+
 ### verlet_chain.rb
 
 ```ruby
@@ -159,6 +160,5 @@ frozen_string_literal: true
 require_relative 'lib/verlet_ball'
 require_relative 'lib/verlet_stick'
 ```
-
 
 [greenberg]:https://github.com/irajgreenberg/workshopExamples/tree/master/verlet_integration_01b_chain
