@@ -168,4 +168,9 @@ require_relative 'lib/verlet_stick'
 
 This post is written in github flavored markdown, and served to you using a github flavored `Jekyll` (a ruby gem of course). Furthermore github is a `Ruby on Rails` project. The irony is that I'm writing this post using `atom` which is essentially a `javascript` project albeit helped along the way by `coffeescript`.
 
+### Refactoring the vanilla processing sketch
+
+The very act of looking a the code afresh in ruby, led me to realise that was lot that could be done to refactor the vanilla processing code, see this [gist][gist].
+
 [greenberg]:https://github.com/irajgreenberg/workshopExamples/tree/master/verlet_integration_01b_chain
+[gist]:https://gist.github.com/monkstone/e45cbefb26395e10727d6b91364d3bac
