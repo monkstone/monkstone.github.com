@@ -162,6 +162,12 @@ require_relative 'lib/verlet_ball'
 require_relative 'lib/verlet_stick'
 ```
 
+### verlet_chain.ogv
+
 <video src="{{site.github.url}}/assets/verlet_chain.ogv" poster="{{site.github.url}}/assets/Averlet_chain..png" width="400" height="400" controls preload></video>
+
+### PS: There is more ruby out there than you think!!!
+
+This post is written in github flavored markdown, and served to you using a github flavored `Jekyll` (a ruby gem of course). Furthermore github is a `Ruby on Rails` project. The irony is that I'm writing this post using `atom` which is essentially a `javascript` project allbeit helped along the way by `coffeescript`.
 
 [greenberg]:https://github.com/irajgreenberg/workshopExamples/tree/master/verlet_integration_01b_chain
