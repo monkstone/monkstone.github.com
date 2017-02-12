@@ -11,8 +11,6 @@ Here is [WOVNS][wovns] example sketch converted to JRubyArt.
 ### cross_hatch.rb (vanilla processing WOVNS example)
 
 ```ruby
-# Original sketch by David M. Ellis
-# https://github.com/damellis/wovns-processing-examples
 # Divan Quality, Landscape 1 Palette
 # This draws a cross-hatch pattern, i.e. a grid of cells, each of which contains
 # multiple lines. The lines in each cell alternate between horizontal and vertical.
@@ -26,31 +24,32 @@ def settings
 end
 
 def setup
+  sketch_title 'Cross Hatch'
   background(color('#050406')) # Black Satin
   stroke(color('#C2C2BF')) # Pearl
-  stroke_weight(10) # draw lines 10 pixels thick
+  strokeWeight(10) # draw lines 10 pixels thick
   # the width and height of each cell of the grid
-  w = width / 18.0
-  h = height / 48.0
+  w = width / 18
+  h = height / 48
   # the distance between stripes
   w2 = w / NUM_STRIPES
-  h2 = h / NUM_STRIPES  
-  grid(width, height, w, h) do |row, col| # JRubyArt grid method
+  h2 = h / NUM_STRIPES
+  grid(w, h) do |col, row|
     (0..NUM_STRIPES).each do |i|
-      # this will be true for every other cell in the grid
-      if (row % NUM_STRIPES + col % NUM_STRIPES).zero?
+      if (row + col).even?
         # horizontal lines
-        line(col + w2 / 2, row + i * h2 + h2 / 2,
-        (col + 1) - w2 / 2, row + i * h2 + h2 / 2)
+        line(w * col + w2 / 2, h * row + i * h2 + h2 / 2,
+        w * (col + 1) - w2 / 2, h * row + i * h2 + h2 / 2)
       else
         # vertical lines
-        line(col + i * w2 + w2 / 2, row + h2 / 2,
-        col + i * w2 + w2 / 2, (row + 1) - h2 / 2)
+        line(w * col + i * w2 + w2 / 2, h * row + h2 / 2,
+        w * col + i * w2 + w2 / 2, h * (row + 1) - h2 / 2);
       end
     end
   end
   save(data_path('hatch.png'))
 end
+
 ```
 
 ### Output
