@@ -63,7 +63,7 @@ end
 
 ### Output
 
-<img src="/assets/wovns_hype.png" />
+<img src="/assets/hype_wovns.png" />
 
 [wovns]:https://github.com/damellis/wovns-processing-examples
 
