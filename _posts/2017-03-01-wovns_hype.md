@@ -17,7 +17,7 @@ The latest [JRubyArt][jruby_art] and [propane][propane] versions feature example
 
 There are some restrictions regarding color palettes that you may use for your designs, so you should probably decide what color palette (and quality) suits you to start with eg [Spectrum 18][divan]. We can deal with such web palettes quite easily in JRubyArt and propane.
 
-### Here is experiment using hype library
+### An experimental design using hype library
 
 The sketch below uses Joshua Davis hype library with [Spectrum 18][divan] and will produce a different result each time you run it (hence use of a timestamp).
 
