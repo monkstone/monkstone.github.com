@@ -11,7 +11,7 @@ keywords: capture, jruby_art, glvideo, processing
 This library uses GStreamer-1.0 (and hence possibility of hardware acceleration).  First you need to make sure you can use the library on vanilla processing, for Archlinux this may need a re-compile
 see [my fork](https://github.com/monkstone/processing-glvideo). Here is a more complicated sketch by Gottfreid Haider, translated to JRubyArt see [original here](https://github.com/gohai/processing-glvideo/blob/master/examples/VideoMapping/VideoMapping.pde).
 
-Note how we are able to take advantage of ruby features to make the sketch more intelligble (partly by using the ruby struct as lighweight containers rather than the unecessarily complicated PVector or an indexed array for the image sources). Nevertheless kudos to Gottfreid Haider for the original sketch and for creating the library.
+Note how we are able to take advantage of ruby features to make the sketch more intelligble (partly by using the ruby struct as lighweight containers rather than the unecessarily complicated PVector or an indexed array for the image sources). But it would probably also be improved by creation of a Corners class? Nevertheless kudos to Gottfreid Haider for the original sketch and for creating the library.
 
 NB: The glvideo library is still somewhat experimental and the interface may well change.
 
