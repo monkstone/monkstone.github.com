@@ -11,7 +11,7 @@ keywords: capture, jruby_art, glvideo, processing
 This library uses GStreamer-1.0 (and hence possibility of hardware acceleration).  First you need to make sure you can use the library on vanilla processing, for Archlinux this may need a re-compile
 see [my fork](https://github.com/monkstone/processing-glvideo). Here is a simple video capture sketch that outputs the available camera/s and the possible settings.
 
-NB: The glvideo library is still somewhat experimental and the interface may well change.
+NB: The glvideo library is still somewhat experimental and the interface may well change (`start` is slated as an alternative to `play`).
 
 
 ```ruby
