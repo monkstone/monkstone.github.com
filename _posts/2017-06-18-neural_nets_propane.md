@@ -8,7 +8,7 @@ keywords: propane, nature of code, xor, neural net
 
 ### Custom java library build for propane (or JRubyArt)
 
-This library is taken from a `neural net` example in Dan Shiffmanns [Nature of Code][book] see original [code][code], see [propane version][version]. In our case for convenience we are calling the java library `xor.jar`, and since this is a ruby project, we are making use of a [polyglot maven][polyglot] build. See how easy it is to create a custom build in ruby:-
+This library is taken from a `neural net` example in Dan Shiffmanns [Nature of Code][book] see original [code][code], see [propane version][version]. In our case for convenience we are calling the java library `xor.jar`, and since this is a ruby project, we are making use of a [polyglot maven][polyglot] build. See how easy it is to create a custom `pom.rb` build in ruby:-
 
 ```ruby
 project 'xor' do
