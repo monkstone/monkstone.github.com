@@ -6,7 +6,7 @@ categories: jruby_art update
 keywords: JRubyArt, grid, step
 ---
 
-### There's more than one way to it in ruby
+### There's usuall more than one way to do it in ruby
 
 Here are two JRubyArt versions of an [openprocessing sketch by Michael Pinn][sketch]
 
