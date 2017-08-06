@@ -28,6 +28,8 @@ Java processing provides the following __Library Methods__
 
 ### LibraryProxy.java in JRubyArt
 
+Since jruby_art-1.4.0 we can readily access all the above library methods in library classes and include them in our sketches (and TouchEvent could be added if required). For simplicities sake you should use the jruby_art `library_loader` to load the `proxy_library` into the sketch. We can then create ruby classes that inherit from `LibraryProxy` to give us access to the above methods. Note `LibraryProxy` is an abstract java class, because it's `draw` method is abstract. We need to implement that method in our ruby class, but an empty `draw` method will work just fine.
+
 ```java
 package monkstone.core;
 
@@ -161,7 +163,8 @@ public abstract class LibraryProxy {
 
 ```ruby
 java_import Java::MonkstoneCore::LibraryProxy
-
+java_import Java::ProcessingEvent::KeyEvent
+java_import Java::ProcessingEvent::MouseEvent
 # classes that inherit from LibraryProxy are expected to implement
 # the abstract draw method of monkstone.core.LibraryProxy the other methods are
 # registered with PApplet instance in constructor ImplementingClass.new(app)
