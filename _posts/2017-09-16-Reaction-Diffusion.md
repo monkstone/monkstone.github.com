@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Reaction with PixelFlow in JRubyArt and propane"
+title: "Reaction Diffusion with PixelFlow in JRubyArt"
 date: 2017-09-15 06:00:00
 categories: jruby_art update
 keywords: ruby-processing, JRubyArt, propane, library, glsl, reaction diffusion, grayscott
