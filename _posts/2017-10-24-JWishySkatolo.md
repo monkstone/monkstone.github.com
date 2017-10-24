@@ -108,7 +108,7 @@ def create_gui
   sy = 14
   oy = (sy * 1.5).to_i
   ######################################
-  # GUI - FLUID
+  # GUI - Side Panel
   ######################################
   control = skatolo.add_group('control')
   control.set_title('Control Panel')
