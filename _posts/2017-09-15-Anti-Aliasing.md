@@ -22,7 +22,7 @@ module AA
   java_import 'com.thomasdiewald.pixelflow.java.antialiasing.FXAA.FXAA'
   java_import 'com.thomasdiewald.pixelflow.java.antialiasing.GBAA.GBAA'
   java_import 'com.thomasdiewald.pixelflow.java.antialiasing.SMAA.SMAA'
-  java_import 'com.thomasdiewald.pixelflow.java.dwgl.DwGLTextureUtils'
+  java_import 'com.thomasdiewald.pixelflow.java.utils.DwUtils'
   java_import 'com.thomasdiewald.pixelflow.java.geometry.DwCube'
   java_import 'com.thomasdiewald.pixelflow.java.geometry.DwMeshUtils'
   java_import 'com.thomasdiewald.pixelflow.java.imageprocessing.filter.DwFilter'
@@ -147,7 +147,7 @@ def draw
              end
   magnifier.apply(display, mouse_x, mouse_y)
   magnifier.display_tool
-  peasycam.beginHUD
+  DwUtils.beginScreen2D(g)
   # display Anti Aliased result
   blend_mode(REPLACE)
   clear
@@ -181,7 +181,7 @@ def draw
   text mode << buffer, tx + 2, ty + 2
   fill(255, 200, 0)
   text mode, tx, ty
-  peasycam.endHUD
+  DwUtils.endScreen2D(g)
   # some info, window title
   format_string = 'Anti Aliasing | fps: (%6.2f)'
   surface.set_title(format(format_string, frame_rate))
