@@ -57,6 +57,7 @@ end
 <img src="/assets/from_image.png" />
 
 The [hemesh][hemesh] library is developed by [Frederik Vanhoutte][wblut]
+
 [wblut]:http://www.wblut.com/
 [hemesh]:https://github.com/wblut/HE_Mesh
 [jruby_art]:https://ruby-processing.github.io/JRubyArt/
