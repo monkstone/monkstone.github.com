@@ -11,13 +11,13 @@ Skatolo is a replacement for [controlP5][P5] in [JRubyArt][jruby_art] and [propa
 
 ```ruby
 require 'skatolo'
-include EventMethod
 
 VIEWPORT_W = 600
 VIEWPORT_H = 600
 GUI_X = 20
 GUI_Y = 20
 GUI_W = 200
+SHAPES = %w[oval square triangle].freeze
 attr_reader :skatolo, :back_color, :x_wiggle, :y_wiggle, :magnitude, :big
 
 def setup
@@ -41,28 +41,30 @@ end
 
 def reset!
   @y_wiggle = 0
+  @shape = 'oval'
 end
 
 def toggle_big
   @big = !big
 end
 
+def random_shape
+  srand
+  @shape = SHAPES.sample
+end
+
 def draw
   draw_background
-
   # Seed the random numbers for consistent placement from frame to frame
   srand(0)
   horiz, vert, mag = x_wiggle, y_wiggle, magnitude
-
   if big
     mag *= 2
     vert /= 2
   end
-
   blu = bluish_value
   x, y = (width / 2), -27
   c = 0.0
-
   64.times do
     x += cos(horiz) * mag
     y += log10(vert) * mag + sin(vert) * 2
@@ -74,7 +76,6 @@ def draw
     horiz += rand * 0.25
     c += 0.1
   end
-
   @x_wiggle += 0.05
   @y_wiggle += 0.1
 end
@@ -84,9 +85,9 @@ def draw_shape(args)
   when 'triangle'
     draw_triangle(args)
   when 'square'
-    rect(args[1], args[2], args[3], args[4])
+    rect(*args.slice(1, 4))
   else
-    oval(args[1], args[2], args[3], args[4]) # ellipse alias
+    oval(*args.slice(1, 4)) # ellipse alias
   end
 end
 
@@ -108,7 +109,7 @@ def create_gui
   sy = 14
   oy = (sy * 1.5).to_i
   ######################################
-  # GUI - Side Panel
+  # GUI - FLUID
   ######################################
   control = skatolo.add_group('control')
   control.set_title('Control Panel')
@@ -119,26 +120,20 @@ def create_gui
          .set_color_background(color(100))
   px = 10
   py = 15
-  skatolo.add_slider('bluish')
-         .set_size(sx, sy)
-         .set_position(px, py += oy)
-         .set_range(0, 1.0)
-         .set_value(0.5)
-         .set_group(control)
-  skatolo.add_slider('alpha')
-         .set_size(sx, sy)
-         .set_position(px, py += oy)
-         .set_range(0, 1.0)
-         .set_value(0.5)
-         .set_group(control)
-  skatolo.add_button('toggle_big')
-         .set_size(sx, 15)
-         .set_position(px, py += oy)
-         .set_group(control)
-  skatolo.add_button('reset!')
-         .set_size(sx, 15)
-         .set_position(px, py += oy)
-         .set_group(control)
+  %w[bluish alpha].freeze.each do |slider|
+    skatolo.add_slider(slider)
+           .set_size(sx, sy)
+           .set_position(px, py += oy)
+           .set_range(0, 1.0)
+           .set_value(0.5)
+           .set_group(control)
+  end
+  %w[toggle_big reset! random_shape].freeze.each do |button|
+    skatolo.add_button(button)
+           .set_size(sx, 15)
+           .set_position(px, py += oy)
+           .set_group(control)
+  end
 end
 
 ```
