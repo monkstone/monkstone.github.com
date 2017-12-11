@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "HEC_Contour sketch from Images"
+title: "HEC_Isosurface sketch from Images"
 date: 2017-12-10 07:00:00
 categories: jruby_art update
 keywords: ruby-processing, JRubyArt, hemesh
