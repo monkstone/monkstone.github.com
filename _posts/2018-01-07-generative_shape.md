@@ -69,4 +69,4 @@ def settings
 end
 ```
 
-<img src="/assets/Line_1.pdf" />
+<img src="/assets/genrative.png" />
