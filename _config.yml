@@ -11,6 +11,7 @@ urls:
   github: https://github.com/monkstone.io
 twitter_username: monkstoneT
 github_username:  monkstone
+theme: cayman
 syntax-highlighting:
     enabled: true
 # Build settings
