@@ -10,11 +10,11 @@ keywords: noise, jruby, processing, generative
 ### Sketch in JRubyArt
 ```ruby
 #
-#  Example of using noise to rotate a grid of arrows
-#
+#  Example of using noise to rotate a grid of arrows after an original by
+#  Chris Coleman @digitalcoleman
 load_library :pdf
 attr_reader :version, :time_seed, :save_one_frame, :arrow
-
+STEP = 40
 POINTS = [
   [0, -55], [6, 0], [16, 10], [2, 10], [0, -10], [-2, 10], [-16, 10], [-6, 0]
 ].freeze
@@ -34,9 +34,9 @@ def draw
   begin_record(PDF, data_path("Line_#{version}.pdf")) if (save_one_frame == true)
   background(255)
   @time_seed = millis / 5000.0 # change noise over time
-  grid(width, height, 40, 40) do |cx, cy|  # iterate down and across the frame
+  grid(width, height, STEP, STEP) do |cx, cy|  # iterate down and accross the page
     push_matrix
-    translate(cx, cy) # set the position of each arrow
+    translate(cx + STEP / 2, cy + STEP / 2) # set the position of each arrow
     # rotate using noise
     rotate(4.0 * PI * noise(cx / 400.0, cy / 400.0, time_seed))
     # scale(1)
