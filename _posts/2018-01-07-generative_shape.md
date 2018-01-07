@@ -69,4 +69,4 @@ def settings
 end
 ```
 
-<img src="/assets/genrative.png" />
+<img src="/assets/generative.png" />
