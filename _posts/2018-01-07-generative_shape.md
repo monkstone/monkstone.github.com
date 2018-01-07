@@ -59,7 +59,6 @@ def create_arrow # custom shape for our arrow
   arrow.begin_shape
   arrow.fill(200, 0, 0)
   arrow.no_stroke
-  arrow.stroke_weight(2)
   POINTS.each { |pt| arrow.vertex(*pt) }
   arrow.end_shape(CLOSE)
 end
