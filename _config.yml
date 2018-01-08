@@ -11,14 +11,14 @@ urls:
   github: https://github.com/monkstone.io
 twitter_username: monkstoneT
 github_username:  monkstone
-theme: cayman
+theme: jekyll-theme-cayman
 syntax-highlighting:
     enabled: true
 # Build settings
 kramdown:
   syntax_highlighter: rouge
   input: GFM
-gems: 
+gems:
   - jekyll-sitemap
   - kramdown
   - rouge
