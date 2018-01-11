@@ -63,7 +63,7 @@ end
 
 ### Saved image
 
-<img src="/assets/wblut_circles.png" />
+<img src="/assets/wblut_circle.png" />
 
 The [hemesh][hemesh] library is developed by [Frederik Vanhoutte][wblut]
 
