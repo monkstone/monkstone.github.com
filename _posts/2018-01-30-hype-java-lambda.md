@@ -5,7 +5,7 @@ date: 2018-01-30 07:00:00
 categories: jruby_art update
 keywords: ruby-processing, JRubyArt, hype, java, lambda
 ---
-Since jdk8 it is possible to replace anonymous classes in callbacks with lambda (but you can't do this in processing ide). Here is [hype][:https://github.com/hype/HYPE_Processing] sketch converted to use java lambda:-
+Since jdk8 it is possible to replace anonymous classes in callbacks with lambda (but you can't do this in processing ide). Here is [hype][hype_library] sketch converted to use java lambda:-
 
 ```java
 import processing.core.PApplet;
@@ -156,7 +156,9 @@ public class HOscillatorSketch extends PApplet {
 
 
 ```
-But is even neater as a [JRubyArt][jruby_art] sketch where we can replace callbacks with a block
+The hype library was created by Joshua Davis. Read more about [hype_framework here][hype_framework], see earlier posts for more JRubyArt examples.
+
+Here is the same hype sketch as a [JRubyArt][jruby_art] sketch, where we simply replace callbacks with a block (which has to be even neater?):-
 
 ```ruby
 load_library :hype
