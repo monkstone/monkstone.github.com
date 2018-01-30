@@ -72,4 +72,4 @@ end
 
 <img src="/assets/in_sketch_shader.png" />
 
-[jruby_art]:https://ruby-processing.github.io/index.html
+[jruby_art]:https://ruby-processing.github.io/JRubyArt/

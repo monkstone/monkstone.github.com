@@ -396,5 +396,5 @@ private :draw_graph
 
 <img src="/assets/easing.png" />
 
-[jruby_art]:https://ruby-processing.github.io/index.html
+[jruby_art]:https://ruby-processing.github.io/JRubyArt/
 [gicentre]:http://www.gicentre.net

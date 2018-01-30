@@ -104,4 +104,4 @@ end
 ```
 
 [standalone class]:https://github.com/ruby-processing/jbox2d/blob/master/examples/test_contact/lib/custom_listener.rb
-[jruby_art]:https://ruby-processing.github.io/index.html
+[jruby_art]:https://ruby-processing.github.io/JRubyArt/

@@ -62,5 +62,5 @@ end
 
 <img src="/assets/couleurs.png" />
 
-[jruby_art]:https://ruby-processing.github.io/index.html
+[jruby_art]:https://ruby-processing.github.io/JRubyArt/
 

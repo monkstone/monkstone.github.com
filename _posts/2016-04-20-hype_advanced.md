@@ -6,7 +6,7 @@ categories: jruby_art update
 keywords: library, hype, JRubyArt
 ---
 
-Here is another example sketch by Joshua Davis, that has been refactored for [JRubyArt][jruby_art]. Download the [hype][hype_library] library from [github][hype_library]. Unzip the library in the processing libraries folder, rename the folder `hype`, rename `distribution` folder to `library`, rename the `HYPE.jar` to `hype.jar`. Check that you can see the library from the processing-3.2.1 ide. Note that we can use snake case in place of camel case, for constants use `::` and not `.` to call. The important thing to learn from this sketch is how to implement the HCallback interface. 
+Here is another example sketch by Joshua Davis, that has been refactored for [JRubyArt][jruby_art]. Download the [hype][hype_library] library from [github][hype_library]. Unzip the library in the processing libraries folder, rename the folder `hype`, rename `distribution` folder to `library`, rename the `HYPE.jar` to `hype.jar`. Check that you can see the library from the processing-3.2.1 ide. Note that we can use snake case in place of camel case, for constants use `::` and not `.` to call. The important thing to learn from this sketch is how to implement the HCallback interface.
 
 ```java
 package hype;
@@ -30,7 +30,7 @@ Which in vanilla processing Joshua Davis implements using an anonymous class:-
     }
   }
   )
-  
+
 ```
 
 But since java 8 he could have used the java lambda form:-
@@ -42,7 +42,7 @@ But since java 8 he could have used the java lambda form:-
                     d.noStroke().noFill().loc((int) random(width), (int) random(height)).visibility(false);
                     swarm.addTarget(d);
                 })
-                
+
 ```
 
 In JRubyArt it is implemented as a closure (block), note we do not/should not try to use the vanilla processing method.
@@ -52,8 +52,8 @@ In JRubyArt it is implemented as a closure (block), note we do not/should not tr
 .on_create do |obj|
   obj.no_stroke.no_fill.loc(rand(0..width), rand(0..width)).visibility(false)
   swarm.add_target(obj)
-  
-``` 
+
+```
 
 
 ```
@@ -129,5 +129,5 @@ end
 
 <img src="/assets/magnetic.png" />
 
-[jruby_art]:https://ruby-processing.github.io/index.html
+[jruby_art]:https://ruby-processing.github.io/JRubyArt/
 [hype_library]:https://github.com/hype/HYPE_Processing

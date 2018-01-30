@@ -181,7 +181,7 @@ import data.cfdg
 
 [context]:http://www.contextfreeart.org
 [cheche]:http://www.contextfreeart.org/gallery/view.php?id=2945
-[jruby_art]:https://ruby-processing.github.io/index.html
+[jruby_art]:https://ruby-processing.github.io/JRubyArt/
 [file_chooser]:https://ruby-processing.github.io/classes/chooser
 [six]:https://www.amazon.co.uk/Six-Young-Painters-Michael-Andrews/dp/B00NRMKB6G
 [work]:http://www.philipsuttonra.com/

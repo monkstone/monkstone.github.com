@@ -78,6 +78,6 @@ end
 <img src="/assets/hype_tween.png" />
 
 [previous post]: {{ site.url }}/nested_callbacks
-[jruby_art]:https://ruby-processing.github.io/index.html
+[jruby_art]:https://ruby-processing.github.io/JRubyArt/
 [hype_library]:https://github.com/hype/HYPE_Processing
 [hype_framework]:http://www.hypeframework.org/

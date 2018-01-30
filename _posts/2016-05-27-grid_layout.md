@@ -72,6 +72,6 @@ end
 
 <img src="/assets/grid_layout.png" />
 
-[jruby_art]:https://ruby-processing.github.io/index.html
+[jruby_art]:https://ruby-processing.github.io/JRubyArt/
 [hype_library]:https://github.com/hype/HYPE_Processing
 [hype_framework]:http://www.hypeframework.org/

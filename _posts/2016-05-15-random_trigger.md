@@ -99,6 +99,6 @@ end
 
 <img src="/assets/random_trigger.png" />
 
-[jruby_art]:https://ruby-processing.github.io/index.html
+[jruby_art]:https://ruby-processing.github.io/JRubyArt/
 
 [hype]:http://www.hypeframework.org/examples/HRandomTrigger/example_001/index.html

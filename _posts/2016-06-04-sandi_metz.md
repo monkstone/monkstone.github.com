@@ -57,7 +57,7 @@ end
 
 <img src="/assets/roman.png" />
 
-[jruby_art]:https://ruby-processing.github.io/index.html
+[jruby_art]:https://ruby-processing.github.io/JRubyArt/
 [roman]:https://gist.github.com/monkstone/b35b26384976c6e474ebf5a33d7abab7
 [list]:http://sandimetz.us3.list-manage.com/track/click?u=1090565ccff48ac602d0a84b4&id=bd938590a4&e=8144e160c6
 [kata]:https://github.com/alxndr/exercism/blob/master/ruby/roman-numerals/roman_numerals_test.rb
