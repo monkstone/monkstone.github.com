@@ -42,9 +42,9 @@ def setup
   wh = 256
   bdata = []
   (0...wh * wh * 4).step(4) do
-    bdata << rand(125)
-    bdata << rand(125)
-    bdata << rand(125)
+    bdata << rand(-125..125) # NB: java bytes are signed
+    bdata << rand(-125..125)
+    bdata << rand(-125..125)
     bdata << 125
   end
   bbuffer = Java::JavaNio::ByteBuffer.wrap(bdata.to_java(Java::byte))
@@ -71,7 +71,6 @@ def draw
   title_format = 'Shadertoy Voronoi Distances | size: [%d, %d] frame_count: %d fps: %6.2f'
   surface.set_title(format(title_format, width, height, frame_count, frame_rate))
 end
-
 
 ```
 
