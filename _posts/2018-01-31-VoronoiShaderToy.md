@@ -54,7 +54,7 @@ def setup
     wh,
     wh,
     GL2::GL_RGBA,
-    GL2::GL_UNSIGNED_BYTE,
+    GL2::GL_BYTE, # matches bbuffer type?,
     GL2::GL_LINEAR,
     GL2::GL_MIRRORED_REPEAT,
     4,
