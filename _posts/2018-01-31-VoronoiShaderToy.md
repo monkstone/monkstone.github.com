@@ -48,10 +48,10 @@ def tex_noise
   texture = DwGLTexture.new
   bdata = []
   (0...WH * WH * 4).step(4) do
-    bdata << rand(0..125) # NB: java bytes are signed
-    bdata << rand(0..125)
-    bdata << rand(0..125)
-    bdata << 125
+    bdata << rand(-125..125) # NB: java bytes are signed
+    bdata << rand(-125..125)
+    bdata << rand(-125..125)
+    bdata << -125
   end
   texture.resize(
     context,
