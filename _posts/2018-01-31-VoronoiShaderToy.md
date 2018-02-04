@@ -15,7 +15,7 @@ java_import 'com.thomasdiewald.pixelflow.java.DwPixelFlow'
 java_import 'com.thomasdiewald.pixelflow.java.dwgl.DwGLTexture'
 java_import 'com.thomasdiewald.pixelflow.java.imageprocessing.DwShadertoy'
 # PixelFlow | Copyright (C) 2017 Thomas Diewald - www.thomasdiewald.com
-# translated to JRubyArt by Martin Prout
+# translated to JRubyArt and refactored by Martin Prout
 # https://github.com/diwi/PixelFlow.git
 #
 # A Processing/Java library for high performance GPU-Computing. MIT
@@ -23,7 +23,9 @@ java_import 'com.thomasdiewald.pixelflow.java.imageprocessing.DwShadertoy'
 #
 # Shadertoy Demo:   https://www.shadertoy.com/view/ldl3W8
 # Shadertoy Author: https://www.shadertoy.com/user/iq
-attr_reader :context, :toy, :tex0
+TITLE = 'Shadertoy Voronoi Distances'.freeze
+WH = 256
+attr_reader :toy, :context
 
 def settings
   size(1280, 720, P2D)
@@ -38,39 +40,43 @@ def setup
   context.print
   context.printGL
   @toy = DwShadertoy.new(context, data_path('voronoi_distances.frag'))
-  # create noise texture
-  wh = 256
+  frame_rate(60)
+  toy.set_iChannel(0, tex_noise)
+end
+
+def tex_noise
+  texture = DwGLTexture.new
   bdata = []
-  (0...wh * wh * 4).step(4) do
-    bdata << rand(-125..125) # NB: java bytes are signed
-    bdata << rand(-125..125)
-    bdata << rand(-125..125)
+  (0...WH * WH * 4).step(4) do
+    bdata << rand(0..125) # NB: java bytes are signed
+    bdata << rand(0..125)
+    bdata << rand(0..125)
     bdata << 125
   end
-  bbuffer = Java::JavaNio::ByteBuffer.wrap(bdata.to_java(Java::byte))
-  tex0.resize(
+  texture.resize(
     context,
     GL2::GL_RGBA8,
-    wh,
-    wh,
+    WH,
+    WH,
     GL2::GL_RGBA,
-    GL2::GL_BYTE, # matches bbuffer type?,
+    GL2::GL_BYTE,
     GL2::GL_LINEAR,
     GL2::GL_MIRRORED_REPEAT,
     4,
     1,
-    bbuffer
+    Java::JavaNio::ByteBuffer.wrap(bdata.to_java(Java::byte))
   )
-  frame_rate(60)
+  texture
 end
 
 def draw
-  toy.set_iMouse(mouse_x, height - 1 - mouse_y, mouse_x, height - 1 - mouse_y)
-  toy.set_iChannel(0, tex0)
-  toy.apply(self.g)
-  title_format = 'Shadertoy Voronoi Distances | size: [%d, %d] frame_count: %d fps: %6.2f'
-  surface.set_title(format(title_format, width, height, frame_count, frame_rate))
+  toy.apply(g)
+  title_format = '%s | size: [%d, %d] frame_count: %d fps: %6.2f'
+  surface.set_title(
+    format(title_format, TITLE, width, height, frame_count, frame_rate)
+  )
 end
+
 
 ```
 
