@@ -1,51 +1,77 @@
 ---
 layout: post
-title: "Voronoi Shadertoy Sketch JRubyArt"
+title: "Expansive Reaction Diffusion Shadertoy Sketch JRubyArt"
 date: 2018-01-31 07:00:00
 categories: jruby_art update
 keywords: ruby-processing, JRubyArt, shadertoy, gpu
 ---
-Thanks to the [PixelFlow library][pixgit] by [Thomas Diewald][diewald] here is a voronoi shadertoy example translated for [JRubyArt][jruby_art],  see more examples [here][jra] and [here][pro]
+Thanks to the [PixelFlow library][pixgit] by [Thomas Diewald][diewald] here is a another shadertoy example translated for [JRubyArt][jruby_art],  see more examples [here][jra] and [here][pro]
 
 ```ruby
+# PixelFlow | Copyright (C) 2017 Thomas Diewald - www.thomasdiewald.com
+# Translate to JRubyArt by Martin Prout
+# https://github.com/diwi/PixelFlow.git
+#
+# A Processing/Java library for high performance GPU-Computing.
+# MIT License: https://opensource.org/licenses/MIT
+#
+# Shadertoy Demo:   https://www.shadertoy.com/view/4dcGW2
+# Shadertoy Author: https://www.shadertoy.com/user/Flexi
+#
 load_library :PixelFlow
 java_import 'java.nio.ByteBuffer'
 java_import 'com.jogamp.opengl.GL2'
 java_import 'com.thomasdiewald.pixelflow.java.DwPixelFlow'
 java_import 'com.thomasdiewald.pixelflow.java.dwgl.DwGLTexture'
 java_import 'com.thomasdiewald.pixelflow.java.imageprocessing.DwShadertoy'
-# PixelFlow | Copyright (C) 2017 Thomas Diewald - www.thomasdiewald.com
-# translated to JRubyArt and refactored by Martin Prout
-# https://github.com/diwi/PixelFlow.git
-#
-# A Processing/Java library for high performance GPU-Computing. MIT
-# License: https://opensource.org/licenses/MIT
-#
-# Shadertoy Demo:   https://www.shadertoy.com/view/ldl3W8
-# Shadertoy Author: https://www.shadertoy.com/user/iq
-TITLE = 'Shadertoy Voronoi Distances'.freeze
+
 WH = 256
-attr_reader :toy, :context
+TITLE = 'Shadertoy Expansive Reaction Diffusion'.freeze
+attr_reader :context, :toys
 
 def settings
   size(1280, 720, P2D)
   smooth(0)
 end
 
+def create_shadertoys
+  buffers = %w[_BufA _BufB _BufC _BufD]
+  buffers << ''
+  @toys = buffers.map do |frag|
+    DwShadertoy.new(context, data_path("ExpansiveReactionDiffusion#{frag}.frag"))
+  end
+end
+
+def set_channels
+  toys[0].set_iChannel(0, toys[0])
+  toys[0].set_iChannel(1, toys[2])
+  toys[0].set_iChannel(2, toys[3])
+  toys[0].set_iChannel(3, tex_noise)
+  toys[0].apply(width, height)
+  toys[1].set_iChannel(0, toys[0])
+  toys[1].apply(width, height)
+  toys[2].set_iChannel(0, toys[1])
+  toys[2].apply(width, height)
+  toys[3].set_iChannel(0, toys[0])
+  toys[3].apply(width, height)
+  toys[4].set_iChannel(0, toys[0])
+  toys[4].set_iChannel(2, toys[2])
+  toys[4].set_iChannel(3, tex_noise)
+  toys[4].apply(g)
+end
+
 def setup
-  sketch_title 'Warming Up'
   surface.set_resizable(true)
-  @tex0 = DwGLTexture.new
   @context = DwPixelFlow.new(self)
   context.print
   context.printGL
-  @toy = DwShadertoy.new(context, data_path('voronoi_distances.frag'))
+  create_shadertoys
   frame_rate(60)
-  toy.set_iChannel(0, tex_noise)
 end
 
 def tex_noise
   texture = DwGLTexture.new
+  bdata = []
   (0...WH * WH * 4).step(4) do
     bdata << rand(-127..127) # NB: java bytes are signed
     bdata << rand(-127..127)
@@ -70,7 +96,13 @@ def tex_noise
 end
 
 def draw
-  toy.apply(g)
+  blend_mode(REPLACE)
+  if mouse_pressed?
+    toys.each do |toy|
+      toy.set_iMouse(mouse_x, height-1-mouse_y, mouse_x, height-1-mouse_y)
+    end
+  end
+  set_channels
   title_format = '%s | size: [%d, %d] frame_count: %d fps: %6.2f'
   surface.set_title(
     format(title_format, TITLE, width, height, frame_count, frame_rate)
@@ -80,9 +112,6 @@ end
 
 ```
 
-### A snapshot of a running sketch from atom
-
-<img src="/assets/voronoi_distance.png" />
 
 [pixgit]:https://github.com/diwi/PixelFlow
 [diewald]:http://thomasdiewald.com/blog/
