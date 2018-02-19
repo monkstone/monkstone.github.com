@@ -5,7 +5,7 @@ date: 2018-02-18 07:00:00
 categories: jruby_art update
 keywords: ruby-processing, JRubyArt, ImageProcessing
 ---
-Thanks to the [ImageProcessing library][image_processing] by [Nick 'Milchreis' Müller][Milchreis] here is a another PixelFlow example translated for [JRubyArt][jruby_art], see more examples [here][jra].
+Thanks to the [ImageProcessing library][image_processing] by [Nick 'Milchreis' Müller][Milchreis] here is a another processing example translated for [JRubyArt][jruby_art], see more examples [here][jra].
 
 ```ruby
 # Example for lookup tables (LUT).
