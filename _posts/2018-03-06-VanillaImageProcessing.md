@@ -28,7 +28,7 @@ NAMES = %w[
 VALUES = [
   REPLACE, BLEND, ADD, SUBTRACT, LIGHTEST, DARKEST, DIFFERENCE, EXCLUSION, MULTIPLY
 ]
-FILTERS = VALUES.zip(NAMES).to_h # avoids the lengthy if/else chain of original
+FILTERS = VALUES.zip(NAMES).to_h
 
 def setup
   sketch_title 'Blending'
