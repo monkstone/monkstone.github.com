@@ -91,14 +91,14 @@ The library (in `library/dead_grid/dead_grid.rb`)
 ```ruby
 # By inheriting from LibraryProxy draw loop is by reflection sketch draw loop
 class DeadGrid < LibraryProxy
-  attr_accessor :app, :block_size, :grid, :width, :height
+  attr_reader :app, :block_size
+  attr_accessor :grid, :width, :height
 
   def initialize(app)
     @app = app
     @block_size = app.block_size
     @width = app.width / block_size - 1
     @height = app.height / block_size - 1
-
     @grid = Array.new
     0.upto(width) do |i|
       grid[i] = Array.new
@@ -177,7 +177,8 @@ end
 
 # By inheriting from LibraryProxy draw loop is by reflection sketch draw loop
 class Block < LibraryProxy
-  attr_accessor :app, :block_size, :x, :y, :width, :height, :direction
+  attr_reader :app, :block_size
+  attr_accessor :x, :y, :width, :height, :direction
 
   def initialize(app)
     @app = app
@@ -218,6 +219,7 @@ class BlockedHandler
     end
   end
 end
+
 
 ```
 
