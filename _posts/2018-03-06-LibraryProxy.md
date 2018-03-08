@@ -3,11 +3,11 @@ layout: post
 title: "Sketch Using Library Proxy in JRubyArt"
 date: 2018-03-06 06:00:00
 categories: jruby_art update
-keywords: ruby-processing, JRubyArt, squarism, observable
+keywords: ruby-processing, JRubyArt, squarism, observable, observer
 ---
 ### A ruby-processing sketch by Squarism translated to JRubyArt
 
-In this [JRubyArt][jruby_art] sketch after an original ruby-processing by [Chris Dillon][squarism] we create a local ruby library, and make use of `LibraryProxy` to access the draw loop from our custom classes.
+In this [JRubyArt][jruby_art] sketch after an original ruby-processing version by [Chris Dillon][squarism] we create a local ruby library, and make use of `LibraryProxy` to access the draw loop from our custom classes.
 The sketch:-
 
 ```ruby
