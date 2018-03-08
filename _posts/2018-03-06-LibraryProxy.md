@@ -12,7 +12,6 @@ The sketch:-
 
 ```ruby
 require 'observer'
-
 include Observable
 load_libraries :library_proxy, :dead_grid
 attr_accessor :deadgrid, :player, :block_size
@@ -39,7 +38,7 @@ end
 def draw_grid_lines
   stroke_weight 1
   stroke 40
-  # for each block in deadgrid, draw lines
+  # for each block in deadgrid, draw lines using JRubyArt `grid` utility
   grid(width, height, block_size, block_size) do |x, y|
     line(x, 0, x, height)
     line(0, y, width, y)
@@ -55,33 +54,28 @@ def key_pressed
     unless deadgrid.grid[player.x][player.y].zero?
       deadgrid.grid[player.x][player.y] = 0
     end
+    return
   when LEFT
     player.direction = 0
     return unless player.x > 0
-    return player.x = player.x - 1 if deadgrid.can_move?(player, 1)
-    changed
-    notify_observers(player, deadgrid)
+    return player.x -= 1 if deadgrid.can_move?(player, 1)
   when RIGHT
     player.direction = 2
     # check bounds
     return unless player.x < deadgrid.width
-    return player.x = player.x + 1 if deadgrid.can_move?(player, 1)
-    changed
-    notify_observers(player, deadgrid)
+    return player.x += 1 if deadgrid.can_move?(player, 1)
   when UP
     player.direction = 1
     # check bounds
     return unless player.y > 0
-    return player.y = player.y - 1 if deadgrid.can_move?(player, 1)
-    changed
-    notify_observers(player, deadgrid)
+    return player.y -= 1 if deadgrid.can_move?(player, 1)
   when DOWN
     player.direction = 3
     return unless player.y < deadgrid.height
-    return player.y = player.y + 1 if deadgrid.can_move?(player, 1)
-    changed
-    notify_observers(player, deadgrid)
+    return player.y += 1 if deadgrid.can_move?(player, 1)
   end
+  changed
+  notify_observers(player, deadgrid)
 end
 
 ```
