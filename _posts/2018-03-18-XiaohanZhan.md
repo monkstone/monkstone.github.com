@@ -7,7 +7,7 @@ keywords: ruby-processing, JRubyArt, hellochar, chaldini, generative
 ---
 ### Xiaohan Zhang has created interesting stuff in processing
 
-Here is a processing sketch by [Xiaohan Zhang aka hellochar][hellochar] roughtly translated for JRubyArt by Martin Prout
+Here is a processing sketch by [Xiaohan Zhang][github] aka [hellochar][hellochar] roughly translated for JRubyArt by Martin Prout
 
 ```ruby
 # After an original by Xiaohan Zhang aka hellochar
@@ -142,6 +142,6 @@ A snapshot of running sketch
 
 ![hellochar.png]({{site.github.url}}/assets/hellochar.png)
 
-
-[hellochar]:https://github.com/hellochar/
+[hellochar]:http://www.hellochar.com/
+[github]:https://github.com/hellochar/
 [jruby_art]:https://ruby-processing.github.io/JRubyArt/
