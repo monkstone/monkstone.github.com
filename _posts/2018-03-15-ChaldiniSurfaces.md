@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Chaldini Surface Sketch in JRubyArt"
-date: 2018-03-25 06:00:00
+date: 2018-03-15 06:00:00
 categories: jruby_art update
 keywords: ruby-processing, JRubyArt, v3ga, chaldini, paul bourke
 ---
