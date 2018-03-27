@@ -19,7 +19,9 @@ Knowledge, experience of java programming is much more important than ruby, pref
 #### Recommended Tools:-
 
 A means of swapping java environments (eg update-alternatives for Debian ubuntu)
+
 A java ide, netbeans is a good choice
+
 A ruby editor, atom is an excellent choice for git support, and ability to run sketches from the editor (further you can preview markdown).
 
 Minitest is preferred over rspec for testing
