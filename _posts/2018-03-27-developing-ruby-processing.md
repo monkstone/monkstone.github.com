@@ -25,6 +25,7 @@ A java ide, netbeans is a good choice
 A ruby editor, atom is an excellent choice for git support, and ability to run sketches from the editor (further you can preview markdown).
 
 Minitest is preferred over rspec for testing
+
 An independent maven install (ie separate from ide that will also include maven support).
 
 If at all possible avoid rvm, and probably rbenv they will only cause grief and confusion (neither handle jruby versioning too well)
