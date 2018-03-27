@@ -40,7 +40,7 @@ Tools like [rubocop][rubocop] and [ruby-lint][lint] can be helpful, read Sandime
 
 Clone the repositories, read the project code (propane is simpler to start with, neither code base is particularly big and I've tried to keep it modular), see if it makes sense, there could be scope for improvement.
 
-##### Documentation
+#### Documentation
 
 The simplest, safest place to contribute to is the documentation, start by contributing to Wiki, otherwise learn jekyll and github markdown.
 
