@@ -18,7 +18,7 @@ Knowledge, experience of java programming is much more important than ruby, pref
 
 #### Recommended Tools:-
 
-A means of swapping java environments (eg update-alternatives for Debian ubuntu)
+A means of swapping java environments (eg `update-alternatives` for Debian ubuntu, or `archlinux-java`)
 
 A java ide, netbeans is a good choice
 
