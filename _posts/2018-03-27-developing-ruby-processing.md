@@ -3,6 +3,7 @@ layout: post
 title: "Developing JRubyArt"
 date: 2018-03-27 06:00:00
 categories: jruby_art update
+permalink: /developing/
 keywords: ruby-processing, JRubyArt, processing, propane, developer, guide
 ---
 ### A Guide for anyone wishing to develop a ruby wrapper for processing

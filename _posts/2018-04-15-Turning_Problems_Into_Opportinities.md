@@ -10,18 +10,10 @@ keywords: opportunities, processing, propane, developer, jdk9
 
 There was an ethos in my last job that you should turn problems into opportunities, it was bit of Orwelian [doublespeak][doublethink] really, but sometimes you can make it work for you (and not just putting a positive spin on a disaster). A classic example make a cock-up on a project for Japanese clients, then you find out they can't lose face because they feel bad about too (after all they selected you to the job and so feel responsible). Of course if you can come up with fix they'll think you are excellent. But there really are opportunities sometimes, and so it is with some recent issues thrown up by jdk9 changes.
 
-Propane and JRubyArt rely on calling an [inherited `protected`][protected] java method, and currently this is not possible (JRuby guys could potentially produce a fix, but are reluctant to do so as it would potential expose `protected` java methods from non inherited classes). The opportunity here is that I can fairly easily produce a fix by compiling my own custom processing-core, and in doing so introduce custom icons to display in OS panel. There are other benefits as I will not have to wait for the processing guys to produce other fixes (required for MacOS), however I will be looking for contributors for help here (being a strictly linux person).
+Propane and JRubyArt rely on calling an [inherited `protected`][protected] java method, and currently this is not possible (JRuby guys could potentially produce a fix, but are reluctant to do so as it would potential expose `protected` java methods from non inherited classes). The opportunity here is that I can fairly easily produce a fix by compiling my own custom processing-core, and in doing so introduce custom icons to display in OS panel. There are other benefits as I will not have to wait for the processing guys to produce other fixes (required for MacOS), however I will be looking for [contributors][developing] for help here (being a strictly linux person).
 
-#### Fixing run_sketch
 
-A bit radical but it works we create a public `runPropane()` method for `PApplet` that mirrors `runSketch()`, except that it is publicly accessible.
-
-wget https://github.com/processing/processing/archive/processing-0264-3.3.7.tar.gz
-
-tar xzvf processing-0264-3.3.7.tar.gz
-
-See github project [processing-core][core] for the modification to `PApplet` and polyglot maven build. All that is the required is to modify propane `app.rb` to call `runPropane` instead of `run_sketch`. However not 100% sure fix preserves processing MacOS hacks, we do however take the opportunity to use our own icons.
-
+[developing]:{{ github.site.url }}/developing/
 [protected]:{{ github.site.url }}/jdk9/
 [doublethink]:https://en.wikipedia.org/wiki/Doublespeak
 [vanilla]:https://github.com/processing/processing/wiki/Supported-Platforms#java-9
