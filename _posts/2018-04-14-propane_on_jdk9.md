@@ -3,6 +3,7 @@ layout: post
 title: "Fixing propane for jdk9"
 date: 2018-04-13 06:00:00
 categories: jruby_art update
+permalink: /jdk9/
 keywords: ruby-processing, JRubyArt, processing, propane, developer, jdk9
 ---
 ### The problems
