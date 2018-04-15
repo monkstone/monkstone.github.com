@@ -26,9 +26,12 @@ See github project [processing-core][core] for the modification to `PApplet` and
 We can avoid calling the `fireStateChanged` if we initialize the slider values directly in the sketch. This is less neat but workable, first we create a method.
 
 ```ruby
-def app_value(name, val)
-  Propane.app.instance_variable_set("@#{name}", val)
-end
+module ControlPanel
+  def self.app_value(name, val)
+    Propane.app.instance_variable_set("@#{name}", val)
+  end
+  ...
+  
 ```
 
 so we can call it initially as well as in our change_listener
