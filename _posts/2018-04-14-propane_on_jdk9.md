@@ -31,7 +31,7 @@ module ControlPanel
     Propane.app.instance_variable_set("@#{name}", val)
   end
   ...
-  
+
 ```
 
 so we can call it initially as well as in our change_listener
@@ -39,15 +39,16 @@ so we can call it initially as well as in our change_listener
 ```ruby
 add_change_listener do
   update_label(label, name, value)
-  app_value(name, value)
+  ControlPanel.app_value(name, value)
   proc.call(value) if proc
 end
-val = (range.first + range.last) / 2
-app_value(name, val * 100)
+val = initial.nil? ? (range.first + range.last) * 50 : initial * 100
+set_value(val)
+ControlPanel.app_value(name, val)
+
 ```
 
-previously it was sufficient to `fireStateChanged` and let the change_listener initialize the sketch values. Because of this change we are dropping the ability to set initial slider values in `control_panel` setup.
-
+previously it was sufficient to `fireStateChanged` and let the change_listener initialize the sketch values. If the val is new that fires state changed for us, otherwise `label` only shows after slider is moved.
 
 
 [vanilla]:https://github.com/processing/processing/wiki/Supported-Platforms#java-9
