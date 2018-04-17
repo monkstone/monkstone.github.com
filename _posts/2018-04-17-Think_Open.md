@@ -12,7 +12,7 @@ I have just released an experimental version of propane, that includes an integr
 
 ### Linux ###
 
-This pre-release should just work on linux and has the advantage of virtually zero dependencies apart from jar available from maven central, it should be quite easy to hack the code to make it compatible with raspberryPI.
+This pre-release should just work on linux and has the advantage of virtually zero dependencies apart from jars available from maven central, it should be quite easy to hack the code to make it compatible with raspberryPI.
 
 ### Help ###
 
