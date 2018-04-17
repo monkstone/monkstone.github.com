@@ -3,7 +3,7 @@ layout: post
 title: "Think Open"
 date: 2018-04-17 06:00:00
 categories: jruby_art update
-permalink: /opportunity/
+permalink: /think_open/
 keywords: opportunities, processing, propane, developer, jdk9
 ---
 ### Experimental Release MacOS ###
