@@ -14,6 +14,23 @@ I have just released an experimental version of propane, that includes an integr
 
 This pre-release should just work on linux and has the advantage of virtually zero dependencies apart from jars available from maven central, it should be quite easy to hack the code to make it compatible with raspberryPI.
 
+### Compiling with jdk9 ###
+
+Can be compiled with jdk9 but it's noisy and not currently recommended:-
+
+```bash
+[tux@monkstone ~]$ java -version
+Picked up _JAVA_OPTIONS: -Dswing.aatext=true
+openjdk version "9.0.4"
+OpenJDK Runtime Environment (build 9.0.4+11)
+OpenJDK 64-Bit Server VM (build 9.0.4+11, mixed mode)
+[tux@monkstone ~]$ propane --version
+Picked up _JAVA_OPTIONS: -Dswing.aatext=true
+Propane version 2.8.0.pre
+JRuby version 9.1.16.0
+
+```
+
 ### Help ###
 
 Beyond testing it would be nice to have some contributions from MacOS or raspberyPI users (fork the [think_open][propane] branch). See [developing][developing]
