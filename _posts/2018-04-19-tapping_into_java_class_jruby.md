@@ -43,7 +43,7 @@ A snapshot of running sketch
 
 ![fred.png]({{site.github.url}}/assets/fred.png)
 
-What this sketch demonstrates is that you can tap into java class. It is possible via duck-typing to create (with no ceremony) a Vec2D instance fro a PVector it requires more ceremony but it is possible to create a PVector instance from Vec2D instance. For some reason PVector to String returns an array of java float.
+What this sketch demonstrates is that you can tap into a java class. It is possible via duck-typing to create (with no ceremony) a Vec2D instance from a PVector, it requires more ceremony but it is possible to create a PVector instance from Vec2D instance. For some reason PVector to String returns an array of java float.
 
 [propane]:https://ruby-processing.github.io/propane/
 [jruby_art]:https://ruby-processing.github.io/JRubyArt/
