@@ -135,4 +135,6 @@ end
 Mandelbrot.new
 ```
 
+See [PiCrate](https://ruby-processing.github.io/PiCrate/) here
+
 ![mandelbrot.png]({{site.github.url}}/assets/mandelbrot.png)
