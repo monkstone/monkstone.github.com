@@ -10,7 +10,7 @@ keywords: processing, jruby, JRubyArt, java
 
 ### Installing raspbian image from processing.organization
 
-Ok it is assumed you have a raspberrypi (preferably 3B+ model) and a spare 16G micro-sd card (or usb drive at push). You should download the processing raspbian image [here][image] and write the image to your spare SD card, see [processing wiki][wiki]. If you want to use a usbstick / usbdrive you need to tell your raspberrypi do usb boot (this is one time and and irreversible step so not for noobs), see [here][usbstick], there are plenty of tools for writing images to usb drives (eg mintstick on mint linux).
+Ok it is assumed you have a raspberrypi (preferably 3B+ model) and a spare 16G micro-sd card (or usb drive at push). You should download the processing raspbian image [here][image] and write the image to your spare SD card, see [processing wiki][wiki]. If you want to use a usbstick / usbdrive you need to tell your raspberrypi to do a usb boot (this is one time and and irreversible step so not for noobs), see [here][usbstick], there are plenty of tools for writing images to usb drives (eg mintstick on mint linux).
 
 ### Connecting WiFi
 
@@ -18,7 +18,7 @@ It is assumed that you will use wifi (instead of ethernet cable) to connect to t
 
 ### Installing gems
 
-It is normal to install gems to a local folder, but you need to define the GEM_HOME to do so, what I usually do is to modify `~/.profile` to modify my personal bash environment see my `~/.profile`:-
+It is normal to install gems to a local folder, but you need to define the GEM_HOME to do so, what I usually do is to modify `~/.profile` to modify the local bash environment see my `~/.profile`:-
 
 ```bash
 # ~/.profile: executed by the command interpreter for login shells.
@@ -88,6 +88,9 @@ Use geany (or better vim needs an install) to edit sketch
 k9 --run my_sketch.rb
 ```
 
+### JWishy running on pi
+
+![pi_capture.jpg]({{site.github.url}}/assets/pi_capture.jpg)
 
 
 [usbstick]:https://www.raspberrypi.org/documentation/hardware/raspberrypi/bootmodes/msd.md
