@@ -49,12 +49,12 @@ export GEM_PATH="/home/pi/.gem/ruby/2.3.0"
 export PATH="${PATH}:${GEM_PATH}/bin"
 ```
 
-Note this profile is not immediately available to your `shell` but you could `source ~/.profile` to make it so or re-boot.
-NB: be very careful here an invalid `.profile` may prevent you from logging into raspberrpi.
+Note this profile is not immediately available to your `shell` but you could do `source ~/.profile` to make it so or re-boot.
+NB: be very careful here an invalid `.profile` may prevent you from logging into raspberrypi.
 
 ### Installing JRubyArt
 
-Since we are on a very specific system we can all use the same configuration for JRubyArt, and this can be created before you download the JRubyArt gem (_if you have create a new user eg tux, replace pi with tux_). You need to `mkdir ~/.jruby_art` and create `config.yml` there:-
+Since we are on a very specific system we can all use the same configuration for JRubyArt, and this can be created before you download the JRubyArt gem (_if you have created a new user eg tux, replace pi with tux_). You need to `mkdir ~/.jruby_art` and create `config.yml` there:-
 
 ```yaml
 ---
@@ -83,7 +83,7 @@ It makes sense to create a new folder to create sketches
 cd my_folder
 k9 --create my_sketch 300 300 # creates my_sketch.rb
 ```
-Use geany (or better vim needs an install) to edit sketch
+Use geany (or better vim needs an install) to edit the sketch
 ```bash
 k9 --run my_sketch.rb
 ```
