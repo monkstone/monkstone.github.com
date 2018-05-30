@@ -10,7 +10,7 @@ keywords: processing, jruby, JRubyArt, java
 
 ### Installing raspbian image from processing.organization
 
-Ok it is assumed you have a raspberrypi (preferably 3B+ model) and a spare 16G micro-sd card (or usb drive at push). You should download the processing raspbian image [here][image] and write the image to your spare SD card, see [processing wiki][wiki]. If you want to use a usbstick / usbdrive you need to tell your raspberrypi to do a usb boot (this is one time and and irreversible step so not for noobs), see [here][usbstick], there are plenty of tools for writing images to usb drives (eg mintstick on mint linux).
+Ok it is assumed you have a raspberrypi (preferably 3B+ model) and a spare 16G micro-sd card (or usb drive at push). You should download the processing raspbian image [here][image] and write the image to your spare SD card, see [pi.processing website][website]. If you want to use a usbstick / usbdrive you need to tell your raspberrypi to do a usb boot (this is one time and and irreversible step so not for noobs), see [here][usbstick], there are plenty of tools for writing images to usb drives (eg mintstick on mint linux).
 
 ### Connecting WiFi
 
@@ -95,6 +95,6 @@ k9 --run my_sketch.rb
 
 [usbstick]:https://www.raspberrypi.org/documentation/hardware/raspberrypi/bootmodes/msd.md
 
-[wiki]:https://github.com/processing/processing/wiki/Raspberry-Pi
+[website]:https://pi.processing.org/get-started/
 
 [image]:https://github.com/processing/processing/releases/download/processing-0264-3.3.7/processing-3.3.7-linux-raspbian.zip
