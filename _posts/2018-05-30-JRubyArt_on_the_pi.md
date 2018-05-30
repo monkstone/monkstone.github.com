@@ -14,7 +14,7 @@ Ok it is assumed you have a raspberrypi (preferably 3B+ model) and a spare 16G m
 
 ### Connecting WiFi
 
-It is assumed that you will use wifi (instead of ethernet cable) to connect to the internet, so once you have booted the processing raspbian image use raspi-config to set your wifi region and enter your wifi connection credentials. Once you have connected it is worth updating raspi-config, although that will mean re-entering your wifi connections, but this time you will be able to use the gui. Clicking on the wifi connection widget you will get a choice of connections choose yours and re-enter credentials.
+It is assumed that you will use wifi (instead of ethernet cable) to connect to the internet, so once you have booted the processing raspbian image use raspi-config to set your wifi region and enter your wifi connection credentials. Once you have connected it is worth updating raspi-config, although that will mean re-entering your wifi connections, but this time you will be able to use the gui. Clicking on the wifi connection widget you will get a choice of connections choose yours and re-enter credentials. You can set a unique network hostname from the RaspberryPI configuration gui.
 
 ### Installing gems
 
@@ -67,7 +67,7 @@ sketch_title: JRubyArt Static Sketch
 width: 600
 height: 600
 ```
-What this does it set up the processing root so we can access the processing jars, and sketchbook path so we can access any installed processing libraries. By setting `JRUBY: false` we are telling JRubyArt to use JRuby-Complete rather an installed jruby.
+What this does it set up the processing root, so we can access the processing jars, and sketchbook path so we can access any installed processing libraries. By setting `JRUBY: false` we are telling JRubyArt to use JRuby-Complete rather than an installed jruby.
 
 ```bash
 gem install jruby_art # installs gems
