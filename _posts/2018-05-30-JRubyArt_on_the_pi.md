@@ -7,6 +7,10 @@ permalink: /jruby_art_on_raspberrypi/
 keywords: processing, jruby, JRubyArt, java
 ---
 
+### This post has been superseded by release of JRubyArt-1.5.0 ###
+
+The new version of JRubyArt should create `~/.jruby_art/config.yml` for you so that is one less thing to worry about, further the `library_loader` has been modified to support loading native binaries on the RaspberryPI. [see][see]
+
 
 ### Installing raspbian image from processing.organization
 
@@ -92,7 +96,7 @@ k9 --run my_sketch.rb
 
 ![pi_capture.jpg]({{site.github.url}}/assets/pi_capture.jpg)
 
-
+[see]:http://ruby-processing.github.io/JRubyArt/raspberrypi_started/
 [usbstick]:https://www.raspberrypi.org/documentation/hardware/raspberrypi/bootmodes/msd.md
 
 [website]:https://pi.processing.org/get-started/
