@@ -34,7 +34,15 @@ PiCrate 3D now works (in the limited way it can on the RaspberryPI) on the [noob
 All you need do is install [JRuby][jruby] (it also pays to set up a local gem store). But we are not out of the woods yet [JRuby][jruby] needs fixing (or more specifically its [jnr-ffi][jnr-ffi]) to allow `jgem` install from rubygems, so we still need to download the ArcBall and PiCrate gems and do a local install.
 
 ### The proof
+monjori shader
 
+![monjori.png]({{site.github.url}}/assets/monjori.png)
+
+joonsrender raytraced media
+
+![balls.png]({{site.github.url}}/assets/balls.png)
+
+Screenshots of opengl frames on raspberryPI don't work (I tried scrot and gimp)
 
 ### To Do
 
