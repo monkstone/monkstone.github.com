@@ -62,7 +62,7 @@ Since we are on a very specific system we can all use the same configuration for
 
 ```yaml
 ---
-PROCESSING_ROOT: "/usr/local/lib/processing-3.3.7"
+PROCESSING_ROOT: "/usr/local/lib/3.4"
 JRUBY: false
 sketchbook_path: "/home/pi/sketchbook"
 template: bare
@@ -101,4 +101,4 @@ k9 --run my_sketch.rb
 
 [website]:https://pi.processing.org/get-started/
 
-[image]:https://github.com/processing/processing/releases/download/processing-0264-3.3.7/processing-3.3.7-linux-raspbian.zip
+[image]:https://github.com/processing/processing/releases/download/processing-0264-3.3.7/3.4-linux-raspbian.zip
