@@ -5,6 +5,9 @@ date: 2018-08-04 20:00:00
 categories: jruby_art update
 keywords: JRubyArt, tesselation, arc
 ---
+I found this __P5*.js__ sketch on openprocessing
+https://www.openprocessing.org/user/23616/ by __Manoylov AC__ which was in need of some serious refactoring, here is my JRubyArt version (javascript is just horrible) which is much shorter and a bit drier.
+
 ```ruby
 attr_reader :cols, :coloured
 
