@@ -65,7 +65,7 @@ def arc_pattern
 end
 
 def mouse_pressed
-    @cols = shuffle_array(cols)
+  @cols = shuffle_array(cols) if coloured
   loop
 end
 
@@ -82,7 +82,7 @@ end
 def shuffle_array(ar)
   cols = ar.to_a
   cols.shuffle!
-  cols.to_java(:int)
+  cols.to_java(Java::int)
 end
 ```
 
