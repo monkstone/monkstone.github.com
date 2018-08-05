@@ -11,6 +11,8 @@ https://www.openprocessing.org/user/23616/ by __Manoylov AC__ which was in need 
 ```ruby
 attr_reader :cols, :coloured
 
+PALETTE = %w[#152A3B #158ca7 #F5C03E #D63826 #0F4155 #7ec873 #4B3331].freeze
+
 def settings
   size(600, 600)
 end
@@ -18,8 +20,8 @@ end
 def setup
   background 0
   sketch_title 'Arc Pattern'
-  no_loop
-  @cols = %w[#152A3B #158ca7 #F5C03E #D63826 #0F4155 #7ec873 #4B3331]
+  # create a java primitive array of signed int
+  @cols = web_to_color_array(PALETTE)
   stroke_weight 1.5
   stroke_cap SQUARE
   stroke(0, 200)
@@ -35,13 +37,13 @@ def sep_index(idx, length)
 end
 
 def sep_color(idx, number)
-  color(cols[sep_index(idx - 1, number + 1)])
+  cols[sep_index(idx - 1, number + 1)]
 end
 
 def arc_pattern
   circ_number = rand(4..10)
   block_size = rand(30..70)
-  back_color = coloured ? color(cols.last) : 255
+  back_color = coloured ? cols.last : 255
   fill(back_color)
   rect(0, 0, width, height)
   half_block = block_size / 2
@@ -59,11 +61,11 @@ def arc_pattern
     end
     pop_matrix
   end
-  cols.shuffle!
   no_loop
 end
 
 def mouse_pressed
+    @cols = shuffle_array(cols)
   loop
 end
 
@@ -76,6 +78,12 @@ def key_typed
   end
 end
 
+# do a ruby shuffle! on a primitive java array
+def shuffle_array(ar)
+  cols = ar.to_a
+  cols.shuffle!
+  cols.to_java(:int)
+end
 ```
 
 
