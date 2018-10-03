@@ -51,7 +51,7 @@ def arc_pattern
   grid(width + two_block, height + two_block, block_size, block_size) do |x, y|
     push_matrix
     translate x, y
-    rotate HALF_PI * rand(0..4)
+    rotate HALF_PI * rand(1..4)
     circ_number.downto(0) do |i|
       diam = two_block * i / (circ_number + 1)
       ccolor = i < 2 || !coloured ? back_color : sep_color(i, circ_number)
