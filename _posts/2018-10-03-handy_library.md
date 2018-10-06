@@ -52,11 +52,9 @@ The handy library is not available from processing ide, you will probably need t
 ```
 For the following sketch I used the `handy.jar` from a local library folder:-
 ```ruby
-load_library :handy
+load_libraries :balls, :handy
 java_import 'org.gicentre.handy.HandyRenderer'
 BALL_NUM = 6
-BALL_COLORS = [[255, 0, 0], [255, 255, 0], [64, 64, 255]].freeze
-
 attr_reader :handy, :balls
 
 def settings
@@ -65,7 +63,6 @@ end
 
 def setup
   sketch_title 'Handy Ball Collision'
-  HandyRenderer.__persistent__ = true # supress singleton warning
   @handy = HandyRenderer.new(self)
   @balls = (0...BALL_NUM).map { |idx| Ball.new(self, idx) }
 end
@@ -73,15 +70,20 @@ end
 def draw
   background(234, 215, 182)
   fill(0, 255, 0)
-  handy.instance_eval do
-    rect(20, 20, 360, 20)
-    rect(20, 360, 360, 20)
-    rect(20, 40, 20, 320)
-    rect(360, 40, 20, 320)
-  end
+  draw_borders(handy)
   balls.each(&:draw)
 end
 
+def draw_borders(renderer)
+  renderer.rect(20, 20, 360, 20)
+  renderer.rect(20, 360, 360, 20)
+  renderer.rect(20, 40, 20, 320)
+  renderer.rect(360, 40, 20, 320)
+end
+```
+The balls library `balls.rb`
+
+```ruby
 # Bouncing ball
 class Ball
   attr_reader :sketch, :position, :delta, :bounds
