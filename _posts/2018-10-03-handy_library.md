@@ -84,6 +84,8 @@ end
 The balls library `balls.rb`
 
 ```ruby
+BALL_COLORS = [[255, 0, 0], [255, 255, 0], [64, 64, 255]].freeze
+
 # Bouncing ball
 class Ball
   attr_reader :sketch, :position, :delta, :bounds
@@ -91,7 +93,8 @@ class Ball
   def initialize(sketch, id)
     @sketch = sketch
     @position = Vec2D.new rand(100..300), rand(100..300)
-    @delta = Vec2D.new rand(-6..6), rand(-6..6)
+    @delta = Vec2D.new rand(0.1..6), rand(0.1..6)
+    @delta *= -1 if rand > 0.5
     @size = rand(60..100)
     radius = @size / 2.0
     @color = BALL_COLORS[id % BALL_COLORS.size]
