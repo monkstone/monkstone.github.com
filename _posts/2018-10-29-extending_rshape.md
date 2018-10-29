@@ -69,4 +69,6 @@ def draw_my_rect
 end
 ```
 
+See animated gif created from sketch:-
+
 ![geomerative_boundary.gif]({{site.github.url}}/assets/geomerative_boundary.gif "Animated Gif")
