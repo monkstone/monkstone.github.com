@@ -44,8 +44,8 @@ def setup
   sketch_title 'Geomerative Boundary Shape Test'
   RG.init(self)
   RG.set_polygonizer(RG.ADAPTATIVE)
-  circle = RShape.createCircle(100, 100, 100);
-  rectangle = RShape.createRectangle(100, 100, 100, 50);
+  circle = RShape.createCircle(100, 100, 100)
+  rectangle = RShape.createRectangle(100, 100, 100, 50)
   @bounds = Boundary.create_bounding_shape(circle.union(rectangle))
 end
 
