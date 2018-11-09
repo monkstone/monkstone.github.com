@@ -8,20 +8,20 @@ keywords: jruby
 
 Here is a dead simple way to install jruby on a RaspberryPI with (Raspbian Stretch OS).
 
-Download my [bashscript](https://gist.github.com/monkstone/2b34b996d40b9eca255fadef5ee6d7dd)
+Download my [bashscript](https://gist.github.com/monkstone/2b34b996d40b9eca255fadef5ee6d7dd) and run as follows:-
 
 ```bash
 sudo bash install_jruby.sh
 ```
 Or if you prefer perform each command manually.
 
-Check with:-
+Check install with:-
 
 ```bash
 jruby --version
 ```
 
-Or fire up a irb session using jruby
+Or fire up an irb session using jruby
 
 ```bash
 jirb
