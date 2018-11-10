@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Installing JRuby-9.2.2.0 on RaspberryPI"
+title: "Installing JRuby-9.2.3.0 on RaspberryPI"
 date: 2018-11-09 06:00:00
 categories: jruby_art update
 keywords: jruby
