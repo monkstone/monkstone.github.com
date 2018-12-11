@@ -1,61 +1,29 @@
 ---
 layout: post
-title: "Installing JRuby-9.2.3.0 on RaspberryPI"
+title: "Installing picrate and JRuby-9.2.5.0 on RaspberryPI"
 date: 2018-11-09 06:00:00
 categories: jruby_art update
-keywords: jruby
+keywords: jruby, picrate, install, processing, RaspberryPI
 ---
 
-Here is a dead simple way to install jruby on a RaspberryPI with (Raspbian Stretch OS).
+Here is easy way to do a virgin install of `picrate` and `jruby` on a RaspberryPI with (Raspbian Stretch OS).
 
-Download my [bashscript](https://gist.github.com/monkstone/2b34b996d40b9eca255fadef5ee6d7dd) and run as follows:-
-
-```bash
-sudo bash install_jruby.sh
-```
-Or if you prefer perform each command manually.
-
-Check install with:-
+Download my [Rakefile](https://github.com/monkstone/install-picrate/releases) and run as follows:-
 
 ```bash
-jruby --version
+rake # to run default task of Rakefile
 ```
-
-Or fire up an irb session using jruby
+To list rake Tasks:-
 
 ```bash
-jirb
-# or jruby -S jirb
+rake --tasks
 ```
+NB: you will be prompted for password as some tasks require `sudo` authority (but you should __not__ run `rake` with `sudo` authority)
 
-It also makes sense to set up your gem environment so you don't need to use `sudo` to install gems. Conventionally gems are stored in users `~/.gem` folder, with subdirectory of version number (vanilla ruby with PI is at version 2.3.0)
+Once everything is installed you use `geanyIDE` to explore example sketches (after loading `PiCrate` project) or to run demo from console:-
 
-```bash
-mkdir -p ~/.gem/ruby/2.3.0
-```
-
-Now edit user `~/.profile` to define `GEM_HOME` and `PATH`
-
-```bash
-export GEM_HOME="$HOME/.gem/ruby/2.3.0"
-export GEM_PATH="$HOME/.gem/ruby/2.3.0"
-# set PATH so it includes user's private bin directories
-PATH="$HOME/bin:$HOME/.local/bin:$GEM_HOME/bin:$PATH"
-```
-
-Now you can use `jgem` to install `jruby` gems eg `PiCrate` a standalone version of ruby-processing
-
-```bash
-jgem install picrate
-```
-
-To test the install:-
-
-```bash
-picrate -i Samples
-```
 To run `PiCrate` demo:
 ```bash
-cd `picrate_samples`
+cd `~/picrate_samples`
 rake
 ```
