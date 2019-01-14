@@ -6,7 +6,7 @@ categories: jruby_art update
 keywords: jruby_art, Vec2D, pentagon, recursion, fractal, sutcliffe
 ---
 
-Recently suzy on the processing forum was asking how to create a Sutcliffe pentagon, this got me thinking is there such a thing.  So far the only reference I have found to it, was in an extract of [Matt Pearsons Book][book]. Anyway it looked interesting so I had go at coding it in JRubyArt (using some logic from a recursive pentagon sketch by C. Andrews on openprocessing). The sketch features a couple of nifty JRubyArt features including Vec2D (whose methods can be chained, _and just look like math_) DegLUT tables, and a handy way of creating an enumerable colour palette from an array of web strings. The other quite useful feature (missing in vanilla processing) is the ability to create a vertex directly from the vector.
+Recently suzy on the processing forum was asking how to create a Sutcliffe pentagon, this got me thinking is there such a thing.  So far the only reference I have found to it, was in an extract of [Matt Pearsons Book][book] Generative Art book. Anyway it looked interesting so I had go at coding it in JRubyArt (using some logic from a recursive pentagon sketch by C. Andrews on openprocessing). The sketch features a couple of nifty JRubyArt features including Vec2D (whose methods can be chained, _and just look like math_) DegLUT tables, and a handy way of creating an enumerable colour palette from an array of web strings. The other quite useful feature (missing in vanilla processing) is the ability to create a vertex directly from the vector.
 
 ### sutcliffe.rb
 ```ruby
@@ -105,5 +105,7 @@ class Pentagon
 end
 
 ```
+
+[book]:https://www.manning.com/books/generative-art
 
 ![sutcliffe.png]({{site.github.url}}/assets/sutcliffe.png)
