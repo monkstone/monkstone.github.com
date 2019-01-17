@@ -6,11 +6,11 @@ categories: jruby_art update
 keywords: propane, pre, java-11
 ---
 
-* Install [java-11][oracle] (probably from Oracle)
+* Install [jdk11][oracle] (possibly from Oracle, but openjdk should be fine)
 
-* Install [jruby-9.2.0.0][jruby]
+* Install [jruby-9.2.5.0][jruby]
 
-* Installing `propane-2.5.0.pre-java`
+* Installing `propane-3.1.0.pre-java`
 ```bash
 jgem install --pre propane
 # alternative
