@@ -6,7 +6,7 @@ categories: jruby_art update
 keywords: jruby_art, Numeric, super, radians
 ---
 
-Headius has now fixed to some extent refinements in JRuby, thus it should be possible to use refinements to provide `:radian` and `:degree` methods to Numeric, rather than monkey patching global space.
+Headius has now fixed to some extent refinements in JRuby, thus it should be possible to use refinements to provide `:radians` and `:degrees` methods to Numeric, rather than monkey patching global space.
 ``` ruby
 module SuperNumeric
   refine Numeric do
