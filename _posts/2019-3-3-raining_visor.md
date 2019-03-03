@@ -6,7 +6,7 @@ categories: jruby_art update
 keywords: jruby_art, Visor, prototype, vjaying
 ---
 
-Getting to grips with coding for Visor, and yes JRubyArt is a great prototyping tool. Here is this [JRubyArt sketch](https://github.com/ruby-processing/JRubyArt-examples/blob/master/contributed/raining.rb) and [library](https://github.com/ruby-processing/JRubyArt-examples/blob/master/contributed/library/rain_drops/rain_drops.rb) translated for Visor, all it need is to hook up a midi which I haven't got...
+Getting to grips with coding for Visor, and yes JRubyArt is a great prototyping tool. Here is this [JRubyArt sketch](https://github.com/ruby-processing/JRubyArt-examples/blob/master/contributed/raining.rb) and [library](https://github.com/ruby-processing/JRubyArt-examples/blob/master/contributed/library/rain_drops/rain_drops.rb) translated for Visor, all it needs is to hook up a midi controller which I haven't got...
 
 Basically you can replace `include Processing::Proxy` into a sketch, with the creation of a `visor_class` eg `:RainDrops` here.
 
