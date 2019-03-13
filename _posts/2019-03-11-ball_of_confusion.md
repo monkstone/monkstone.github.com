@@ -7,6 +7,8 @@ keywords: jruby_art, animation
 ---
 
 ### JRubyArt Sketch
+Using the [default shaders](https://www.processing.org/tutorials/pshader/) with processing3, I managed to a GLGraphics sketch (from 2008) to run just fine in JRubyArt. Kudos to lazydog for original sketch code, I think I may raiding his back catalog for a bit.
+
 ```ruby
 # Ball of Confusion Sketch see original by Ben Notiaranni
 # http://lazydog-bookfragments.blogspot.com/2008/12/orb-code.html
