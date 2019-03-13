@@ -8,8 +8,8 @@ keywords: jruby_art, animation
 
 ### JRubyArt Sketch
 ```ruby
-# Ball of Confusion Sketch see original by Ben Notiaranii
-# http://lazydog-bookfragments.blogspot.com/2008/12/i-think-i-went-bit-over-top.html
+# Ball of Confusion Sketch see original by Ben Notiaranni
+# http://lazydog-bookfragments.blogspot.com/2008/12/orb-code.html
 NUMBER_OF_HAIRS = 10_000
 BODY_R = 25.0
 MIN_HAIR_LENGTH = 24.0
