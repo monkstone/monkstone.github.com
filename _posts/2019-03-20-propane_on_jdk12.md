@@ -3,7 +3,7 @@ layout: post
 title: "JRubyArt and propane on JDK12"
 date: 2019-03-20 06:00:00
 categories: jruby_art update
-permalink: /jdk9/
+permalink: /jdk12/
 keywords: ruby-processing, JRubyArt, processing, propane, developer, jdk12
 ---
 ### Work so far
