@@ -8,7 +8,9 @@ keywords: ruby-processing, JRubyArt, processing, propane, developer, jdk12
 ---
 ### Work so far
 
-I have created a jdk12 branch on github for [propane][propane]. So far it compiles and runs OK with OpenJDK12 (and the Oracle release). Also [JRubyArt][jruby_art] seems to run OK (although it was compiled on jdk8). It is however very `noisy` with much of that noise coming from jruby (jruby-9.2.6.0). I expect [vanilla processing][vanilla] with be similar with Sam Pottingers fixes.
+I have created a jdk12 branch on github for [propane][propane]. So far it compiles and runs OK with OpenJDK12 (and the Oracle release). Also [JRubyArt][jruby_art] seems to run OK (although it was compiled on jdk8). It is however very `noisy` with much of that noise coming from jruby (jruby-9.2.6.0). I expect [vanilla processing][vanilla] it would be similar with Sam Pottingers fixes.
+
+Polyglot maven still not working (support dropped in later versions of maven?). However it is possible to compile for jdk11 with jdk12, and in the first instance that may be appropriate.
 
 
 [vanilla]:https://github.com/processing/processing/
