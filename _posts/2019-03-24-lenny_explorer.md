@@ -3,7 +3,7 @@ layout: post
 title: "Lenny Explorer after Leander Herzog"
 date: 2019-03-24 06:00:00
 categories: jruby_art update
-permalink: /jdk12/
+permalink: /Lenny Explorer/
 keywords: ruby-processing, JRubyArt, processing, toxi, Leander Herzog, Explorer
 ---
 ### A homage to Leander Herzog 'The Explorer'
