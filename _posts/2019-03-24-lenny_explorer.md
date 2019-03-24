@@ -16,8 +16,6 @@ The sketch demonstrates the use of polar coordinates for steering and simplified
 
  * Featuring toxiclibs Circle and Rect classes
 
- * Featuring JRubyArt Vec2D classes
-
  * Featuring custom Path, Boundary and Line2D classes
 
 #### The Sketch
