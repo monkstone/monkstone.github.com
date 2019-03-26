@@ -60,7 +60,7 @@ end
 
 ```
 
-#### Custom Boundary classes
+#### Custom Boundary class
 
 ```ruby
 
