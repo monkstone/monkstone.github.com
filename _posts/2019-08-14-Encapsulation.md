@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Strong Encapsulation
-date: 2019-05-14T06:00:00.000Z
+date: 2019-08-14T06:00:00.000Z
 categories: jruby_art update
 keywords: 'JRubyArt, jdk11, development'
 ---
