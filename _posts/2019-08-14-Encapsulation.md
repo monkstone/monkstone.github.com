@@ -13,6 +13,7 @@ What this means in practice for JRubyArt is that since jdk9, running sketches ha
 1. A simple [java 2d sketch][java2d]
 2. A simple [processing P2D sketch][p2d] (jogl)
 3. A simple [processing P3D sketch][p3d] (jogl)
+4. A swing [control panel sketch][swing]
 
 Possible way around includes `--add-exports`, `--add-opens`, `--add-modules`, `--add-reads` for the specific modules at runtime (you could try this in `java_args.txt`).
 
@@ -23,3 +24,4 @@ Possible way around includes `--add-exports`, `--add-opens`, `--add-modules`, `-
 [p2d]: http://ruby-processing.github.io/jdk12/p2d_sketch/
 [p3d]: http://ruby-processing.github.io/jdk12/p3d_sketch/
 [reinhold]: https://www.voxxed.com/2016/11/problem-modules-reflective-access/
+[swing]: http://ruby-processing.github.io/jdk12/jwishy/
