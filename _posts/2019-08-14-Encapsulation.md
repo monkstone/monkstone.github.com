@@ -17,6 +17,13 @@ What this means in practice for JRubyArt is that since jdk9, running sketches ha
 
 Possible way around includes `--add-exports`, `--add-opens`, `--add-modules`, `--add-reads` for the specific modules at runtime (you could try this in `java_args.txt`).
 
+However I've not had much luck yet. Interestingly if instead of `--illegal-access=warn` you use `--illegal-access=deny` and run simple sketch you get following:-
+
+```bash
+2019-08-15T08:42:52.686+01:00 [main] WARN FilenoUtil : Native subprocess control requires open access to sun.nio.ch
+Pass '--add-opens java.base/sun.nio.ch=org.jruby.dist' or '=org.jruby.core' to enable.
+```
+
 [260]: http://openjdk.java.net/jeps/260
 [261]: http://openjdk.java.net/jeps/261
 [java2d]: http://ruby-processing.github.io/jdk12/simple/
