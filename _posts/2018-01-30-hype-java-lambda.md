@@ -5,7 +5,7 @@ date: 2018-01-30 07:00:00
 categories: jruby_art update
 keywords: ruby-processing, JRubyArt, hype, java, lambda
 ---
-Since jdk8 it is possible to replace anonymous classes in callbacks with lambda (but you can't do this in processing ide). Here is a [hype][hype_library] sketch converted to use java lambda:-
+Since jdk8 it is possible to replace anonymous classes in callbacks with lambda (but you can only do this in Sam Pottingers version of processing ide). Here is a [hype][hype_library] sketch converted to use java lambda (Netbeans/Eclipse etc):-
 
 ```java
 import processing.core.PApplet;
