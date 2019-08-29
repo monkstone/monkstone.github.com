@@ -9,7 +9,6 @@ An explicitly class wrapped sketch for use in [emacs][]/netbeans will run with `
 Methods:-
 
 ```ruby
-
 require 'jruby_art'
 require 'jruby_art/app'
 
@@ -21,7 +20,7 @@ class MySketch < Processing::App
   end
 
   def draw
-
+    no_loop
   end
 
   def settings
@@ -31,7 +30,7 @@ class MySketch < Processing::App
   end
 end
 
-MySketch.new unless defined? $app
+MySketch.new
 
 ```
 
