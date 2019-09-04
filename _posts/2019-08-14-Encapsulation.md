@@ -24,8 +24,11 @@ However I've not had much luck yet. Interestingly if instead of `--illegal-acces
 Pass '--add-opens java.base/sun.nio.ch=org.jruby.dist' or '=org.jruby.core' to enable.
 ```
 
+It is possible there is a more stable solution using `jdeps` to create module-info for the legacy jars and to [inject the module-info][inject] into them.
+
 [260]: http://openjdk.java.net/jeps/260
 [261]: http://openjdk.java.net/jeps/261
+[inject]: https://stackoverflow.com/questions/47222226/how-to-inject-module-declaration-into-jar
 [java2d]: http://ruby-processing.github.io/jdk12/simple/
 [mvpjava]: http://mvpjava.com/java-9-modules-strong-encapsulation/
 [p2d]: http://ruby-processing.github.io/jdk12/p2d_sketch/
