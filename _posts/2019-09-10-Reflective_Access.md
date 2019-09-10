@@ -8,7 +8,14 @@ keywords: 'JRubyArt, jdk11, development, modules, encapsulation'
 
 # Methods and fields that request reflective access by JRubyArt
 
-<style> table{ border-collapse: collapse; border-spacing: 0; border:2px solid #0000FF; } th{ border:2px solid #0000FF; } </style>
+<style type="text/css">
+td {
+      color: blue;
+      background-color: yellow;
+      padding: 5px;
+      border: 2px solid black; </style>
+
+}
 
 requiring class                       | reflective method / field
 ------------------------------------- | ----------------------------------------
