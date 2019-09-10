@@ -10,7 +10,14 @@ keywords: 'JRubyArt, jdk11, development, modules, encapsulation'
 
 <style> table{ border-collapse: collapse; border-spacing: 0; border:2px solid #0000FF; } th{ border:2px solid #0000FF; } </style>
 
- requiring class | reflective method / field ------------------------------------- | ---------------------------------------- com.headius.backport9.modules.Modules | java.lang.Object.finalize() com.headius.backport9.modules.Modules | java.io.FileDescriptor.fd com.headius.backport9.modules.Modules | java.awt.Component.paramString() | jogamp.opengl.awt.Java2D$2 | sun.java2d.opengl.OGLUtilities.UNDEFINED jogamp.nativewindow.jawt.JAWTUtil$1 | sun.awt.SunToolkit.awtLock() |
+requiring class                       | reflective method / field
+------------------------------------- | ----------------------------------------
+com.headius.backport9.modules.Modules | java.lang.Object.finalize()
+com.headius.backport9.modules.Modules | java.io.FileDescriptor.fd
+com.headius.backport9.modules.Modules | java.awt.Component.paramString()
+                                      |
+jogamp.opengl.awt.Java2D$2            | sun.java2d.opengl.OGLUtilities.UNDEFINED
+jogamp.nativewindow.jawt.JAWTUtil$1   | sun.awt.SunToolkit.awtLock()
 
 The `Object.finalize()` and `file descriptor` fields are probably JRuby specific. I suspect access to `Component.paramSring()` might also be required by processing. The last to are required by `jogl` and needed by `P2D` and `P3D` sketches. Here are the `--add-opens` to add to `java_args.txt` to suppress the warnings in JRubyArt and propane sketches.
 
