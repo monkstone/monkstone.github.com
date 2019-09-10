@@ -13,9 +13,9 @@ td {
       color: blue;
       background-color: yellow;
       padding: 5px;
-      border: 2px solid black; </style>
-
+      border: 2px solid black;
 }
+ </style>
 
 requiring class                       | reflective method / field
 ------------------------------------- | ----------------------------------------
