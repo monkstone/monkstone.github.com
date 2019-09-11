@@ -35,7 +35,7 @@ The `Object.finalize()` and `file descriptor` fields are probably JRuby specific
 4. --add-opens java.desktop/sun.java2d.opengl=ALL-UNNAMED
 5. --add-opens java.desktop/sun.awt=ALL-UNNAME
 
-It should be possible to replace `ALL-UNNAMED` with `jruby.dist` for the first 3, but that depends on the `jruby.dist` module being recognized (currently it is only an explicitly named automatic module ie has an `AutomaticModuleName:` entry in the Manifest in the `jruby.jar`).
+It should be possible to replace `ALL-UNNAMED` with `jruby.dist` for the first 3, but that depends on the `jruby.dist` module being recognized (currently it is only an explicitly named automatic module ie has an `AutomaticModuleName:` entry in the Manifest in the `jruby.jar`). There is the possibility of doing a global fix in JRubyArt (not propane) by adding the `--add-opens` to the `java_args:` in `~/.jruby_art/config.yml`
 
 [260]: http://openjdk.java.net/jeps/260
 [261]: http://openjdk.java.net/jeps/261
