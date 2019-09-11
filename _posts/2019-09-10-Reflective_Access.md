@@ -27,7 +27,7 @@ com.headius.backport9.modules.Modules | java.awt.Component.paramString()
 jogamp.opengl.awt.Java2D$2            | sun.java2d.opengl.OGLUtilities.UNDEFINED
 jogamp.nativewindow.jawt.JAWTUtil$1   | sun.awt.SunToolkit.awtLock()
 
-The `Object.finalize()` and `file descriptor` fields are probably JRuby specific. I suspect access to `Component.paramSring()` might also be required by processing. The last to are required by `jogl` and needed by `P2D` and `P3D` sketches. Here are the `--add-opens` to add to `java_args.txt` to suppress the warnings in JRubyArt and propane sketches.
+The `Object.finalize()` and `file descriptor` fields are probably JRuby specific. I suspect access to `Component.paramSring()` might also be required by processing. The last two are required by `jogl` and needed by `P2D` and `P3D` sketches. Here are the `--add-opens` to add to `java_args.txt` to suppress the warnings in JRubyArt and propane sketches.
 
 1. --add-opens java.base/java.lang=ALL-UNNAMED
 2. --add-opens java.base/java.io=ALL-UNNAMED
