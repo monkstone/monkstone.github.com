@@ -5,6 +5,7 @@ date: 2019-09-10T06:00:00.000Z
 categories: jruby_art update
 keywords: 'JRubyArt, jdk11, development, modules, encapsulation'
 ---
+Since jdk9 running sketches in JRubyArt generate `WARNING:` of illegal reflective access, that will be prohibited in future versions of jdk in line with a move to stronger encapsulation see [here][260] and [here][261]. Here is a table summarising those warnings.
 
 # Methods and fields that request reflective access by JRubyArt
 
@@ -36,4 +37,5 @@ The `Object.finalize()` and `file descriptor` fields are probably JRuby specific
 
 It should be possible to replace `ALL-UNNAMED` with `jruby.dist` for the first 3, but that depends on the `jruby.dist` module being recognized (currently it is only an explicitly named automatic module ie has an `AutomaticModuleName:` entry in the Manifest in the `jruby.jar`).
 
-Read about [explicitly naming automatic modules here](https://dzone.com/articles/explicitly-naming-automatic-java-modules).
+[260]: http://openjdk.java.net/jeps/260
+[261]: http://openjdk.java.net/jeps/261
