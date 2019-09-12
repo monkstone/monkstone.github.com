@@ -5,7 +5,7 @@ date: 2019-09-10T06:00:00.000Z
 categories: jruby_art update
 keywords: 'JRubyArt, jdk11, development, modules, encapsulation'
 ---
-Since jdk9 running sketches in JRubyArt generate `WARNING:` of illegal reflective access, that will be prohibited in future versions of jdk in line with a move to stronger encapsulation see [here][260] and [here][261]. Here is a table summarising those warnings.
+Since jdk9 running sketches in JRubyArt generate `WARNING:` of illegal reflective access, that will be prohibited in future versions of jdk in line with a move to stronger encapsulatijava.awt.Component.getAccessControlContext()on see [here][260] and [here][261]. Here is a table summarising those warnings.
 
 # Methods and fields that request reflective access by JRubyArt
 
@@ -27,7 +27,7 @@ com.headius.backport9.modules.Modules | java.awt.Component.paramString()
 jogamp.opengl.awt.Java2D$2            | sun.java2d.opengl.OGLUtilities.UNDEFINED
 jogamp.nativewindow.jawt.JAWTUtil$1   | sun.awt.SunToolkit.awtLock()
 
-The `Object.finalize()` method and `file descriptor` field are probably JRuby specific. I suspect access to `Component.paramSring()` method might also be required by processing. The last two are required by `jogl` and needed by `P2D` and `P3D` sketches. Here are the `--add-opens` to add to `java_args.txt` to suppress the warnings in JRubyArt and propane sketches.
+The `Object.finalize()` method and `file descriptor` field are probably JRuby specific. I suspect access to `Component.paramSring()` method might also be required by processing. The last two are required by `jogl` and needed by `P2D` and `P3D` sketches. Here are the `--add-opens` to add to `java_args.txt` to suppress the warnings in JRubyArt and propane sketches. In practice many more fields and methods within the packages above are accessed but the following `--add-opens` open the whole package to reflective access. To display all reflective access warnings put `--illegal-access=warn` into `java_args.txt`. JRuby requests illegal access to `java.lang.Object.clone()` ..., and to `java.awt.Component.getAccessControlContext()` ... .
 
 1. --add-opens java.base/java.lang=ALL-UNNAMED
 2. --add-opens java.base/java.io=ALL-UNNAMED
