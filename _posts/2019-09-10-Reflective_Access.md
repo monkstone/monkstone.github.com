@@ -5,7 +5,7 @@ date: 2019-09-10T06:00:00.000Z
 categories: jruby_art update
 keywords: 'JRubyArt, jdk11, development, modules, encapsulation'
 ---
-Since jdk9 running sketches in JRubyArt generate `WARNING:` of illegal reflective access, that will be prohibited in future versions of jdk in line with a move to stronger encapsulatijava.awt.Component.getAccessControlContext()on see [here][260] and [here][261]. Here is a table summarising those warnings.
+Since jdk9 running sketches in JRubyArt generate `WARNING:` of illegal reflective access, that will be prohibited in future versions of jdk in line with a move to stronger encapsulation see [here][260] and [here][261]. Here is a table summarising those warnings.
 
 # Methods and fields that request reflective access by JRubyArt
 
