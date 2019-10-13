@@ -10,7 +10,12 @@ I have just released what will probably be the final version of PiCrate for rasb
 
 ![stretch.png]({{site.github.url}}/assets/stretch.png)
 
-For buster and later I expect to be using OpenJDK, but currently it seems to lack performance, I have already create a [jdk11 branch][branch] to support this work.
+I have already create a [jdk11 branch][branch] to support Buster. Currently you need to install OpenJDK11 yourself:-
+
+```bash
+apt-get install openjdk-11-jdk
+```
+Because of this change, the next release of PiCrate will be version 2, currently OpenJDK11 is not as performant asthe Oracle java.
 
 
 [branch]:https://github.com/ruby-processing/PiCrate/tree/jdk11
