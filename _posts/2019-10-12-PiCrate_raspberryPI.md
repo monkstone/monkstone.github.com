@@ -10,7 +10,7 @@ I have just released what will probably be the final version of PiCrate for rasb
 
 ![stretch.png]({{site.github.url}}/assets/stretch.png)
 
-I have already create a [jdk11 branch][branch] to support Buster. Currently you need to install OpenJDK11 yourself:-
+I have already created a [jdk11 branch][branch] to support Buster. Currently you need to install OpenJDK11 yourself:-
 
 ```bash
 apt-get install openjdk-11-jdk
