@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Picrate-1.2.0 Raspbian Stretch
+title: Picrate-1.2.1 Raspbian Stretch
 date: 2019-10-12T06:00:00.000Z
 categories: jruby_art update
 keywords: 'jruby, picrate, processing, RaspberryPI, Oracle, java'
@@ -16,6 +16,8 @@ I have already created a [jdk11 branch][branch] to support Buster. Currently you
 apt-get install openjdk-11-jdk
 ```
 
-Because of this change, the next release of PiCrate will be version 2, currently OpenJDK11 is not as performant asthe Oracle java.
+Because of this change, the next release of PiCrate will be version 2, currently OpenJDK11 is not as performant as the Oracle java.
+
+However currently you may prefer to use openjdk-8-jdk on Buster since it seem to outperform OpenJDK11 and isn't noisy about reflective access.
 
 [branch]: https://github.com/ruby-processing/PiCrate/tree/jdk11
