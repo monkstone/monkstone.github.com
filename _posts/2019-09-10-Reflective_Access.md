@@ -29,13 +29,16 @@ jogamp.nativewindow.jawt.JAWTUtil$1   | sun.awt.SunToolkit.awtLock()
 
 The `Object.finalize()` method and `file descriptor` field are probably JRuby specific. I suspect access to `Component.paramSring()` method might also be required by processing. The last two are required by `jogl` and needed by `P2D` and `P3D` sketches. Here are the `--add-opens` to add to `java_args.txt` to suppress the warnings in JRubyArt and propane sketches. In practice many more fields and methods within the packages above are accessed but the following `--add-opens` open the whole package to reflective access. To display all reflective access warnings put `--illegal-access=warn` into `java_args.txt`. JRuby as an example also requests illegal access to `java.lang.Object.clone()` ..., and to `java.awt.Component.getAccessControlContext()` ... etc.
 
-1. --add-opens java.base/java.lang=ALL-UNNAMED
-2. --add-opens java.base/java.io=ALL-UNNAMED
-3. --add-opens java.desktop/java.awt=ALL-UNNAMED
-4. --add-opens java.desktop/sun.java2d.opengl=ALL-UNNAMED
-5. --add-opens java.desktop/sun.awt=ALL-UNNAME
+1. `--add-opens java.base/java.lang=ALL-UNNAMED`
+2. `--add-opens java.base/java.io=ALL-UNNAMED`
+3. `--add-opens java.desktop/java.awt=ALL-UNNAMED`
+4. `--add-opens java.desktop/sun.java2d.opengl=ALL-UNNAMED`
+5. `--add-opens java.desktop/sun.awt=ALL-UNNAMED`
 
 It should be possible to replace `ALL-UNNAMED` with `jruby.dist` for the first 3, but that depends on the `jruby.dist` module being recognized (currently it is only an explicitly named automatic module ie has an `AutomaticModuleName:` entry in the Manifest in the `jruby.jar`). There is the possibility of doing a global fix in JRubyArt (not propane) by adding the `--add-opens` to the `java_args:` in `~/.jruby_art/config.yml`
+
+### Update ###
+Providing you have set `JAVA_HOME` there is the possibility that will work on `PiCrate` and `propane` of putting `java_options` in `.jruby.java_opts` file local to your sketch.
 
 [260]: http://openjdk.java.net/jeps/260
 [261]: http://openjdk.java.net/jeps/261
