@@ -1,10 +1,14 @@
 ---
 layout: post
-title: Picrate Video
+title: Picrate Video on Buster
 date: 2019-11-25T06:00:00.000Z
 categories: jruby_art update
 keywords: 'jruby, picrate, processing, RaspberryPI, Oracle, java'
 ---
+It seems that the latest [beta release of processing-video][latest] works best RaspberryPI Buster (at least with model 3B+). Here is snapshot of my Steinberg filter sketch:-
+![steinberg.png]({{site.github.url}}/assets/steinberg.png)
+
+It seem it is necessary to define which camera you are using in the sketch, and you can obtain the name of your model with the capture_test.rb sketch see below (_it pays to know whether you have a 720P or 1080P camera_):-
 
 ![capture_test.png]({{site.github.url}}/assets/capture_test.png)
 
@@ -57,3 +61,5 @@ end
 CaptureTest.new
 
 ```
+
+[latest]:https://github.com/processing/processing-video/releases/tag/r6-v2.0-beta4
