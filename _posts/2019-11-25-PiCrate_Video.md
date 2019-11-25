@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Picrate-1.2.1 Raspbian Stretch
-date: 2019-10-12T06:00:00.000Z
+title: Picrate Video
+date: 2019-11-25T06:00:00.000Z
 categories: jruby_art update
 keywords: 'jruby, picrate, processing, RaspberryPI, Oracle, java'
 ---
