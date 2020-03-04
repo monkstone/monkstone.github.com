@@ -8,7 +8,7 @@ keywords: 'JRuby, jdk11+, development, modules, encapsulation'
 For JRuby-9.2.11.0 the reflective access warnings with jdk > 8 are mainly fixed (providing you define `JAVA_HOME`). However
 for JRubyArt (PiCrate and propane) `JOGL` warnings remain for OpenGL sketches
 
-For Debian linux, define `JAVA_HOME` in `~/.profile` for ArchLinux and others define in `~/.bashrc`. Windows and Mac users should do similar. Create a `~/.jruby.java_opts` file with following content to fix `JOGL` reflective access warnings:-
+For Debian linux, define `JAVA_HOME` in `~/.profile` for ArchLinux and others define `JAVA_HOME` in `~/.bashrc`. Windows and Mac users should do similar. Create a `~/.jruby.java_opts` file with following content to fix `JOGL` reflective access warnings:-
 
 
 ```bash
