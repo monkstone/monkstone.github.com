@@ -19,4 +19,4 @@ For Debian linux, define `JAVA_HOME` in `~/.profile` for ArchLinux and others de
 
 ```
 
-NB: ALL-UNNAMED is for legacy jar access, if we had named modules we could/should be more specific
+NB: ALL-UNNAMED is for legacy jar access, if we had named modules we could/should be more specific. Fortunately this will no be necessary, since JOGL-2.4.0 does not generate any warnings.
