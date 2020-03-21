@@ -5,7 +5,7 @@ date: 2020-03-21T06:00:00.000Z
 categories: jruby_art update
 keywords: 'PiCrate, VC4, V3D, Mesa, glxinfo'
 ---
-It is surprising that `mesa-utils` package does get installed by default with Raspbian Buster, it is provides the useful diagnostic tool `glxinfo`
+It is surprising that `mesa-utils` package does get installed by default with Raspbian Buster, since it provides the useful diagnostic tool `glxinfo`
 
 ```bash
 sudo apt-get install mesa-utils
