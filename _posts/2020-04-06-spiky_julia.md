@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Julia Visualizer with propane"
-date: 2020-03-06 06:00:00
+date: 2020-04-06 06:00:00
 categories: jruby_art update
 keywords: propane, movie, sound, visualizer
 ---
