@@ -6,7 +6,7 @@ categories: jruby_art update
 keywords: propane, movie, sound, visualizer
 ---
 
-I have just released a new [version of propane][propane], and found this [dependant application][depend] `Julia Visualizer` by J. Scott Pilgrim. Which fortunately still works with my latest release.
+I have just released a new [version of propane][propane], and found this [dependant application][depend] `Julia Visualizer` by J.P.Scott. Which fortunately still works with my latest release.
 
 #### A video of my desktop (no-sound) with running app
 #### (music was from Cerys Mathews Radio6 broadcast)
