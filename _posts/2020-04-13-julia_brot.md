@@ -12,5 +12,90 @@ I have just released a new [version of propane][propane], and found this [depend
 
 <video src="{{site.github.url}}/assets/julia_brot.ogv" poster="{{site.github.url}}/assets/julia_brot.png" width="1280" height="1024" controls preload></video>
 
+The video explorer inspired me to have a go at the 'Julia Set' challenge at [Rosetta Code][rosetta] were I used the ruby built in Complex. I tried wrote my own Complex class to see if it would be more efficient (not much more so it seems) but it was an interesting exercise:-
+
+```ruby
+# frozen_string_literal: true
+
+# My Attempt to create a more efficient Complex
+class MyComplex
+  attr_accessor :real, :imag
+
+  def initialize(real, imag)
+    @real = real
+    @imag = imag
+  end
+
+  def square
+    orig_real = real
+    @real = real**2 - imag**2
+    @imag = 2 * orig_real * imag
+    self
+  end
+
+  # adds a given complex number
+  def +(other)
+    @real += other.real
+    @imag += other.imag
+    self
+  end
+
+  # computes the magnitude
+  def abs
+    Math.hypot(real, imag)
+  end
+
+  def to_s
+    if imag.positive?
+      return format('(%<real>.2f+%<imag>.2fi)', real: real, imag: imag)
+    end
+
+    format('(%<real>.2f%<imag>.2fi)', real: real, imag: imag)
+  end
+end
+```
+
+Here's my 'julia sketch' code:-
+
+```ruby
+load_library :my_complex
+attr_reader :max_iter
+CONST = MyComplex.new(-0.835, -0.2321)
+
+def settings
+  size(640, 480)
+end
+
+def setup
+  sketch_title 'Julia Set'
+  @max_iter = 360
+  color_mode HSB, 360, 100, 100
+  load_pixels
+end
+
+def draw
+  grid(width, height) do |x, y|
+    i = max_iter
+    z = MyComplex.new(map1d(x, 0..width, -1.4..1.4), map1d(y, 0..height, -1.0..1.0))
+    while z.abs < 2 && i -= 1
+      z = (z.square + CONST)
+    end
+    pixels[x + width * y] = color((360 * i) / max_iter, 100, i)
+  end
+  update_pixels
+  fill 0
+  text CONST.to_s, 560, 400
+  save_frame data_path('julia.png')
+  no_loop
+end
+```
+Which I used to explore some of the classic julia sets (see Wikipedia):-
+
+<img src="/assets/julia_1.png" />
+<img src="/assets/julia_2.png" />
+<img src="/assets/julia_3.png" />
+<img src="/assets/julia_4.png" />
+
 [depend]:https://github.com/jscottpilgrim/julia_brot
 [propane]:https://github.com/ruby-processing/propane
+[rosetta]:http://rosettacode.org/wiki/Julia_set#Ruby
