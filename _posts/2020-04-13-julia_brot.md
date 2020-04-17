@@ -92,8 +92,11 @@ end
 Which I used to explore some of the classic julia sets (see Wikipedia):-
 
 <img src="/assets/julia_1.png" />
+
 <img src="/assets/julia_2.png" />
+
 <img src="/assets/julia_3.png" />
+
 <img src="/assets/julia_4.png" />
 
 [depend]:https://github.com/jscottpilgrim/julia_brot
