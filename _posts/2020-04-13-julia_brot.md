@@ -26,10 +26,14 @@ class MyComplex
     @imag = imag
   end
 
-  def square
-    orig_real = real
-    @real = real**2 - imag**2
-    @imag = 2 * orig_real * imag
+  # multiply complex number by another complex no
+  def *(other)
+    a = real
+    b = imag
+    c = other.real
+    d = other.imag
+    @real = a * c - b * d
+    @imag = a * d + b * c
     self
   end
 
@@ -46,11 +50,7 @@ class MyComplex
   end
 
   def to_s
-    if imag.positive?
-      return format('(%<real>.2f+%<imag>.2fi)', real: real, imag: imag)
-    end
-
-    format('(%<real>.2f%<imag>.2fi)', real: real, imag: imag)
+    format('(%<real>0.2f+%<imag>0.2fi)', real: real, imag: imag)
   end
 end
 ```
@@ -59,7 +59,7 @@ Here's my 'julia sketch' code:-
 
 ```ruby
 load_library :my_complex
-attr_reader :max_iter
+attr_reader :max_iter, :time
 CONST = MyComplex.new(-0.835, -0.2321)
 
 def settings
@@ -78,14 +78,14 @@ def draw
     i = max_iter
     z = MyComplex.new(map1d(x, 0..width, -1.4..1.4), map1d(y, 0..height, -1.0..1.0))
     while z.abs < 2 && i -= 1
-      z = (z.square + CONST)
+      z *= z
+      z += CONST
     end
     pixels[x + width * y] = color((360 * i) / max_iter, 100, i)
   end
   update_pixels
   fill 0
-  text CONST.to_s, 560, 400
-  save_frame data_path('julia.png')
+  text CONST.to_s, 530, 400
   no_loop
 end
 ```
