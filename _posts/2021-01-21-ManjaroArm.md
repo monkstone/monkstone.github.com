@@ -1,84 +1,17 @@
 ---
 layout: post
-title: "Experimenting With Graal on RaspberryPI4"
-date: 2020-10-25 06:00:00
+title: "Processing4 on RaspberryPI4"
+date: 2021-01-21 06:00:00
 categories: jruby_art update
 keywords: picrate, processing, RaspberryPI4
 ---
 
-Recently I've been working on Newton Fractal Sketches using ruby Complex Math, which are quite testing for the RaspberryPI processor. Up till now I'd been reasonably happy with the performance of OpenJDK14 with my PiCrate sketches, but the Newton Fractal sketches run quite slowly (especially compared with processing.py and jython). So finally I bit the bullet and gave the latest GraalVM a go, which is now available for aarch64. Running on Manjaro ARM OS, I installed Graal on `/opt`, I then unset archlinux-java and used my `~/.bashrc` to control which jvm was used:-
+Recently I've released a new version of [PiCrate][picrate] which works on both RaspberryPI4 and RaspberryPI3B+ with both 32 bit (RaspbianOS) and 64 bit (Manjaro Arm) operating systems. So I know it should be possible to run vanilla processing4 on the RaspberryPI. Now I've previously shown on the [processing forum][forum] how to get Sam Pottingers Alpha releases of vanilla processing4 on the raspberryPI. This is not possible with the latest-4.0a3 release, there seems to be a Catch 22 because when you try to run a sketch on Manjaro Linux it complains that core needs to run on a 32 bit OS, yet the jogl aarch64-linux binaries are included.
+Anyway you may need to update the symbolic link on manjaro linux if you are using the stock openjdk which has been just updated to jdk-15 from jdk14. Here's an example sketch running with updated jdk:-
 
-<img src="/assets/bashrc.png" />
+<img src="assets/Processing_On_Manjaro_Linux.jpg">
 
-Here is a test sketch
 
-```ruby
-# frozen_string_literal: true
 
-require 'picrate'
-
-class NewtonFractal < Processing::App
-  IMGX = 512
-  IMGY = 512
-  MAXIT = 20 # max iterations allowed
-  EPS = 1e-3 # max error allowed
-  COMPLEX = Complex(1e-6, 1e-6) # step increment
-
-  attr_reader :xa, :xb, :ya, :yb, :z, :img, :start
-
-  def settings
-    size(IMGX, IMGY)
-  end
-
-  def setup
-    sketch_title 'Newton Fractal'
-    #color_mode(HSB)
-    @start = Time.now
-    # Drawing area
-    @xa = -1.0
-    @xb = 1.0
-    @ya = -1.0
-    @yb = 1.0
-    @img = create_image(width, height, RGB).tap do |image|
-      image.load_pixels
-      grid(IMGY, IMGX) do |y, x|
-        zy = y * (yb - ya) / (IMGY - 1) + ya
-        zx = x * (xb - xa) / (IMGX - 1) + xa
-        @z = Complex(zx, zy)
-        (0...MAXIT).each do |i|
-          # Newton iteration
-          z0 =  z - func(z) / ((func(z + COMPLEX) - func(z)) / COMPLEX)
-          break if (z0 - z).abs2 < EPS * EPS
-
-          @z = z0
-          # pixels[x + y * width] = color(i % 5 * 64, i % 17 * 16, i % 9 * 32)
-          image.pixels[x + y * width] = color(i % 5 * 64, i % 9 * 32, i % 17 * 16)
-        end
-      end
-    end
-    no_loop
-  end
-
-  def draw
-    set(0, 0, img)
-    puts Time.now - start
-  end
-
-  def func(z)
-    z**3.0 - 1.0
-    # z**4 - 1.0
-  end
-end
-
-NewtonFractal.new
-
-```
-
-This sketch took over 2 minutes to develop on OpenJDK14 and less than a minute to develop on the GraalVM. Also I found a community PKGBUILD build, which require a `fakeroot`, install as follows (then you can use `archlinux-java` to switch `jvm`:-
-```bash
-sudo pacman -S fakeroot
-git clone https://aur.archlinux.org/jdk11-graalvm-bin.git
-cd jkd11-graalvm-bin
-makepkg -si
-
-```
+[forum]:https://discourse.processing.org/t/processing-in-style-with-java-11/13776/46
+[picrate]:https://ruby-processing.github.io/PiCrate/
