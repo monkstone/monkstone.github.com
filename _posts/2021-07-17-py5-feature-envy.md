@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Experimental Propane GEM"
+title: "py5 feature envy"
 date: 2021-07-17 06:00:00
 categories: jruby_art update
 keywords: ruby-processing, JRubyArt, processing, py5
