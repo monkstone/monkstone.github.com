@@ -23,7 +23,7 @@ Ability to integrate with [jupyter notebooks][jupyter]
 
 #### py5-generator
 
-The hooking up of these features in py5 depends on the [py5-generator][py5generator], which looks a bit complicated to to me kudos to Jim Schmitz the creator of py5. Makes the meta programming used in ruby-processing projects look very straightforward.
+The hooking up of these features in py5 depends on the [py5-generator][py5generator], which looks a bit complicated to to me, kudos to Jim Schmitz the creator of py5. Makes the meta programming used in ruby-processing projects look very straightforward.
 
 
 [py5generator]:https://github.com/hx2A/py5generator
