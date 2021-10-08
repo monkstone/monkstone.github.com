@@ -14,6 +14,8 @@ I've released a [new version][] of [PiCrate][picrate] which works on both Raspbe
 
 <img src="/assets/steinberg.png">
 
+This above sketch is using the regular processing video library and a USB camera, you should not need to use [legacy driver][gohai]...
+
 #### You can also create and run py5 sketches on ManjaroArm (RaspbianOS is untested) ####
 
 See processing [forum][]
@@ -23,3 +25,4 @@ See processing [forum][]
 [forum]:https://discourse.processing.org/t/using-geany-ide-for-py5-on-raspberrypi/32236
 [new version]:https://discourse.processing.org/t/new-release-of-picrate-for-raspberrypi/32424
 [picrate]:https://ruby-processing.github.io/PiCrate/
+[gohai]:https://github.com/gohai/processing-glvideo
