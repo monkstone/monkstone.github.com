@@ -13,6 +13,8 @@ Previously you may have seen guides by [Yoko Harada (yokolet)][yokolet] and [Jam
 
 For a JRubyArt example see the [Vec3D class][Vec3D], you can use/abuse this class like any regular ruby class, it can be monkey-patched or refined like any other ruby class see a [previous blog entry][previous]. Another interesting example is the [MathTool module][Math] in particular the `grid` and `mesh_grid` methods, which demonstrates how to create a method that takes a ruby block (uses yield).
 
+See also this [jruby wiki entry][wiki].
+
 
 [yokolet]:https://yokolet.blogspot.com/2011/06/extending-jruby-compile-and-jar-java.html
 [coglan]:https://blog.jcoglan.com/2012/08/02/your-first-ruby-native-extension-java/
@@ -23,3 +25,5 @@ For a JRubyArt example see the [Vec3D class][Vec3D], you can use/abuse this clas
 [Vec3D]:https://github.com/ruby-processing/JRubyArt/blob/master/src/main/java/monkstone/vecmath/vec3/Vec3.java
 [previous]:https://monkstone.github.io/jruby_art/update/2021/09/26/refinements.html
 [Math]:https://github.com/ruby-processing/JRubyArt/blob/master/src/main/java/monkstone/MathToolModule.java
+
+[wiki]:https://github.com/jruby/jruby/wiki/Java-extensions-for-JRuby-using-polyglot-maven
