@@ -23,7 +23,7 @@ If you want to specify the a version of of maven used, or allow users to build y
 mvn -N io.takari:maven:wrapper -Dmaven=3.8.3
 ```
 
-Users are then able to build using the local maven wrapper command `mvnw` on unix based systems or `mvnw.cmd` on windows. In practice you will probably create a `Rakefile` at this stage, which will use the wrapper command to execute maven tasks in order. See for example [Rakefile][rakefile] for JRubyArt.
+Users are then able to build your project using the local maven wrapper command `mvnw` on unix based systems or `mvnw.cmd` on windows. In practice you will probably create a `Rakefile` at this stage, which will use the wrapper command to execute maven tasks in order. See for example [Rakefile][rakefile] for JRubyArt.
 
 [yokolet]:https://yokolet.blogspot.com/2011/06/extending-jruby-compile-and-jar-java.html
 [coglan]:https://blog.jcoglan.com/2012/08/02/your-first-ruby-native-extension-java/
