@@ -15,6 +15,15 @@ For a JRubyArt example see the [Vec3D class][Vec3D], you can use/abuse this clas
 
 See also this [jruby wiki entry][wiki].
 
+### Creating a maven wrapper ###
+
+If you want to specify the a version of of maven used, or allow users to build your project without installing maven, you could add a maven wrapper run the following command in your project folder:-
+
+```bash
+mvn -N io.takari:maven:wrapper -Dmaven=3.8.3
+```
+
+Users are then able to build using the local maven wrapper command `mvnw` on unix based systems or `mvnw.cmd` on windows. In practice you will probably create a `Rakefile` at this stage, which will use the wrapper command to execute maven tasks in order. See for example [Rakefile][rakefile] for JRubyArt.
 
 [yokolet]:https://yokolet.blogspot.com/2011/06/extending-jruby-compile-and-jar-java.html
 [coglan]:https://blog.jcoglan.com/2012/08/02/your-first-ruby-native-extension-java/
@@ -27,3 +36,5 @@ See also this [jruby wiki entry][wiki].
 [Math]:https://github.com/ruby-processing/JRubyArt/blob/master/src/main/java/monkstone/MathToolModule.java
 
 [wiki]:https://github.com/jruby/jruby/wiki/Java-extensions-for-JRuby-using-polyglot-maven
+
+[rakefile]:https://github.com/ruby-processing/JRubyArt/blob/master/Rakefile
