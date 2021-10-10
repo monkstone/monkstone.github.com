@@ -9,7 +9,7 @@ keywords: JRuby, extension, java, polyglot, maven, compiling, jar
 
 ## Do you want to create a JRuby extension? ##
 
-Previously you may have seen guides by [Yoko Harada (yokolet)][yokolet] and [James Coglan][coglan] which suggest you use the [Rake-Compiler][rake] to compile your code. However those recommendations were made before the [polyglot maven compiler][polyglot] existed, which is now the recommended way to compile and jar your ruby code. You can now write your pom file in ruby (and get regular pom.xml emitted useful when working with a java ide such as netbeans). For a basic example see [jruby-examples][basic] which demonstrates how to create a ruby class and ruby module in java. The article by [James Coglan][coglan] remains in interesting, as it shows how you should create a java extension of a gem with an existing MRI extension. The beauty of maven is that you can pull in jar dependencies from maven central including jruby-base.jar which is the recommended jruby dependency when compilig jruby extension (_was jruby.jar but that may cause dependency conflicts_).
+Previously you may have seen guides by [Yoko Harada (yokolet)][yokolet] and [James Coglan][coglan] which suggest you use the [Rake-Compiler][rake] to compile your code. However those recommendations were made before the [polyglot maven compiler][polyglot] existed, which is now the recommended way to compile and jar your ruby code. You can now write your pom file in ruby (and get regular pom.xml emitted useful when working with a java ide such as netbeans). For a basic example see [jruby-examples][basic] which demonstrates how to create a ruby class and ruby module in java. The article by [James Coglan][coglan] remains in interesting, as it shows how you should create a java extension of a gem with an existing MRI extension. The beauty of maven is that you can pull in jar dependencies from maven central including jruby-base.jar which is the recommended jruby dependency when compiling jruby extension (_was jruby.jar but that may cause dependency conflicts_).
 
 For a JRubyArt example see the [Vec3D class][Vec3D], you can use/abuse this class like any regular ruby class, it can be monkey-patched or refined like any other ruby class see a [previous blog entry][previous]. Another interesting example is the [MathTool module][Math] in particular the `grid` and `mesh_grid` methods, which demonstrates how to create a method that takes a ruby block (uses yield).
 
@@ -17,7 +17,7 @@ See also this [jruby wiki entry][wiki].
 
 ### Creating a maven wrapper ###
 
-If you want to specify the a version of of maven used, or allow users to build your project without installing maven, you could add a maven wrapper run the following command in your project folder:-
+If you want to specify the a version of of maven used, or allow users to build your project without installing maven, you could add a maven wrapper, to do this run the following command in your project folder:-
 
 ```bash
 mvn -N io.takari:maven:wrapper -Dmaven=3.8.3
