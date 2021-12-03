@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Instance Of Pattern Matching"
-date: 2021-10-16 06:00:00
+title: "Plans For Future Development"
+date: 2021-12-04 06:00:00
 categories: jruby_art update
 keywords: JRuby, extension, java, polyglot, maven, instanceof, jdk17
 ---
