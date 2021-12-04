@@ -12,6 +12,6 @@ Recent discussions about vectors and the py5 project persuaded me to prefer wedg
 
 #### Use of jdk17 ####
 
-Initially propane will be changed to require jdk17 (probably by xmas 2017), for JRubyArt and PiCrate, I will wait to see what processing.org and jruby.org, there will be no going back otherwise change will be pointless (since I am currently using jdk 17 to test and run both projects)!!!
+Initially propane will be changed to require jdk17 (probably by xmas 2017), for JRubyArt and PiCrate, I will wait to see what processing.org and jruby.org do, there will be no going back otherwise the change will be pointless (since I am currently using jdk 17 to test and run both projects)!!!
 
 [picrate-example]:https://github.com/ruby-processing/picrate-examples/blob/master/demo/library/circle/lib/t_points.rb
